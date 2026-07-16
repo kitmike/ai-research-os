@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Research OS — Briefings & Essays</title>
+  <style>
+    :root{--paper:#f6f0e6;--ink:#161412;--muted:#70685f;--line:#d8cbbb;--bronze:#a66a2c;--blue:#203f73;--card:#fffaf1;--shadow:0 22px 70px rgba(42,32,20,.12)}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 18% 8%,#fff8e9 0 18%,transparent 38%),linear-gradient(135deg,#f8f1e5,#ebe0d1);color:var(--ink);font:17px/1.55 Georgia, 'Iowan Old Style', serif;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.25"/></svg>')}
+    .shell{width:min(1240px,94vw);margin:0 auto;padding:34px 0 60px}.mast{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:end;border-bottom:1px solid var(--ink);padding-bottom:24px}.kicker{font:700 12px/1.1 ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze)}h1{font-size:clamp(42px,7vw,92px);line-height:.86;margin:12px 0 10px;letter-spacing:-.055em}.subtitle{max-width:760px;color:#403a34;font-size:19px}.status{background:rgba(255,250,241,.78);border:1px solid var(--line);box-shadow:var(--shadow);padding:18px}.status b{font-variant:small-caps;letter-spacing:.05em}.grid{display:grid;grid-template-columns:280px 1fr 330px;gap:22px;margin-top:26px}.panel{background:rgba(255,250,241,.82);border:1px solid var(--line);box-shadow:var(--shadow)}.panel h2{font-size:14px;text-transform:uppercase;letter-spacing:.16em;border-bottom:1px solid var(--line);margin:0;padding:13px 15px;color:var(--blue);font-family:ui-monospace,monospace}.panel .inner{padding:16px}.toc a{display:block;color:var(--ink);text-decoration:none;border-left:3px solid transparent;padding:8px 8px 8px 12px;font-size:15px}.toc a:hover{border-color:var(--bronze);background:#f1e6d6}.hero-card{padding:26px}.hero-card h3{font-size:34px;line-height:1.05;margin:0 0 12px;letter-spacing:-.025em}.meta{font:12px ui-monospace,monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.chip{border:1px solid var(--line);background:#f7ecd9;padding:5px 8px;border-radius:999px;font:12px ui-monospace,monospace}.claim{border-top:1px solid var(--line);padding:14px 0}.claim:first-child{border-top:0}.claim b{color:var(--blue)}.timeline{display:grid;gap:12px}.item{padding:14px;border:1px solid var(--line);background:#fffdf7}.item h4{margin:0 0 8px;font-size:19px}.item p{margin:0;color:#4b443d}.source{font-size:13px;color:var(--muted);word-break:break-word}.empty{padding:26px;color:var(--muted);font-style:italic}.graph{height:230px;position:relative;overflow:hidden;background:radial-gradient(circle at center,#fff 0,#f6ead9 70%)}.node{position:absolute;border:1px solid var(--blue);background:#fffaf1;border-radius:999px;padding:7px 10px;font:12px ui-monospace,monospace;box-shadow:0 8px 22px rgba(32,63,115,.12)}footer{margin-top:30px;color:var(--muted);font:13px ui-monospace,monospace} @media(max-width:980px){.mast,.grid{grid-template-columns:1fr}.grid{gap:16px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="mast">
+      <div><div class="kicker">Hermes / AI Research OS</div><h1>Briefings & Essays</h1><p class="subtitle">A professional, source-backed AI research database: morning executive briefings and afternoon Gwern-like paper essays, continuously folded into an editorial dashboard.</p></div>
+      <aside class="status"><b>Cadence</b><br>11:05 HKT briefing · 16:05 HKT essay<br><br><b>Design</b><br>Editorial density, source ledger, concept graph, dashboard drilldown.</aside>
+    </section>
+    <section class="grid">
+      <nav class="panel"><h2>Research Ledger</h2><div id="toc" class="inner toc"><div class="empty">Loading records…</div></div></nav>
+      <article class="panel hero-card"><div class="meta" id="latestMeta">Awaiting first cron run</div><h3 id="latestTitle">AI Research OS is ready.</h3><p id="latestSummary">The database and dashboard scaffold are in place. The scheduled jobs will populate this page with briefings, essays, papers, claims, and implications.</p><div id="chips" class="chips"></div><div id="claims"></div></article>
+      <aside class="panel"><h2>Concept Dashboard</h2><div class="graph" id="graph"><span class="node" style="left:34%;top:42%">AI agents</span><span class="node" style="left:10%;top:16%">Papers</span><span class="node" style="right:10%;top:20%">Markets</span><span class="node" style="left:12%;bottom:18%">Products</span><span class="node" style="right:14%;bottom:16%">Careers</span></div><div class="inner"><h2 style="border:0;padding:0;margin:0 0 8px">Source Ledger</h2><div id="sources" class="source">No sources yet.</div></div></aside>
+    </section>
+    <section class="panel" style="margin-top:22px"><h2>Archive</h2><div id="archive" class="inner timeline"></div></section>
+    <footer>Created for Michael Kit · files live in /home/hermes/deliverables/ai_research_os · citations required, no invented sources.</footer>
+  </main>
+<script>
+async function load(){
+  let records=[]; try{records=await (await fetch('data/research.json?ts='+Date.now())).json()}catch(e){}
+  records=(records||[]).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  const latest=records[0];
+  if(!latest){document.getElementById('archive').innerHTML='<div class="empty">No generated reports yet. First cron run will populate this archive.</div>';return}
+  latestMeta.textContent=`${latest.date||''} · ${latest.cadence||''}`; latestTitle.textContent=latest.title||'Untitled'; latestSummary.textContent=latest.executive_summary||'';
+  chips.innerHTML=(latest.concepts||[]).slice(0,10).map(c=>`<span class="chip">${c}</span>`).join('');
+  claims.innerHTML=(latest.key_claims||[]).slice(0,6).map((c,i)=>`<div class="claim"><b>${String(i+1).padStart(2,'0')}</b> ${c}</div>`).join('');
+  sources.innerHTML=(latest.sources||[]).slice(0,8).map(s=>`<div>↳ ${typeof s==='string'?s:(s.url||s.title||JSON.stringify(s))}</div>`).join('') || 'No sources recorded.';
+  toc.innerHTML=records.slice(0,20).map(r=>`<a href="${r.report_path||'#'}"><span class="meta">${r.cadence||''}</span><br>${r.title||'Untitled'}</a>`).join('');
+  archive.innerHTML=records.slice(0,14).map(r=>`<div class="item"><div class="meta">${r.date||''} · ${r.cadence||''}</div><h4>${r.title||'Untitled'}</h4><p>${r.executive_summary||''}</p></div>`).join('');
+}
+load();
+</script>
+</body>
+</html>

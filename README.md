@@ -21,6 +21,8 @@ Times are staggered by 5 minutes to avoid existing cron slot collisions.
 - `reports/` — generated Markdown briefings/essays
 - `STYLE_GUIDE.md` — design and research contract used by cron prompts
 - `.github/workflows/pages.yml` — GitHub Pages deployment workflow
+- `AGENTS.md` — operating rules for autonomous improvement jobs
+- `scripts/verify_site.py` — deterministic local site verifier
 
 ## Local preview
 

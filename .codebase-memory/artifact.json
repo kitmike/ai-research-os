@@ -1,11 +1,11 @@
 {
     "schema_version": 1,
-    "commit": "56af030b29c9c52a35501409abe231e6f86528bd",
-    "indexed_at": "2026-07-17T02:29:22Z",
+    "commit": "6294c894ac0588cc5170d3f10c3162fdd123ddd7",
+    "indexed_at": "2026-07-17T05:23:06Z",
     "project": "home-hermes-deliverables-ai_research_os",
-    "nodes": 469,
-    "edges": 489,
-    "original_size": 1703936,
-    "compressed_size": 53781,
-    "compression_level": 9
+    "nodes": 512,
+    "edges": 526,
+    "original_size": 2293760,
+    "compressed_size": 84546,
+    "compression_level": 3
 }

@@ -1,0 +1,243 @@
+[
+  {
+    "slug": "ai-news-wire-2026-07-16",
+    "title": "AI News Wire — 2026-07-16",
+    "description": "Automated AI news brief from Google DeepMind Blog, Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-16.",
+    "date": "2026-07-16",
+    "category": "AI News Briefs",
+    "status": "brief",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "deepmind",
+      "frontier-models",
+      "industry",
+      "mlops",
+      "open-source"
+    ],
+    "path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-16.md",
+    "excerpt": "This automated brief was generated at **2026-07-16 18:16 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement. Top links 1. [The AI compute gap: Enterprises are buying infrastructure faster than they can measure what it costs](https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs) - **Source:** VentureBeat AI · **Published:*"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-15",
+    "title": "AI News Wire — 2026-07-15",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-15.",
+    "date": "2026-07-15",
+    "category": "AI News Briefs",
+    "status": "brief",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "frontier-models",
+      "mlops",
+      "open-source",
+      "openai",
+      "research"
+    ],
+    "path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-15.md",
+    "excerpt": "This automated brief was generated at **2026-07-15 18:17 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement. Top links 1. [What building Shippy taught us about building agents](https://huggingface.co/blog/allenai/shippy-tech-blog) - **Source:** Hugging Face Blog · **Published:** 2026-07-15 2. [Model Routing Is Simple. Until It Isn’t.](https://huggingface.co/blog/ibm-research/model-routing-is-si"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-14",
+    "title": "AI News Wire — 2026-07-14",
+    "description": "Automated AI news brief from Google DeepMind Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-14.",
+    "date": "2026-07-14",
+    "category": "AI News Briefs",
+    "status": "brief",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "deepmind",
+      "frontier-models",
+      "openai",
+      "research"
+    ],
+    "path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-14.md",
+    "excerpt": "This automated brief was generated at **2026-07-14 18:14 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement. Top links 1. [Can AI build a jet engine? JARVIS Challenge tests role of AI copilots in tough-tech engineering](https://news.mit.edu/2026/can-ai-build-jet-engine-jarvis-challenge-tests-ai-copilots-in-tough-tech-engineering-0714) - **Source:** MIT News AI · **Published:** 2026-07-14 - **Fe"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-13",
+    "title": "AI News Wire — 2026-07-13",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-13.",
+    "date": "2026-07-13",
+    "category": "AI News Briefs",
+    "status": "brief",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "frontier-models",
+      "mlops",
+      "open-source",
+      "openai",
+      "research"
+    ],
+    "path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-13.md",
+    "excerpt": "This automated brief was generated at **2026-07-13 18:48 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement. Top links 1. [Interval Certifications for Multilayered Perceptrons via Lattice Traversal](https://arxiv.org/abs/2607.08773) - **Source:** arXiv cs.AI · **Published:** 2026-07-13 - **Feed summary:** arXiv:2607.08773v1 Announce Type: new Abstract: In this work we present a rigorous theoret"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-12",
+    "title": "AI News Wire — 2026-07-12",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News. Newest source item: 2026-07-10.",
+    "date": "2026-07-12",
+    "category": "AI News Briefs",
+    "status": "brief",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "frontier-models",
+      "mlops",
+      "open-source",
+      "openai"
+    ],
+    "path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-12.md",
+    "excerpt": "This automated brief was generated at **2026-07-12 18:06 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement. Top links 1. [How Deutsche Telekom is rewiring telecommunications with AI](https://openai.com/index/deutsche-telekom) - **Source:** OpenAI News · **Published:** 2026-07-10 - **Feed summary:** How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, e"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-11",
+    "title": "AI News Wire — 2026-07-11",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News. Newest source item: 2026-07-10.",
+    "date": "2026-07-11",
+    "category": "AI News Briefs",
+    "status": "brief",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "frontier-models",
+      "mlops",
+      "open-source",
+      "openai"
+    ],
+    "path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-11.md",
+    "excerpt": "This automated brief was generated at **2026-07-11 18:03 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement. Top links 1. [How Deutsche Telekom is rewiring telecommunications with AI](https://openai.com/index/deutsche-telekom) - **Source:** OpenAI News · **Published:** 2026-07-10 - **Feed summary:** How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, e"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-10",
+    "title": "AI News Wire — 2026-07-10",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-10.",
+    "date": "2026-07-10",
+    "category": "AI News Briefs",
+    "status": "brief",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "frontier-models",
+      "mlops",
+      "open-source",
+      "openai",
+      "research"
+    ],
+    "path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-10.md",
+    "excerpt": "This automated brief was generated at **2026-07-10 18:42 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement. Top links 1. [How Deutsche Telekom is rewiring telecommunications with AI](https://openai.com/index/deutsche-telekom) - **Source:** OpenAI News · **Published:** 2026-07-10 - **Feed summary:** How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, e"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-09",
+    "title": "AI News Wire — 2026-07-09",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-09.",
+    "date": "2026-07-09",
+    "category": "AI News Briefs",
+    "status": "brief",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "frontier-models",
+      "mlops",
+      "open-source",
+      "openai",
+      "research"
+    ],
+    "path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-09.md",
+    "excerpt": "This automated brief was generated at **2026-07-09 18:58 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement. Top links 1. [Tiny robot boats build floating structures](https://news.mit.edu/2026/tiny-robot-boats-build-floating-structures-0709) - **Source:** MIT News AI · **Published:** 2026-07-09 - **Feed summary:** MIT researchers developed FloatForm, a swarm of small aquatic robots that snap to"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-08",
+    "title": "AI News Wire — 2026-07-08",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-08.",
+    "date": "2026-07-08",
+    "category": "AI News Briefs",
+    "status": "brief",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "frontier-models",
+      "mlops",
+      "open-source",
+      "openai",
+      "research"
+    ],
+    "path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-08.md",
+    "excerpt": "This automated brief was generated at **2026-07-08 18:40 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement. Top links 1. [Data for Agents](https://huggingface.co/blog/nvidia/open-data-for-agents) - **Source:** Hugging Face Blog · **Published:** 2026-07-08 2. [Helping K–12 educators build practical AI skills](https://openai.com/index/k-12-educators-practical-skills) - **Source:** OpenAI News · "
+  },
+  {
+    "slug": "agent-evaluation-after-benchmarks",
+    "title": "Agent evaluation after benchmark saturation",
+    "description": "A practical note on moving from leaderboard thinking to task-level evidence for autonomous AI agents.",
+    "date": "2026-07-03",
+    "category": "Long-form Essays",
+    "status": "essay",
+    "tags": [
+      "agents",
+      "evaluation",
+      "benchmarks",
+      "research-systems"
+    ],
+    "path": "sources/agilentic-ai-research-wire/research/posts/agent-evaluation-after-benchmarks.md",
+    "excerpt": "Benchmarks are useful compression artifacts: they reduce a sprawling model capability frontier into a number that a team can compare. The problem is that agentic systems rarely fail as isolated question-answering engines. They fail as loops: tool selection, state management, context packing, retry policy, planning, permissions, and handoff quality all interact. What should replace leaderboard-first evaluation? A rese"
+  },
+  {
+    "slug": "markdown-first-research-sites",
+    "title": "Why Markdown-first research sites age well",
+    "description": "Markdown keeps research notes portable, reviewable, and automation-friendly while still supporting a polished publication layer.",
+    "date": "2026-07-02",
+    "category": "Research Notes",
+    "status": "evergreen",
+    "tags": [
+      "publishing",
+      "markdown",
+      "digital-garden",
+      "knowledge-systems"
+    ],
+    "path": "sources/agilentic-ai-research-wire/research/posts/markdown-first-research-sites.md",
+    "excerpt": "Markdown-first publishing has a simple advantage: the source artifact remains legible even when the rendering stack changes. A repository of plain-text notes can be searched, reviewed in pull requests, transformed into RSS, and mirrored into future tools. Design goals - **Portable source.** Articles live in `research/posts`, not in a proprietary CMS. - **Inspectable history.** Changes are ordinary commits and pull re"
+  },
+  {
+    "slug": "turingwire-gwern-interface-notes",
+    "title": "Interface notes: Gwern durability, TuringWire clarity",
+    "description": "A lightweight interface brief for dense AI research notes: typographic hierarchy, durable URLs, search, and visible metadata.",
+    "date": "2026-07-01",
+    "category": "Research Notes",
+    "status": "note",
+    "tags": [
+      "interface",
+      "typography",
+      "archive",
+      "research-ux"
+    ],
+    "path": "sources/agilentic-ai-research-wire/research/posts/turingwire-gwern-interface-notes.md",
+    "excerpt": "A research site should reward both skimming and deep reading. Gwern-style pages demonstrate the value of durable long-form notes, visible metadata, and strong typography. TuringWire-style publishing points toward direct headlines, fast orientation, and a clean archive. Interface principles 1. **The article is the product.** Navigation should stay quiet once the reader enters an essay. 2. **Metadata should be visible."
+  }
+]

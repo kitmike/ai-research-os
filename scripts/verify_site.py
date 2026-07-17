@@ -13,6 +13,7 @@ REQUIRED_FILES = [
     "STYLE_GUIDE.md",
     "data/research.json",
     "data/agilentic_articles.json",
+    "data/editorial_notes.json",
     ".github/workflows/pages.yml",
 ]
 HTML_SENTINELS = [

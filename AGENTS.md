@@ -9,6 +9,15 @@ Continuously improve the website as a professional AI research database and edit
 - https://kitmike.github.io/ai-research-os/
 - https://github.com/kitmike/ai-research-os
 
+## Cross-account synchronization
+
+- Canonical combined repo: `kitmike/ai-research-os`.
+- Preserved upstream source: `agilentic/ai-research-wire`.
+- Imported subtree path: `sources/agilentic-ai-research-wire/`.
+- Article summary data for the root dashboard: `data/agilentic_articles.json`.
+- Use `git subtree pull --prefix=sources/agilentic-ai-research-wire agilentic main --squash` to import new Agilentic changes; never force-push or delete either repository.
+- Keep `agilentic/ai-research-wire`'s README/CANONICAL marker pointing back to the canonical kitmike repo.
+
 ## Required workflow
 
 1. Pull/rebase latest `main` before editing.

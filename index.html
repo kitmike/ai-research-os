@@ -22,21 +22,25 @@
       <article class="panel hero-card"><div class="meta" id="latestMeta">Awaiting first cron run</div><h3 id="latestTitle">AI Research OS is ready.</h3><p id="latestSummary">The database and dashboard scaffold are in place. The scheduled jobs will populate this page with briefings, essays, papers, claims, and implications.</p><div id="chips" class="chips"></div><div id="claims"></div></article>
       <aside class="panel"><h2>Concept Dashboard</h2><div class="graph" id="graph"><span class="node" style="left:34%;top:42%">AI agents</span><span class="node" style="left:10%;top:16%">Papers</span><span class="node" style="right:10%;top:20%">Markets</span><span class="node" style="left:12%;bottom:18%">Products</span><span class="node" style="right:14%;bottom:16%">Careers</span></div><div class="inner"><h2 style="border:0;padding:0;margin:0 0 8px">Source Ledger</h2><div id="sources" class="source">No sources yet.</div></div></aside>
     </section>
+    <section class="panel" style="margin-top:22px"><h2>Synchronized Repositories</h2><div class="inner"><p class="source"><b>Canonical:</b> <a href="https://github.com/kitmike/ai-research-os">kitmike/ai-research-os</a> · <b>Imported wire:</b> <a href="https://github.com/agilentic/ai-research-wire">agilentic/ai-research-wire</a>. The Agilentic research-wire history/content is preserved under <code>sources/agilentic-ai-research-wire/</code> and summarized below.</p><div id="wire" class="timeline"></div></div></section>
     <section class="panel" style="margin-top:22px"><h2>Archive</h2><div id="archive" class="inner timeline"></div></section>
-    <footer>Created for Michael Kit · files live in /home/hermes/deliverables/ai_research_os · citations required, no invented sources.</footer>
+    <footer>Created for Michael Kit · canonical repo kitmike/ai-research-os · synchronized with agilentic/ai-research-wire · citations required, no invented sources.</footer>
   </main>
 <script>
 async function load(){
   let records=[]; try{records=await (await fetch('data/research.json?ts='+Date.now())).json()}catch(e){}
+  let wireRecords=[]; try{wireRecords=await (await fetch('data/agilentic_articles.json?ts='+Date.now())).json()}catch(e){}
   records=(records||[]).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
   const latest=records[0];
-  if(!latest){document.getElementById('archive').innerHTML='<div class="empty">No generated reports yet. First cron run will populate this archive.</div>';return}
+  if(!latest){document.getElementById('archive').innerHTML='<div class="empty">No generated reports yet. First cron run will populate this archive.</div>';} else {
   latestMeta.textContent=`${latest.date||''} · ${latest.cadence||''}`; latestTitle.textContent=latest.title||'Untitled'; latestSummary.textContent=latest.executive_summary||'';
   chips.innerHTML=(latest.concepts||[]).slice(0,10).map(c=>`<span class="chip">${c}</span>`).join('');
   claims.innerHTML=(latest.key_claims||[]).slice(0,6).map((c,i)=>`<div class="claim"><b>${String(i+1).padStart(2,'0')}</b> ${c}</div>`).join('');
   sources.innerHTML=(latest.sources||[]).slice(0,8).map(s=>`<div>↳ ${typeof s==='string'?s:(s.url||s.title||JSON.stringify(s))}</div>`).join('') || 'No sources recorded.';
   toc.innerHTML=records.slice(0,20).map(r=>`<a href="${r.report_path||'#'}"><span class="meta">${r.cadence||''}</span><br>${r.title||'Untitled'}</a>`).join('');
   archive.innerHTML=records.slice(0,14).map(r=>`<div class="item"><div class="meta">${r.date||''} · ${r.cadence||''}</div><h4>${r.title||'Untitled'}</h4><p>${r.executive_summary||''}</p></div>`).join('');
+  }
+  wire.innerHTML=(wireRecords||[]).slice(0,6).map(r=>`<div class="item"><div class="meta">${r.date||''} · ${r.source_repo||'agilentic/ai-research-wire'}</div><h4>${r.title||'Untitled'}</h4><p>${r.description||''}</p><p class="source"><a href="${r.imported_path||'#'}">imported markdown</a> · <a href="${r.original_url||'#'}">original page</a></p></div>`).join('') || '<div class="empty">No Agilentic wire records imported yet.</div>';
 }
 load();
 </script>

@@ -12,6 +12,7 @@ REQUIRED_FILES = [
     "README.md",
     "STYLE_GUIDE.md",
     "data/research.json",
+    "data/agilentic_articles.json",
     ".github/workflows/pages.yml",
 ]
 HTML_SENTINELS = [
@@ -20,6 +21,7 @@ HTML_SENTINELS = [
     "Research Ledger",
     "Concept Dashboard",
     "data/research.json",
+    "agilentic/ai-research-wire",
 ]
 
 

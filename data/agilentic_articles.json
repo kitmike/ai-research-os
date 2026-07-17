@@ -1,0 +1,230 @@
+[
+  {
+    "slug": "ai-news-wire-2026-07-16",
+    "title": "AI News Wire — 2026-07-16",
+    "description": "Automated AI news brief from Google DeepMind Blog, Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-16.",
+    "date": "2026-07-16",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "deepmind",
+      "frontier-models",
+      "industry"
+    ],
+    "category": "AI News Briefs",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-16.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-16/"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-15",
+    "title": "AI News Wire — 2026-07-15",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-15.",
+    "date": "2026-07-15",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "frontier-models",
+      "mlops",
+      "open-source"
+    ],
+    "category": "AI News Briefs",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-15.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-15/"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-14",
+    "title": "AI News Wire — 2026-07-14",
+    "description": "Automated AI news brief from Google DeepMind Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-14.",
+    "date": "2026-07-14",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "deepmind",
+      "frontier-models",
+      "openai"
+    ],
+    "category": "AI News Briefs",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-14.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-14/"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-13",
+    "title": "AI News Wire — 2026-07-13",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-13.",
+    "date": "2026-07-13",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "frontier-models",
+      "mlops",
+      "open-source"
+    ],
+    "category": "AI News Briefs",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-13.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-13/"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-12",
+    "title": "AI News Wire — 2026-07-12",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News. Newest source item: 2026-07-10.",
+    "date": "2026-07-12",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "frontier-models",
+      "mlops",
+      "open-source",
+      "openai"
+    ],
+    "category": "AI News Briefs",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-12.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-12/"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-11",
+    "title": "AI News Wire — 2026-07-11",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News. Newest source item: 2026-07-10.",
+    "date": "2026-07-11",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "frontier-models",
+      "mlops",
+      "open-source",
+      "openai"
+    ],
+    "category": "AI News Briefs",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-11.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-11/"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-10",
+    "title": "AI News Wire — 2026-07-10",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-10.",
+    "date": "2026-07-10",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "frontier-models",
+      "mlops",
+      "open-source"
+    ],
+    "category": "AI News Briefs",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-10.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-10/"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-09",
+    "title": "AI News Wire — 2026-07-09",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-09.",
+    "date": "2026-07-09",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "frontier-models",
+      "mlops",
+      "open-source"
+    ],
+    "category": "AI News Briefs",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-09.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-09/"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-08",
+    "title": "AI News Wire — 2026-07-08",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-08.",
+    "date": "2026-07-08",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "frontier-models",
+      "mlops",
+      "open-source"
+    ],
+    "category": "AI News Briefs",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-08.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-08/"
+  },
+  {
+    "slug": "agent-evaluation-after-benchmarks",
+    "title": "Agent evaluation after benchmark saturation",
+    "description": "A practical note on moving from leaderboard thinking to task-level evidence for autonomous AI agents.",
+    "date": "2026-07-03",
+    "tags": [
+      "agents",
+      "evaluation",
+      "benchmarks",
+      "research-systems"
+    ],
+    "category": "Long-form Essays",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/agent-evaluation-after-benchmarks.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/agent-evaluation-after-benchmarks/"
+  },
+  {
+    "slug": "markdown-first-research-sites",
+    "title": "Why Markdown-first research sites age well",
+    "description": "Markdown keeps research notes portable, reviewable, and automation-friendly while still supporting a polished publication layer.",
+    "date": "2026-07-02",
+    "tags": [
+      "publishing",
+      "markdown",
+      "digital-garden",
+      "knowledge-systems"
+    ],
+    "category": "Research Notes",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/markdown-first-research-sites.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/markdown-first-research-sites/"
+  },
+  {
+    "slug": "turingwire-gwern-interface-notes",
+    "title": "Interface notes: Gwern durability, TuringWire clarity",
+    "description": "A lightweight interface brief for dense AI research notes: typographic hierarchy, durable URLs, search, and visible metadata.",
+    "date": "2026-07-01",
+    "tags": [
+      "interface",
+      "typography",
+      "archive",
+      "research-ux"
+    ],
+    "category": "Research Notes",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/turingwire-gwern-interface-notes.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/turingwire-gwern-interface-notes/"
+  }
+]

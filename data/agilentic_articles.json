@@ -1,5 +1,25 @@
 [
   {
+    "slug": "ai-news-wire-2026-07-17",
+    "title": "AI News Wire — 2026-07-17",
+    "description": "Automated AI news brief from Google DeepMind Blog, Hugging Face Blog, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-17.",
+    "date": "2026-07-17",
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "ai",
+      "arxiv",
+      "deepmind",
+      "frontier-models",
+      "industry",
+      "mlops"
+    ],
+    "category": "AI News Briefs",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-17.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-17/"
+  },
+  {
     "slug": "ai-news-wire-2026-07-16",
     "title": "AI News Wire — 2026-07-16",
     "description": "Automated AI news brief from Google DeepMind Blog, Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-16.",

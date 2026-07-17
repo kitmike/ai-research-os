@@ -24,23 +24,43 @@
     </section>
     <section class="panel" style="margin-top:22px"><h2>Synchronized Repositories</h2><div class="inner"><p class="source"><b>Canonical:</b> <a href="https://github.com/kitmike/ai-research-os">kitmike/ai-research-os</a> · <b>Imported wire:</b> <a href="https://github.com/agilentic/ai-research-wire">agilentic/ai-research-wire</a>. The Agilentic research-wire history/content is preserved under <code>sources/agilentic-ai-research-wire/</code> and summarized below.</p><div id="wire" class="timeline"></div></div></section>
     <section class="panel" style="margin-top:22px"><h2>Archive</h2><div id="archive" class="inner timeline"></div></section>
-    <footer>Created for Michael Kit · canonical repo kitmike/ai-research-os · synchronized with agilentic/ai-research-wire · citations required, no invented sources.</footer>
+    <footer>Created for Michael Kit · canonical repo kitmike/ai-research-os · synchronized with agilentic/ai-research-wire · citations required, no invented sources. · <a href="https://deerflow.tech" target="_blank" rel="noopener" style="color:inherit;opacity:.72;text-decoration:none;border-bottom:1px dotted currentColor">Created By Deerflow</a></footer>
   </main>
 <script>
+const text = value => String(value ?? '');
+const esc = value => text(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+const safeHref = value => {
+  const href = text(value).trim();
+  if (!href) return '#';
+  if (/^(https?:|reports\/|sources\/|data\/)/.test(href)) return esc(href);
+  return '#';
+};
+async function readJson(path){
+  try{
+    const response = await fetch(`${path}?ts=${Date.now()}`);
+    if(!response.ok) throw new Error(response.statusText);
+    const data = await response.json();
+    return Array.isArray(data) ? data : [];
+  }catch(e){ return []; }
+}
+function sourceLabel(source){
+  if(typeof source === 'string') return esc(source);
+  return esc(source.title || source.url || JSON.stringify(source));
+}
 async function load(){
-  let records=[]; try{records=await (await fetch('data/research.json?ts='+Date.now())).json()}catch(e){}
-  let wireRecords=[]; try{wireRecords=await (await fetch('data/agilentic_articles.json?ts='+Date.now())).json()}catch(e){}
-  records=(records||[]).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  let records=await readJson('data/research.json');
+  let wireRecords=await readJson('data/agilentic_articles.json');
+  records=records.sort((a,b)=>text(b.date).localeCompare(text(a.date)));
   const latest=records[0];
   if(!latest){document.getElementById('archive').innerHTML='<div class="empty">No generated reports yet. First cron run will populate this archive.</div>';} else {
   latestMeta.textContent=`${latest.date||''} · ${latest.cadence||''}`; latestTitle.textContent=latest.title||'Untitled'; latestSummary.textContent=latest.executive_summary||'';
-  chips.innerHTML=(latest.concepts||[]).slice(0,10).map(c=>`<span class="chip">${c}</span>`).join('');
-  claims.innerHTML=(latest.key_claims||[]).slice(0,6).map((c,i)=>`<div class="claim"><b>${String(i+1).padStart(2,'0')}</b> ${c}</div>`).join('');
-  sources.innerHTML=(latest.sources||[]).slice(0,8).map(s=>`<div>↳ ${typeof s==='string'?s:(s.url||s.title||JSON.stringify(s))}</div>`).join('') || 'No sources recorded.';
-  toc.innerHTML=records.slice(0,20).map(r=>`<a href="${r.report_path||'#'}"><span class="meta">${r.cadence||''}</span><br>${r.title||'Untitled'}</a>`).join('');
-  archive.innerHTML=records.slice(0,14).map(r=>`<div class="item"><div class="meta">${r.date||''} · ${r.cadence||''}</div><h4>${r.title||'Untitled'}</h4><p>${r.executive_summary||''}</p></div>`).join('');
+  chips.innerHTML=(latest.concepts||[]).slice(0,10).map(c=>`<span class="chip">${esc(c)}</span>`).join('');
+  claims.innerHTML=(latest.key_claims||[]).slice(0,6).map((c,i)=>`<div class="claim"><b>${String(i+1).padStart(2,'0')}</b> ${esc(c)}</div>`).join('');
+  sources.innerHTML=(latest.sources||[]).slice(0,8).map(s=>`<div>↳ <a href="${safeHref(typeof s==='string'?s:s.url)}" target="_blank" rel="noopener">${sourceLabel(s)}</a></div>`).join('') || 'No sources recorded.';
+  toc.innerHTML=records.slice(0,20).map(r=>`<a href="${safeHref(r.report_path)}"><span class="meta">${esc(r.cadence)}</span><br>${esc(r.title||'Untitled')}</a>`).join('');
+  archive.innerHTML=records.slice(0,14).map(r=>`<div class="item"><div class="meta">${esc(r.date)} · ${esc(r.cadence)}</div><h4>${esc(r.title||'Untitled')}</h4><p>${esc(r.executive_summary)}</p></div>`).join('');
   }
-  wire.innerHTML=(wireRecords||[]).slice(0,6).map(r=>`<div class="item"><div class="meta">${r.date||''} · ${r.source_repo||'agilentic/ai-research-wire'}</div><h4>${r.title||'Untitled'}</h4><p>${r.description||''}</p><p class="source"><a href="${r.imported_path||'#'}">imported markdown</a> · <a href="${r.original_url||'#'}">original page</a></p></div>`).join('') || '<div class="empty">No Agilentic wire records imported yet.</div>';
+  wire.innerHTML=(wireRecords||[]).slice(0,6).map(r=>`<div class="item"><div class="meta">${esc(r.date)} · ${esc(r.source_repo||'agilentic/ai-research-wire')}</div><h4>${esc(r.title||'Untitled')}</h4><p>${esc(r.description)}</p><p class="source"><a href="${safeHref(r.imported_path)}">imported markdown</a> · <a href="${safeHref(r.original_url)}">original page</a></p></div>`).join('') || '<div class="empty">No Agilentic wire records imported yet.</div>';
 }
 load();
 </script>

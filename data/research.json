@@ -1,1 +1,103 @@
-[]
+[
+  {
+    "id": "2026-07-17-morning",
+    "date": "2026-07-17",
+    "cadence": "morning",
+    "title": "AI Research OS Morning Briefing — 2026-07-17",
+    "executive_summary": "Agents are moving into production infrastructure: Google added managed-agent primitives, Search AI Mode is becoming an action layer, NVIDIA pushed agentic retrieval, and Hugging Face disclosed an AI-agent-driven intrusion. The opportunity is reliable, secure, domain-specific agent operating systems—especially for finance workflows.",
+    "key_claims": [
+      "Google is hardening Gemini managed agents into hosted production infrastructure: asynchronous background execution, remote MCP integration, custom function calling, credential refresh, and isolated cloud sandboxes.",
+      "Google Search is turning AI Mode into a consumer action layer by linking apps such as Instacart, Canva, and YouTube Music directly inside search results.",
+      "Google DeepMind and Isomorphic Labs framed bioresilience as a frontier-model safety and science priority, citing more than 15 partnerships over the past 12 months.",
+      "NVIDIA released Nemotron 3 Embed models for agentic retrieval; the 8B BF16 model is claimed to rank #1 on the RTEB leaderboard and 1B variants target production latency/cost.",
+      "Hugging Face disclosed an autonomous AI-agent-driven intrusion through dataset processing paths, with limited internal dataset/credential exposure and no evidence of public model/dataset/Spaces tampering.",
+      "IBM Research argues LLM routing is systems optimization, not just classification: on 417 AppWorld tasks, Sonnet reportedly cost $79 versus GPT-4.1 at $155 because caching changed effective economics.",
+      "Ai2’s Shippy case study highlights the practical agent pattern for high-stakes domains: deterministic tools, provenance in answers, sandboxing/isolation, agent-level evaluation, then UI control/model routing/memory."
+    ],
+    "papers": [
+      {
+        "title": "DKCD: Domain Knowledge-Enhanced Causal Discovery from Unstructured Data",
+        "url": "https://arxiv.org/abs/2607.09348v1",
+        "implication": "For finance/healthcare workflows, domain-grounded latent-factor extraction may matter more than generic LLM causal labeling."
+      },
+      {
+        "title": "Shapley in Context: Explaining Financial Language with Domain Expertise",
+        "url": "https://arxiv.org/abs/2607.00856v1",
+        "implication": "Financial LLM explainability should be audited against domain expertise, not only generic token-attribution heatmaps."
+      },
+      {
+        "title": "Exploring the Semantic Gap in Agentic Data Systems",
+        "url": "https://arxiv.org/abs/2607.00828v1",
+        "implication": "Agent-generated analytics can execute successfully while operationalizing the wrong concept; schema metadata is insufficient for trusted dashboards."
+      }
+    ],
+    "concepts": [
+      "managed agents",
+      "remote MCP",
+      "background execution",
+      "AI Mode actions",
+      "agentic retrieval",
+      "RTEB",
+      "model routing",
+      "agent security",
+      "bioresilience",
+      "finance explainability",
+      "semantic gap"
+    ],
+    "sources": [
+      {
+        "title": "Google: Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/"
+      },
+      {
+        "title": "Google Search: Connect more of your apps to Search",
+        "url": "https://blog.google/products-and-platforms/products/search/connected-apps/"
+      },
+      {
+        "title": "Google DeepMind / Isomorphic Labs: Our approach to bioresilience",
+        "url": "https://deepmind.google/blog/our-approach-to-bioresilience/"
+      },
+      {
+        "title": "Hugging Face/NVIDIA: Nemotron 3 Embed ranks #1 overall on RTEB",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb"
+      },
+      {
+        "title": "Hugging Face: Security incident disclosure — July 2026",
+        "url": "https://huggingface.co/blog/security-incident-july-2026"
+      },
+      {
+        "title": "Ai2 on Hugging Face: What building Shippy taught us about building agents",
+        "url": "https://huggingface.co/blog/allenai/shippy-tech-blog"
+      },
+      {
+        "title": "IBM Research on Hugging Face: Model Routing Is Simple. Until It Isn’t.",
+        "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt"
+      },
+      {
+        "title": "arXiv 2607.09348: DKCD: Domain Knowledge-Enhanced Causal Discovery from Unstructured Data",
+        "url": "https://arxiv.org/abs/2607.09348v1"
+      },
+      {
+        "title": "arXiv 2607.00856: Shapley in Context: Explaining Financial Language with Domain Expertise",
+        "url": "https://arxiv.org/abs/2607.00856v1"
+      },
+      {
+        "title": "arXiv 2607.00828: Exploring the Semantic Gap in Agentic Data Systems",
+        "url": "https://arxiv.org/abs/2607.00828v1"
+      }
+    ],
+    "implications": {
+      "AI/product": "Hosted agent runtimes are converging on the same missing pieces: async jobs, tool connectors, credentials, sandboxing, provenance, and evaluation. Product advantage shifts from chat UI to safe action orchestration.",
+      "finance/trading": "Two arXiv signals point at regulated-finance needs: explainability with domain priors and causal discovery from unstructured evidence. Trading/research agents need traceable concept operationalization before automation.",
+      "agentic company OS": "Treat MCP/tool access, background workers, memory, and model routing as first-class OS primitives—but add secret rotation, data-pipeline sandboxing, and source-linked outputs from day one.",
+      "career/opportunities": "Strong opportunity in agent reliability engineering: eval harnesses, routing economics, secure data ingestion, and domain-specific retrieval/memory for financial and operational workflows."
+    },
+    "open_questions": [
+      "Will Google’s managed-agent primitives become a de facto hosted runtime standard, or will portable local/MCP frameworks keep the advantage?",
+      "How much of Nemotron 3 Embed’s RTEB gain transfers to proprietary enterprise corpora and long-lived agent memory?",
+      "Did the Hugging Face disclosure trigger durable new norms for dataset loaders, sandbox boundaries, and token rotation across AI platforms?",
+      "Which financial institutions will accept LLM-generated causal/explainability artifacts, and what audit standard will emerge?"
+    ],
+    "report_path": "reports/2026-07-17_morning_briefing.md"
+  }
+]

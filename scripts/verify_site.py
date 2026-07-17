@@ -23,6 +23,7 @@ HTML_SENTINELS = [
     "Concept Dashboard",
     "data/research.json",
     "agilentic/ai-research-wire",
+    "No hidden tracking",
 ]
 
 

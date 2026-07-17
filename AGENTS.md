@@ -37,5 +37,5 @@ Continuously improve the website as a professional AI research database and edit
 - No invented citations or sources.
 - Maintain professional UI: readable typography, source ledger, archive, concept dashboard, mobile responsiveness, restrained motion.
 - Optimize for robustness: idempotent updates, no duplicate records, no broken links introduced, graceful empty-state handling.
-- Transparency rule: no deceptive UI, no hidden tracking/analytics, no hidden commercial redirect, no dark pattern, no credential or token display. If a future optimization adds third-party scripts, analytics, personalization, or outbound tracking, document it visibly in the Research Ledger before publishing.
+- Transparency rule: no dark patterns, no undisclosed analytics, no surprise commercial redirects, no credential or token display. If a future optimization adds third-party scripts, analytics, personalization, or outbound tracking, document it visibly in the Research Ledger before publishing.
 - Publishing rule: a cron-generated commit is not complete until it is pushed to `origin/main`, GitHub Pages succeeds, and a live HTTP fetch confirms the deployed site contains the expected sentinels.

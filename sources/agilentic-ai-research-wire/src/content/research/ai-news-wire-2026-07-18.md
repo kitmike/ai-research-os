@@ -1,53 +1,53 @@
 ---
-title: "AI News Wire — 2026-07-17"
-description: "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-17."
-date: "2026-07-17"
+title: "AI News Wire — 2026-07-18"
+description: "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-18."
+date: "2026-07-18"
 tags: [ai-news, research-wire, academia, ai, arxiv, frontier-models, industry, mlops, open-source, openai]
 category: "AI News Briefs"
 status: "brief"
 author: "Agilentic News Bot"
 ---
 
-This automated brief was generated at **2026-07-17 18:15 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement.
+This automated brief was generated at **2026-07-18 07:05 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement.
 
 ## Top links
 
-### 1. [Following the questions where they lead](https://news.mit.edu/2026/following-questions-where-they-lead-bailey-flanigan-0717)
-- **Source:** MIT News AI · **Published:** 2026-07-17
-- **Feed summary:** Assistant Professor Bailey Flanigan has arrived at complex computational methods for helping
-democracy thrive.
-
-### 2. [Fine-tune video and image models at scale with NVIDIA NeMo Automodel and 🤗 Diffusers](https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel)
-- **Source:** Hugging Face Blog · **Published:** 2026-07-17
-
-### 3. [A scorecard for the AI age](https://openai.com/index/a-scorecard-for-the-ai-age)
-- **Source:** OpenAI News · **Published:** 2026-07-17
-- **Feed summary:** Sarah Friar, CFO of OpenaAI, introduces a practical AI scorecard to measure ROI through useful
-work, cost per successful task, dependability, and return on compute.
-
-### 4. [Intelligent Three Level Learning Architecture for Autonomous UAV Swarms in Search and Rescue](https://arxiv.org/abs/2607.14093)
-- **Source:** arXiv cs.AI · **Published:** 2026-07-17
+### 1. [Intelligent Three Level Learning Architecture for Autonomous UAV Swarms in Search and Rescue](https://arxiv.org/abs/2607.14093)
+- **Source:** arXiv cs.AI · **Published:** 2026-07-18
 - **Feed summary:** arXiv:2607.14093v1 Announce Type: new Abstract: This paper presents a novel three level
 hierarchical learning architecture for autonomous UAV swarms performing search and rescue
 operations. Unlike conventional approaches that apply a single learning paradigm across all…
 
-### 5. [HG-RAG: Hierarchy-Guided Retrieval-Augmented Generation for Structured Knowledge Graphs](https://arxiv.org/abs/2607.14095)
-- **Source:** arXiv cs.AI · **Published:** 2026-07-17
+### 2. [HG-RAG: Hierarchy-Guided Retrieval-Augmented Generation for Structured Knowledge Graphs](https://arxiv.org/abs/2607.14095)
+- **Source:** arXiv cs.AI · **Published:** 2026-07-18
 - **Feed summary:** arXiv:2607.14095v1 Announce Type: new Abstract: Retrieval Augmented Generation (RAG) has proven
 to be a widely successful process at improving the quality of outputs from a Large Language
 Model (LLM) for wider context. However, RAG systems typically retrieve context from flat…
 
-### 6. [IMEX Interaction-Based Model Explanation](https://arxiv.org/abs/2607.14096)
-- **Source:** arXiv cs.AI · **Published:** 2026-07-17
+### 3. [IMEX Interaction-Based Model Explanation](https://arxiv.org/abs/2607.14096)
+- **Source:** arXiv cs.AI · **Published:** 2026-07-18
 - **Feed summary:** arXiv:2607.14096v1 Announce Type: new Abstract: In predictive modeling, the ability to explain
 why a model produces a given target prediction has become increasingly important [5, 10]. Black-
 box models do not provide a transparent description of the internal mechanisms that…
 
-### 7. [RegNetAgents: A Multi-Agent Framework for Cross-Network Regulatory Driver Identification in Cancer Genomics](https://arxiv.org/abs/2607.14097)
-- **Source:** arXiv cs.AI · **Published:** 2026-07-17
+### 4. [RegNetAgents: A Multi-Agent Framework for Cross-Network Regulatory Driver Identification in Cancer Genomics](https://arxiv.org/abs/2607.14097)
+- **Source:** arXiv cs.AI · **Published:** 2026-07-18
 - **Feed summary:** arXiv:2607.14097v1 Announce Type: new Abstract: We introduce RegNetAgents, an AI-oriented multi-
 agent framework for structured, query-driven regulatory candidate identification across
 heterogeneous gene regulatory networks. The system enables unified analysis of bulk tumor and…
+
+### 5. [Following the questions where they lead](https://news.mit.edu/2026/following-questions-where-they-lead-bailey-flanigan-0717)
+- **Source:** MIT News AI · **Published:** 2026-07-17
+- **Feed summary:** Assistant Professor Bailey Flanigan has arrived at complex computational methods for helping
+democracy thrive.
+
+### 6. [Fine-tune video and image models at scale with NVIDIA NeMo Automodel and 🤗 Diffusers](https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel)
+- **Source:** Hugging Face Blog · **Published:** 2026-07-17
+
+### 7. [A scorecard for the AI age](https://openai.com/index/a-scorecard-for-the-ai-age)
+- **Source:** OpenAI News · **Published:** 2026-07-17
+- **Feed summary:** Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful
+work, cost per successful task, dependability, and return on compute.
 
 ### 8. [The AI compute gap: Enterprises are buying infrastructure faster than they can measure what it costs](https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs)
 - **Source:** VentureBeat AI · **Published:** 2026-07-16

@@ -210,5 +210,113 @@
       "How much of post-hoc abstention can be eliminated by requiring dry-run plans before commit-class tool calls?"
     ],
     "report_path": "reports/2026-07-17_afternoon_gwern_essay.md"
+  },
+  {
+    "id": "2026-07-18-morning",
+    "date": "2026-07-18",
+    "cadence": "morning",
+    "title": "AI Research OS Morning Briefing — 2026-07-18",
+    "executive_summary": "Agents are shifting from model demos to operating-system discipline: open multimodal frontier models, persistent search state, causal retrieval metrics, cost-aware security evals, and deterministic safety gates around coding-agent setup. The practical opportunity is agent reliability engineering for vertical workflows, especially finance and company-OS automation.",
+    "key_claims": [
+      "Thinking Machines’ Inkling release on Hugging Face is positioned as a large open multimodal MoE model: 975B total / 41B active parameters, 1M context, image/audio/text input, tool calling, Apache-2.0 licensing, and model-card evals including 77.6% SWE-bench Verified and 54.3% SWE-bench Pro.",
+      "Bridge Evidence argues static RAG relevance is a poor proxy for agentic search value: in 23,322 document observations, Static RAG Utility and Counterfactual Trajectory Utility are nearly independent (Spearman rho = -0.026).",
+      "A new coding-agent security paper shows ordinary setup instructions can redirect agents into supply-chain attacks; deterministic pre-install checks for package names, sources, and versions close most of the evaluated gap.",
+      "Cost-aware security-agent evaluation is becoming a priority: defensive SOC tasks appear to depend more on disciplined tool/telemetry use than raw test-time compute.",
+      "SearchOS-V1 externalizes search progress into persistent state—Frontier Task, Evidence Graph, Coverage Map, and Failure Memory—to reduce repeated search loops and improve information-seeking agents.",
+      "NVIDIA is emphasizing open-stack agent economics: Nemotron 3 Ultra plus LangChain Deep Agents is claimed to reduce inference cost per run versus leading closed models, while Nemotron 3 Embed targets agentic retrieval and production RAG.",
+      "Domain-specialized adaptation remains a live product pattern: DharmaOCR attributes Brazilian Portuguese OCR gains to targeted SFT plus DPO stability tuning rather than newer general architectures alone.",
+      "Voice-agent evaluation is broadening beyond latency/WER: HumeAI’s Real World VoiceEQ uses large human-rating sets and highlights accents, emotion, noise, and long conversations as persistent gaps."
+    ],
+    "papers": [
+      {
+        "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
+        "url": "https://arxiv.org/abs/2607.15253v1",
+        "arxiv_id": "2607.15253v1",
+        "implication": "Research and trading agents should evaluate whether evidence changes the next query/trajectory, not only whether it answers the current question."
+      },
+      {
+        "title": "Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents",
+        "url": "https://arxiv.org/abs/2607.15143v1",
+        "arxiv_id": "2607.15143v1",
+        "implication": "Dependency installation is a privileged commit boundary; coding agents need deterministic package-source verification before running setup steps."
+      },
+      {
+        "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
+        "url": "https://arxiv.org/abs/2607.15263v1",
+        "arxiv_id": "2607.15263v1",
+        "implication": "Agent benchmarks should report fixed-budget success, tool spend, and operational fit—not only peak success under generous inference budgets."
+      }
+    ],
+    "concepts": [
+      "Inkling",
+      "open multimodal frontier model",
+      "agent OS",
+      "bridge evidence",
+      "counterfactual trajectory utility",
+      "agentic retrieval",
+      "coding-agent supply chain security",
+      "commit boundary",
+      "cost-aware evals",
+      "SearchOS",
+      "failure memory",
+      "domain specialization",
+      "voice AI evaluation"
+    ],
+    "sources": [
+      {
+        "title": "Thinking Machines / Hugging Face: Welcome Inkling by Thinking Machines",
+        "url": "https://huggingface.co/blog/thinkingmachines-inkling"
+      },
+      {
+        "title": "Hugging Face model card: thinkingmachines/Inkling",
+        "url": "https://huggingface.co/thinkingmachines/Inkling"
+      },
+      {
+        "title": "arXiv 2607.15253: Bridge Evidence",
+        "url": "https://arxiv.org/abs/2607.15253v1"
+      },
+      {
+        "title": "arXiv 2607.15143: Setup Complete, Now You Are Compromised",
+        "url": "https://arxiv.org/abs/2607.15143v1"
+      },
+      {
+        "title": "arXiv 2607.15263: Cost-Aware Evaluation of Security Agents",
+        "url": "https://arxiv.org/abs/2607.15263v1"
+      },
+      {
+        "title": "arXiv 2607.15257: SearchOS-V1",
+        "url": "https://arxiv.org/abs/2607.15257v1"
+      },
+      {
+        "title": "NVIDIA: Nemotron with LangChain Deep Agents Harness",
+        "url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/"
+      },
+      {
+        "title": "NVIDIA / Hugging Face: Nemotron 3 Embed ranks #1 on RTEB",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb"
+      },
+      {
+        "title": "Dharma-AI / Hugging Face: Newer Models, Same Advantage",
+        "url": "https://huggingface.co/blog/Dharma-AI/newer-models-same-advantages"
+      },
+      {
+        "title": "HumeAI / Hugging Face: Real World VoiceEQ",
+        "url": "https://huggingface.co/blog/real-world-voiceeq"
+      }
+    ],
+    "implications": {
+      "AI/product": "Expose state, coverage gaps, failed attempts, and commit gates in the product UI. A serious agent cockpit beats another chat wrapper.",
+      "finance/trading": "Measure bridge evidence: filings/news/transcripts may matter because they introduce the next entity or query, not because they directly answer the first prompt. No-trade and ask-clarification states should count as successful outcomes.",
+      "agentic company OS": "Add deterministic preflight checks for dependency installs, external API calls, credential use, and customer-visible writes; maintain evidence graphs and failure memory across runs.",
+      "career/opportunities": "Agent reliability engineering is the wedge: cost-aware eval harnesses, retrieval trajectory metrics, secure tool execution, and domain-specific adaptation for regulated verticals."
+    },
+    "open_questions": [
+      "Will Inkling’s long-context multimodal capability transfer to enterprise agent workloads, or are results harness-sensitive?",
+      "Can retrieval stacks measure counterfactual trajectory utility cheaply enough for routine evals?",
+      "Which coding-agent vendors will make package-source verification a default pre-install guard?",
+      "Will security and finance agent benchmarks converge on cost-normalized leaderboards?",
+      "Does Nemotron 3 Embed’s RTEB performance transfer to proprietary corpora and long-lived agent memory?"
+    ],
+    "report_path": "reports/2026-07-18_morning_briefing.md"
   }
 ]

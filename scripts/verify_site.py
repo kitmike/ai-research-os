@@ -23,6 +23,8 @@ HTML_SENTINELS = [
     "Latest cited-source ledger",
     "sourceAudit",
     "Concept Dashboard",
+    "Research Integrity Packet",
+    "integrityChecks",
     "data/research.json",
     "agilentic/ai-research-wire",
     "No hidden tracking",

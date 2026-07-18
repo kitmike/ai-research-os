@@ -318,5 +318,102 @@
       "Does Nemotron 3 Embed’s RTEB performance transfer to proprietary corpora and long-lived agent memory?"
     ],
     "report_path": "reports/2026-07-18_morning_briefing.md"
+  },
+  {
+    "id": "2026-07-18-afternoon",
+    "date": "2026-07-18",
+    "cadence": "afternoon",
+    "title": "Bridge Evidence and the Retrieval Metric Mismatch",
+    "executive_summary": "Bridge Evidence is this afternoon’s key paper because it measures a structural mismatch in agentic retrieval: documents that help a multi-step search agent are often not documents that help a stateless reader. Using counterfactual replay over 1,000 HotpotQA questions and 23,322 document observations, the authors report near-zero correlation between Static RAG Utility and Counterfactual Trajectory Utility (Spearman rho −0.0257). The lesson for research, trading, and company-OS agents is that retrieval should be evaluated by trajectory steering—what evidence causes the next useful query—not only answer-local relevance.",
+    "key_claims": [
+      "The paper introduces Counterfactual Trajectory Exploration: remove one shown document from an agent trajectory, replay from that point, and measure how answer quality, next-query quality, and effort change.",
+      "Across 23,322 document observations from 1,000 HotpotQA development questions, Static RAG Utility and Counterfactual Trajectory Utility are reported as nearly independent (Spearman rho −0.0257).",
+      "The reader-based quadrant puts 35.72% of read documents in the bridge cell—low static utility but high causal trajectory utility—but the authors correctly caution that this percentage largely follows from independence plus a skewed static axis.",
+      "A robustness check using BM25 plus cross-encoder scores instead of a stateless reader still yields a 27.16% bridge cell over 9,600 agreement records, with proxy/CTU correlation near zero (rho −0.0161, p=0.116).",
+      "The mechanism appears entity-level: high Observable Entity Relevance entities propagate into the agent’s next query 4.02× more often than low-OER entities under exact matching (6.1% vs 1.5%, n=227,139).",
+      "CTU is explicitly agent-specific: the result is measured for Qwen2.5-7B-Instruct under one ReAct-style prompt and retrieval stack, not claimed as a universal document property.",
+      "For finance and company-OS agents, evidence should be logged as answer evidence, bridge evidence, or risk/abstention evidence; final citations alone omit the path-forming sources."
+    ],
+    "papers": [
+      {
+        "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
+        "url": "https://arxiv.org/abs/2607.15253v1",
+        "arxiv_id": "2607.15253v1",
+        "implication": "Agentic retrieval should optimize trajectory utility and lead discovery, not only static reader usefulness."
+      },
+      {
+        "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+        "url": "https://arxiv.org/abs/2607.15257v1",
+        "arxiv_id": "2607.15257v1",
+        "implication": "Persistent search state—frontier tasks, evidence graphs, coverage maps, and failure memory—is the natural product substrate for bridge-evidence-aware agents."
+      },
+      {
+        "title": "Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents",
+        "url": "https://arxiv.org/abs/2607.15143v1",
+        "arxiv_id": "2607.15143v1",
+        "implication": "Agent OSs need deterministic pre-commit gates around tool execution, complementing trajectory-aware retrieval."
+      },
+      {
+        "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
+        "url": "https://arxiv.org/abs/2607.15263v1",
+        "arxiv_id": "2607.15263v1",
+        "implication": "Agent evaluation should track operational cost and tool-use discipline as well as final task success."
+      }
+    ],
+    "concepts": [
+      "bridge evidence",
+      "Static RAG Utility",
+      "Counterfactual Trajectory Utility",
+      "Counterfactual Trajectory Exploration",
+      "agentic retrieval",
+      "next-query delta",
+      "Observable Entity Relevance",
+      "evidence graph",
+      "coverage map",
+      "finance lead ledger",
+      "trajectory steering",
+      "agent reliability engineering"
+    ],
+    "sources": [
+      {
+        "title": "arXiv: Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
+        "url": "https://arxiv.org/abs/2607.15253v1"
+      },
+      {
+        "title": "arXiv HTML: Bridge Evidence full text",
+        "url": "https://arxiv.org/html/2607.15253v1"
+      },
+      {
+        "title": "arXiv: SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+        "url": "https://arxiv.org/abs/2607.15257v1"
+      },
+      {
+        "title": "arXiv: Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents",
+        "url": "https://arxiv.org/abs/2607.15143v1"
+      },
+      {
+        "title": "arXiv: Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
+        "url": "https://arxiv.org/abs/2607.15263v1"
+      },
+      {
+        "title": "arXiv: Entity labels are not entity signals: a framework for observable relevance in document re-ranking",
+        "url": "https://arxiv.org/abs/2606.15998"
+      }
+    ],
+    "implications": {
+      "AI/product": "Expose a lead ledger and evidence graph: show which source changed the next query or plan, not only which sources support the final answer.",
+      "finance/trading": "Evaluate filings, transcripts, news, supplier links, and legal-entity clues by whether they redirect the research trajectory. Add bridge evidence and no-trade/risk evidence to the audit trail.",
+      "agentic company OS": "Treat retrieval as state transition. Persist frontier tasks, coverage gaps, failed searches, bridge documents, and commit-risk evidence across runs.",
+      "career/opportunities": "Agent retrieval evaluation engineering—CTU approximations, OER-like selectors, path provenance, and cost-aware retrieval policies—is a defensible high-leverage niche."
+    },
+    "open_questions": [
+      "Does SRU/CTU independence replicate on live web research tasks and proprietary enterprise corpora?",
+      "Do frontier models reduce bridge dependence, or do they simply exploit bridge documents more effectively?",
+      "Can OER-like features approximate CTU cheaply enough for ranking/training without counterfactual replay?",
+      "What is the right finance benchmark for bridge evidence across filings, transcripts, supplier networks, and macro variables?",
+      "How should final agent reports cite bridge evidence that changed the path but does not directly support the final claim?",
+      "What is the cost frontier: how much bridge-evidence recall is worth extra retrieval/tool spend?"
+    ],
+    "report_path": "reports/2026-07-18_afternoon_gwern_essay.md"
   }
 ]

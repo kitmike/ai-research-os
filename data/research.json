@@ -415,5 +415,143 @@
       "What is the cost frontier: how much bridge-evidence recall is worth extra retrieval/tool spend?"
     ],
     "report_path": "reports/2026-07-18_afternoon_gwern_essay.md"
+  },
+  {
+    "id": "2026-07-19-morning",
+    "date": "2026-07-19",
+    "cadence": "morning",
+    "title": "AI Research OS Morning Briefing — 2026-07-19",
+    "executive_summary": "The Sunday morning signal is not a new frontier-model drop; it is a cluster of agent-operating-system hardening papers and platform posts. The highest-value thread: production agents now need evidence-bound setup, permissioning, memory governance, MCP/runtime security, and domain-specific skills.",
+    "key_claims": [
+      "Coding-agent setup is now a supply-chain surface: a new arXiv paper studies package-install-time attacks delivered through ordinary setup documentation such as READMEs, requirements files, and Makefiles.",
+      "Alipay-PIBench brings payment integration closer to realistic coding-agent evaluation: nine product-specific projects, 18 task instances, Basic and Advanced scenarios, and a reported 10.31 percentage-point average gain from an Alipay integration skill.",
+      "Agent governance papers are converging on action records and permissions: CAVA proposes canonical runtime action objects, while a permissions survey studies user-level policies across agent proposals.",
+      "MCP security is shifting from semantic suspicion to runtime evidence: FlowGuard verifies execution-related risks with probes, while MCPEvol-Bench tests adaptation to evolving MCP servers.",
+      "Persistent agent memory is a live threat surface: MemPoison reports 1,227 hand-validated cases spanning four attack types, three injection channels, and three memory substrates.",
+      "GitHub’s Copilot code-review post shows harness design matters: shared grep/glob/view tools initially worsened cost/effectiveness, but task-specific workflow instructions delivered roughly 20% lower average review cost at the same quality.",
+      "Open multimodal infrastructure keeps advancing: Hugging Face’s Inkling post describes a 1T-parameter, 1M-context multimodal open model with BF16/NVFP4 variants and day-0 Transformers/SGLang/llama.cpp support.",
+      "NVIDIA and Hugging Face are productizing diffusion fine-tuning through NeMo Automodel + Diffusers recipes, including 8× H100 80GB benchmark measurements."
+    ],
+    "papers": [
+      {
+        "title": "Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents",
+        "url": "https://arxiv.org/abs/2607.15143v1",
+        "arxiv_id": "2607.15143v1",
+        "implication": "Treat repository setup instructions as untrusted executable input; add dependency provenance and sandboxed install review to code-agent workflows."
+      },
+      {
+        "title": "Alipay-PIBench: A Realistic Payment Integration Benchmark for Coding Agents",
+        "url": "https://arxiv.org/abs/2607.14573v1",
+        "arxiv_id": "2607.14573v1",
+        "implication": "Finance agents need domain skills plus deterministic rubrics for transaction correctness and risk-aware hardening."
+      },
+      {
+        "title": "CAVA: Canonical Action Verification and Attestation for Runtime Governance of Agentic AI Systems",
+        "url": "https://arxiv.org/abs/2607.13716v1",
+        "arxiv_id": "2607.13716v1",
+        "implication": "Agent OS design should include canonical action receipts that bind approval, execution, and replayable evidence."
+      },
+      {
+        "title": "FlowGuard: From Signals to Evidence for MCP Security Detection",
+        "url": "https://arxiv.org/abs/2607.14754v1",
+        "arxiv_id": "2607.14754v1",
+        "implication": "MCP gateways should move beyond metadata scanning toward runtime evidence and history-guided probes."
+      },
+      {
+        "title": "MemPoison: Uncovering Persistent Memory Threats and Structural Blind Spots in LLM Agents",
+        "url": "https://arxiv.org/abs/2607.14651v1",
+        "arxiv_id": "2607.14651v1",
+        "implication": "Persistent company memory needs provenance, write gates, quarantine, TTLs, and conflict review."
+      },
+      {
+        "title": "Why Git Is the Memory Solution for the Agentic Development Lifecycle",
+        "url": "https://arxiv.org/abs/2607.14390v1",
+        "arxiv_id": "2607.14390v1",
+        "implication": "Git-bound memory may be a practical substrate for agentic software organizations because it inherits commit/review/merge guarantees."
+      }
+    ],
+    "concepts": [
+      "coding-agent supply chain",
+      "package-install attacks",
+      "payment integration benchmark",
+      "domain skills",
+      "canonical action verification",
+      "agent permissions",
+      "MCP security",
+      "runtime evidence",
+      "persistent memory poisoning",
+      "Git-bound memory",
+      "harness engineering",
+      "open multimodal models",
+      "diffusion fine-tuning"
+    ],
+    "sources": [
+      {
+        "title": "Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents",
+        "url": "https://arxiv.org/abs/2607.15143v1"
+      },
+      {
+        "title": "Alipay-PIBench: A Realistic Payment Integration Benchmark for Coding Agents",
+        "url": "https://arxiv.org/abs/2607.14573v1"
+      },
+      {
+        "title": "CAVA: Canonical Action Verification and Attestation for Runtime Governance of Agentic AI Systems",
+        "url": "https://arxiv.org/abs/2607.13716v1"
+      },
+      {
+        "title": "How Agents Ask for Permission: User Permissions for AI Agents, from Interfaces to Enforcement",
+        "url": "https://arxiv.org/abs/2607.13718v1"
+      },
+      {
+        "title": "FlowGuard: From Signals to Evidence for MCP Security Detection",
+        "url": "https://arxiv.org/abs/2607.14754v1"
+      },
+      {
+        "title": "MCPEvol-Bench: Benchmarking LLM Agent Performance Across Dynamic Evolutions of MCP Servers",
+        "url": "https://arxiv.org/abs/2607.14642v1"
+      },
+      {
+        "title": "MemPoison: Uncovering Persistent Memory Threats and Structural Blind Spots in LLM Agents",
+        "url": "https://arxiv.org/abs/2607.14651v1"
+      },
+      {
+        "title": "Why Git Is the Memory Solution for the Agentic Development Lifecycle",
+        "url": "https://arxiv.org/abs/2607.14390v1"
+      },
+      {
+        "title": "Are LLM-Generated GPU Kernels Production-Ready? A Trace-Driven Benchmark and Optimization Agent",
+        "url": "https://arxiv.org/abs/2607.14541v1"
+      },
+      {
+        "title": "AI-Native Insurance for Agentic AI: Pricing, Underwriting, and End-to-End Automation",
+        "url": "https://arxiv.org/abs/2607.13230v1"
+      },
+      {
+        "title": "GitHub Blog: Better tools made Copilot code review worse. Here’s how we actually improved it.",
+        "url": "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/"
+      },
+      {
+        "title": "Hugging Face / Thinking Machines: Welcome Inkling by Thinking Machines",
+        "url": "https://huggingface.co/blog/thinkingmachines-inkling"
+      },
+      {
+        "title": "Hugging Face / NVIDIA: Fine-tune video and image models at scale with NVIDIA NeMo Automodel and Diffusers",
+        "url": "https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel"
+      }
+    ],
+    "implications": {
+      "AI/product": "Move from capability demos to evidence packets: setup plan, dependency provenance, permission request, action receipt, tests passed, and rollback state.",
+      "finance/trading": "Financial agents need domain-specific skills, hardening rubrics, approval ledgers for money movement, and successful no-trade/no-transfer outcomes.",
+      "agentic company OS": "Center the OS on source, memory, permission, action, and evaluation ledgers. Git-bound memory is a pragmatic default for software organizations.",
+      "career/opportunities": "Strong opportunity in agent reliability/security engineering: MCP threat modeling, sandboxed package installs, eval rubrics, domain skill authoring, and audit-friendly approval UX."
+    },
+    "open_questions": [
+      "Will setup-instruction attacks become the first mainstream exploit class for coding agents, and will vendors add default package provenance checks?",
+      "Which MCP security approach wins: semantic scanning, runtime probing, formal schemas, or gateway-mediated policy enforcement?",
+      "Can domain skills like the Alipay integration skill transfer across banks/payment providers, or are they mostly vendor-specific?",
+      "Does Git-bound memory outperform vector memory in long-lived multi-agent organizations after repositories cross millions of lines?",
+      "Will open 1T multimodal models with 1M context be economically useful for private company OS deployments, or mainly serve as frontier benchmarks?"
+    ],
+    "report_path": "reports/2026-07-19_morning_briefing.md"
   }
 ]

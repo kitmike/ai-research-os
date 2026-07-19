@@ -553,5 +553,122 @@
       "Will open 1T multimodal models with 1M context be economically useful for private company OS deployments, or mainly serve as frontier benchmarks?"
     ],
     "report_path": "reports/2026-07-19_morning_briefing.md"
+  },
+  {
+    "id": "2026-07-19-afternoon",
+    "date": "2026-07-19",
+    "cadence": "afternoon",
+    "title": "The Install Gap: Why Coding Agents Need Package-Trust Firewalls Before They Need More IQ",
+    "executive_summary": "Bagmar & Saraf’s new arXiv paper shows that AI coding-agent setup is an execution boundary: ordinary README/requirements/Makefile instructions can steer agents into untrusted registries, vulnerable versions, or plausible wrong package names. The decisive variable is not only model intelligence but the model–harness–package-manager boundary; deterministic pre-install checks and canonical action receipts matter more than generic security prompts.",
+    "key_claims": [
+      "The paper evaluates package-install-time attacks delivered through ordinary project setup documentation across twelve scenarios, five attack classes, nine harness-model configurations, four harnesses, and seven models.",
+      "The same model can catch an attack in one harness and install it in another, making harness mediation a first-class security surface rather than a wrapper around model intelligence.",
+      "Agents are comparatively good at obvious package-name typosquats but weak on plausible separator confusion and especially weak on source/version attacks such as registry redirection, hidden indexes, and CVE-pinned versions.",
+      "Security prompts recover only the dimension they explicitly name; a deterministic pre-install hook that verifies package names, sources, and versions before code runs is the structural defense.",
+      "Adjacent July 2026 papers on permissions, canonical action attestation, MCP runtime evidence, persistent memory poisoning, and payment-integration benchmarks point to a broader agentic OS stack: source ledger, permission ledger, action ledger, memory ledger, and evaluation ledger."
+    ],
+    "papers": [
+      {
+        "title": "Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents",
+        "url": "https://arxiv.org/abs/2607.15143v1",
+        "implication": "Coding-agent setup should be treated as an executable trust boundary with pre-install package provenance checks."
+      },
+      {
+        "title": "How Agents Ask for Permission: User Permissions for AI Agents, from Interfaces to Enforcement",
+        "url": "https://arxiv.org/abs/2607.13718v1",
+        "implication": "User permissions need runtime enforcement and policy derivation, not only high-level consent prompts."
+      },
+      {
+        "title": "CAVA: Canonical Action Verification and Attestation for Runtime Governance of Agentic AI Systems",
+        "url": "https://arxiv.org/abs/2607.13716v1",
+        "implication": "Agent actions such as package installs, exports, payments, and deploys need canonical identities and receipts."
+      },
+      {
+        "title": "FlowGuard: From Signals to Evidence for MCP Security Detection",
+        "url": "https://arxiv.org/abs/2607.14754v1",
+        "implication": "Tool security requires runtime evidence and schema-valid probing, especially as MCP becomes an integration layer."
+      },
+      {
+        "title": "MemPoison: Uncovering Persistent Memory Threats and Structural Blind Spots in LLM Agents",
+        "url": "https://arxiv.org/abs/2607.14651v1",
+        "implication": "Persistent agent memory should be governed like a mutable dependency with provenance, quarantine, and context-sensitive review."
+      },
+      {
+        "title": "Alipay-PIBench: A Realistic Payment Integration Benchmark for Coding Agents",
+        "url": "https://arxiv.org/abs/2607.14573v1",
+        "implication": "Domain skills and deterministic rubrics improve high-stakes coding agents, but must be wrapped by permission and provenance controls."
+      }
+    ],
+    "concepts": [
+      "install gap",
+      "agent setup supply-chain security",
+      "package-trust firewall",
+      "harness-model interaction",
+      "documentation as executable authority",
+      "pre-install verification hook",
+      "canonical action receipts",
+      "user-level agent permissions",
+      "MCP runtime evidence",
+      "persistent memory poisoning",
+      "domain skills for coding agents",
+      "finance agent provenance"
+    ],
+    "sources": [
+      {
+        "title": "Bagmar & Saraf — Setup Complete, Now You Are Compromised",
+        "url": "https://arxiv.org/abs/2607.15143v1"
+      },
+      {
+        "title": "Michael & Roesner — How Agents Ask for Permission",
+        "url": "https://arxiv.org/abs/2607.13718v1"
+      },
+      {
+        "title": "Wang — CAVA: Canonical Action Verification and Attestation",
+        "url": "https://arxiv.org/abs/2607.13716v1"
+      },
+      {
+        "title": "An et al. — FlowGuard: From Signals to Evidence for MCP Security Detection",
+        "url": "https://arxiv.org/abs/2607.14754v1"
+      },
+      {
+        "title": "Gao et al. — MemPoison",
+        "url": "https://arxiv.org/abs/2607.14651v1"
+      },
+      {
+        "title": "Ying et al. — Alipay-PIBench",
+        "url": "https://arxiv.org/abs/2607.14573v1"
+      },
+      {
+        "title": "GitHub Blog — Better tools made Copilot code review worse",
+        "url": "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/"
+      },
+      {
+        "title": "PyTorch Blog — Compromised nightly dependency / torchtriton",
+        "url": "https://pytorch.org/blog/compromised-nightly-dependency/"
+      },
+      {
+        "title": "Yossarian — Ultralytics YOLO compromised via GitHub Actions injection",
+        "url": "https://blog.yossarian.net/2024/12/06/zizmor-ultralytics-injection"
+      },
+      {
+        "title": "Alex Birsan — Dependency Confusion",
+        "url": "https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610"
+      }
+    ],
+    "implications": {
+      "AI/product": "Build agent trust middleware: pre-execution policy firewalls, dependency provenance checks, permission prompts bound to canonical actions, and durable receipts rather than generic chat UI safety language.",
+      "finance/trading": "Treat package/data/broker provenance as pre-trade controls. A research or trading agent should not silently add data sources, change backtest assumptions, install packages, or place orders without verifiable source and action ledgers.",
+      "agentic company OS": "Design around five ledgers: source, setup, permission, action, and memory. No autonomous coding-agent setup in privileged environments until package name/source/version checks pass or an explicit exception receipt is approved.",
+      "career/opportunities": "A high-value niche is agent reliability/security engineering: package trust, MCP risk probing, memory quarantine, action attestation, and evaluation rubrics for regulated workflows."
+    },
+    "open_questions": [
+      "Can an agent setup firewall wrap pip/uv/npm/cargo and shell execution locally without waiting for coding-agent vendor integration?",
+      "What false-positive rate would strict package-source allowlists create on real AI/ML repositories using private indexes, CUDA wheels, and nightly builds?",
+      "Which signal best predicts dangerous package-name confusion: edit distance, normalized-name collision, download asymmetry, maintainer reputation, or embedding similarity?",
+      "Can package-install receipts be standardized as a lightweight JSON schema and attached to coding-agent transcripts?",
+      "How much risk remains after sandboxed ephemeral dev containers if poisoned dependencies enter committed lockfiles?",
+      "What is the finance-agent equivalent of a CVE database for data vendors, broker APIs, and strategy templates?"
+    ],
+    "report_path": "reports/2026-07-19_afternoon_gwern_essay.md"
   }
 ]

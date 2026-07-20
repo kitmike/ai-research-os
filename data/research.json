@@ -670,5 +670,136 @@
       "What is the finance-agent equivalent of a CVE database for data vendors, broker APIs, and strategy templates?"
     ],
     "report_path": "reports/2026-07-19_afternoon_gwern_essay.md"
+  },
+  {
+    "id": "2026-07-20-morning",
+    "date": "2026-07-20",
+    "cadence": "morning",
+    "title": "AI Research OS Morning Briefing — 2026-07-20",
+    "executive_summary": "The weekend signal is a production-hardening cluster, not a single model-launch event: agentic RL is getting optimizer-level scrutiny, multi-agent systems are being reframed as compression/relay design, MoE serving is attacking KV-cache/weight-memory contention, and platform posts continue to move agents from demos toward governed work systems. For Michael, the actionable edge is to treat agents as engineered operating loops: optimize post-training, communication bandwidth, memory/permission boundaries, and cost-of-ownership together.",
+    "key_claims": [
+      "Muon improved final-window validation success from 0.290 to 0.546 in a single-seed GiGPO/ALFWorld agentic-RL setup, but the authors explicitly flag multi-seed and cross-task validation as open.",
+      "A new multi-agent-systems paper argues MAS gains come from an information-bottleneck trade-off: bounded relay messages can reduce redundant context but also lose task-relevant information.",
+      "PagedWeight targets MoE serving memory pressure by dynamically quantizing expert weights at runtime; the paper reports FP16-equivalent accuracy with up to 72.0% GPU memory savings and 1.94× throughput improvement.",
+      "A controlled pretraining-to-RL study finds post-RL performance at a given RL compute level is predicted by pretraining loss, with longer pretraining improving RL reward-curve slope in chess and a math-domain transfer test.",
+      "Open-weight LLMs can generate structured threat intelligence for autonomous-vehicle vulnerabilities with strong reported STIX/CWE scores, while complete MITRE ATT&CK mapping remains challenging.",
+      "VideoTreeSearch frames self-correction as explicit tool/action design—zoom_in, zoom_out, shift, answer—rather than relying on implicit model recovery.",
+      "GitHub’s engineering post argues generated patches are best treated as price checks; AI lowers first-patch cost, not long-run ownership cost.",
+      "Anthropic’s containment write-up frames agent deployment as blast-radius engineering across products, reinforcing the need for runtime boundaries as model access expands."
+    ],
+    "papers": [
+      {
+        "title": "When Does Muon Help Agentic Reinforcement Learning?",
+        "url": "https://arxiv.org/abs/2607.16169v1",
+        "arxiv_id": "2607.16169v1",
+        "implication": "Agentic RL post-training should tune optimizer, advantage estimator, and learning rate jointly; do not assume AdamW defaults are optimal."
+      },
+      {
+        "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+        "url": "https://arxiv.org/abs/2607.16133v1",
+        "arxiv_id": "2607.16133v1",
+        "implication": "Multi-agent architecture is a communication-compression problem; handoff protocols matter as much as the number of agents."
+      },
+      {
+        "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+        "url": "https://arxiv.org/abs/2607.16184v1",
+        "arxiv_id": "2607.16184v1",
+        "implication": "Long-context agent serving needs dynamic memory/quality policies to manage KV cache and expert-weight pressure."
+      },
+      {
+        "title": "Understanding Reasoning from Pretraining to Post-Training",
+        "url": "https://arxiv.org/abs/2607.16097v1",
+        "arxiv_id": "2607.16097v1",
+        "implication": "Pretraining quality/loss may be a practical predictor for reasoning-RL ROI before expensive post-training runs."
+      },
+      {
+        "title": "Searching Videos as Trees: Self-Correcting Agents for Grounded Long Video QA",
+        "url": "https://arxiv.org/abs/2607.16189v1",
+        "arxiv_id": "2607.16189v1",
+        "implication": "Agent tools should expose recovery/backtracking primitives explicitly when early mistakes are common."
+      }
+    ],
+    "concepts": [
+      "agentic RL optimizer choice",
+      "Muon",
+      "GiGPO",
+      "GRPO",
+      "GraphGPO",
+      "multi-agent information bottleneck",
+      "relay bandwidth",
+      "handoff compression",
+      "dynamic MoE quantization",
+      "KV-cache memory",
+      "expert-weight memory",
+      "reasoning pretraining-to-RL interface",
+      "structured threat intelligence",
+      "STIX generation",
+      "self-correcting agents",
+      "VideoTreeSearch",
+      "AI code ownership cost",
+      "agent containment",
+      "blast-radius caps"
+    ],
+    "sources": [
+      {
+        "title": "arXiv 2607.16169: When Does Muon Help Agentic Reinforcement Learning?",
+        "url": "https://arxiv.org/abs/2607.16169v1"
+      },
+      {
+        "title": "arXiv 2607.16133: When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+        "url": "https://arxiv.org/abs/2607.16133v1"
+      },
+      {
+        "title": "arXiv 2607.16184: PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+        "url": "https://arxiv.org/abs/2607.16184v1"
+      },
+      {
+        "title": "arXiv 2607.16097: Understanding Reasoning from Pretraining to Post-Training",
+        "url": "https://arxiv.org/abs/2607.16097v1"
+      },
+      {
+        "title": "arXiv 2607.16175: Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+        "url": "https://arxiv.org/abs/2607.16175v1"
+      },
+      {
+        "title": "arXiv 2607.16189: Searching Videos as Trees: Self-Correcting Agents for Grounded Long Video QA",
+        "url": "https://arxiv.org/abs/2607.16189v1"
+      },
+      {
+        "title": "arXiv 2607.16131: ToolSciVer: Multimodal Scientific Claim Verification with Visual Tool Augmented Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2607.16131v1"
+      },
+      {
+        "title": "GitHub Blog: The cost of saying yes has changed",
+        "url": "https://github.blog/engineering/the-cost-of-saying-yes-has-changed/"
+      },
+      {
+        "title": "Anthropic Engineering: How we contain Claude across products",
+        "url": "https://www.anthropic.com/engineering/how-we-contain-claude"
+      },
+      {
+        "title": "NVIDIA Blog: NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness",
+        "url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/"
+      },
+      {
+        "title": "Hugging Face / NVIDIA: Fine-tune video and image models at scale with NVIDIA NeMo Automodel and Diffusers",
+        "url": "https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel"
+      }
+    ],
+    "implications": {
+      "AI/product": "Build agent products around operating constraints, not persona metaphors: optimizer/post-training choices, relay schemas, backtracking tools, cost gates, and containment policies should be first-class product surfaces.",
+      "finance/trading": "The finance analogue of CAV-STIXGen is structured extraction from filings, broker notes, risk events, and trade rationales into auditable schemas, with no-trade/no-action policies and serving-cost controls.",
+      "agentic company OS": "Design the OS around relay contracts, memory/serving budgets tied to task value, explicit recovery/backtracking tools, and containment levels matched to external blast radius.",
+      "career/opportunities": "High-signal niche: agent systems engineer for regulated workflows, combining RL post-training literacy, model-serving economics, schema-based extraction/evals, permission/containment design, and ownership-aware code review."
+    },
+    "open_questions": [
+      "Do Muon’s agentic-RL gains survive multi-seed, larger-model, and non-ALFWorld tests?",
+      "What relay format best preserves task-relevant information across agents: natural-language briefs, structured JSON, execution traces, or source-linked ledgers?",
+      "Can dynamic MoE weight quantization be safely tied to business SLAs, e.g. low precision for exploratory analysis and higher precision for trade/risk decisions?",
+      "Will pretraining-loss predictors become a standard go/no-go rule before expensive reasoning RL?",
+      "Which agent platforms expose backtracking and containment as native UX primitives rather than hidden system prompts?",
+      "How should finance agents price ownership cost: reviewer time, test coverage, operational risk, compliance auditability, and compute spend?"
+    ],
+    "report_path": "reports/2026-07-20_morning_briefing.md"
   }
 ]

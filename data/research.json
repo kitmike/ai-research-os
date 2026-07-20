@@ -801,5 +801,87 @@
       "How should finance agents price ownership cost: reviewer time, test coverage, operational risk, compliance auditability, and compute spend?"
     ],
     "report_path": "reports/2026-07-20_morning_briefing.md"
+  },
+  {
+    "id": "2026-07-20-afternoon",
+    "date": "2026-07-20",
+    "cadence": "afternoon",
+    "title": "Relay Bandwidth Is the Real Multi-Agent Architecture",
+    "executive_summary": "Yu et al.’s arXiv paper reframes LLM multi-agent systems as bounded relay-compression systems rather than miniature org charts. Under infinite relay bandwidth, a MAS can simulate a single-agent system by passing full upstream context, so the nontrivial advantage appears only when compressed handoffs remove more nuisance context than downstream-relevant state. Across 18 controlled comparisons on five benchmarks and three model scales, MAS gains are positive on low-relay-complexity tasks such as ALFWorld, WideSearch, and TravelPlanner commonsense checks, but shrink or reverse on globally coupled tasks such as WorkBench and TravelPlanner hard constraints. The product implication is clear: build relay contracts, state ledgers, sufficiency checks, and escalation paths before adding more agents.",
+    "key_claims": [
+      "The paper’s central abstraction is context flow: SAS accumulates one shared context, while MAS isolates worker contexts and connects them through bounded relay messages.",
+      "The authors prove an infinite-bandwidth equivalence: with full-context relays, a MAS can simulate any SAS, so the interesting MAS effect arises from bounded relay compression.",
+      "Their local MAS gain decomposition is context-reduction benefit minus capability-weighted relay information loss: G_i^MAS = H(M_i | m_i) - beta * Delta_i(m_i).",
+      "MAS-vs-SAS-contextflow gains are positive on low-relay-complexity tasks: ALFWorld (+0.194, +0.157, +0.023), WideSearch (+0.079, +0.063, +0.028), and TravelPlanner-CS (+0.011, +0.183, +0.028) across Qwen2.5-7B, GPT-4o-mini, and Qwen3.5-27B.",
+      "MAS gains shrink or reverse on higher-relay-complexity tasks: WorkBench is negative across all three models, WebShop flips to -0.003 on Qwen3.5-27B, and TravelPlanner-HC flips to -0.233 on Qwen3.5-27B.",
+      "The paper’s limitations are operationally important: beta is qualitative rather than directly estimated, and relay complexity delta is assigned by task-structure analysis rather than measured as a true minimum sufficient relay length.",
+      "For production agent systems, the decisive design object is the relay contract: downstream target, required state, omitted state, provenance, and recovery path."
+    ],
+    "papers": [
+      {
+        "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+        "url": "https://arxiv.org/abs/2607.16133v1",
+        "arxiv_id": "2607.16133v1",
+        "implication": "Multi-agent architecture should be evaluated as relay compression: split tasks only when bounded handoffs preserve downstream-relevant information."
+      },
+      {
+        "title": "MAS-SAS GitHub repository",
+        "url": "https://github.com/divelab/MAS-SAS",
+        "implication": "The released repository documents installation, benchmark data preparation, and the controlled SAS/SAS-contextflow/MAS/SAS-Plan prototypes for replication."
+      }
+    ],
+    "concepts": [
+      "multi-agent systems",
+      "single-agent systems",
+      "information bottleneck",
+      "relay bandwidth",
+      "relay compression",
+      "relay information loss",
+      "context reduction",
+      "SAS-contextflow",
+      "relay complexity",
+      "local sufficiency",
+      "hidden long-range dependency",
+      "agent handoff contracts",
+      "relay ledger",
+      "agentic company OS"
+    ],
+    "sources": [
+      {
+        "title": "arXiv: When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+        "url": "https://arxiv.org/abs/2607.16133v1"
+      },
+      {
+        "title": "arXiv HTML full text: When Do Multi-Agent Systems Help?",
+        "url": "https://arxiv.org/html/2607.16133v1"
+      },
+      {
+        "title": "GitHub: divelab/MAS-SAS",
+        "url": "https://github.com/divelab/MAS-SAS"
+      },
+      {
+        "title": "Raw GitHub README: divelab/MAS-SAS",
+        "url": "https://raw.githubusercontent.com/divelab/MAS-SAS/main/README.md"
+      },
+      {
+        "title": "AI Research OS morning context: 2026-07-20 briefing",
+        "url": "reports/2026-07-20_morning_briefing.md"
+      }
+    ],
+    "implications": {
+      "AI/product": "Position serious agent products around handoff governance rather than agent count: relay schema editor, handoff diff viewer, relay-risk score, and automatic fallback from summary to source trace.",
+      "finance/trading": "Financial research agents should preserve machine-readable global constraints—tickers, timestamps, source URLs, restatement flags, covenants, liquidity constraints, assumptions—rather than handing off only prose summaries.",
+      "agentic company OS": "Add a relay ledger beside the source, action, memory, and evaluation ledgers: every handoff should state the downstream target, required state, omitted state, provenance, and recovery/escalation path.",
+      "career/opportunities": "Agent reliability engineering now includes information architecture: deciding when to split work, when to keep shared context, and how to test whether a relay is sufficient for downstream action."
+    },
+    "open_questions": [
+      "Can effective beta be measured from context-clutter and summary-compression sensitivity rather than treated qualitatively?",
+      "Can relay complexity delta be estimated automatically using state reconstruction, counterfactual compression sweeps, or downstream sufficiency tests?",
+      "On real company workflows, how often do SAS, SAS-contextflow, and MAS differ once total token/tool budgets are matched?",
+      "Do structured JSON/state relays outperform natural-language summaries on high-relay-complexity finance and operations tasks?",
+      "When should a downstream agent escalate to the full upstream trace instead of trusting a bounded relay?",
+      "What is the right finance benchmark for hidden long-range dependencies across filings, transcripts, corporate actions, and portfolio constraints?"
+    ],
+    "report_path": "reports/2026-07-20_afternoon_gwern_essay.md"
   }
 ]

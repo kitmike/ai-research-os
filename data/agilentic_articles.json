@@ -1,9 +1,10 @@
 [
   {
-    "slug": "ai-news-wire-2026-07-18",
-    "title": "AI News Wire — 2026-07-18",
-    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-18.",
-    "date": "2026-07-18",
+    "slug": "ai-news-wire-2026-07-20",
+    "title": "AI News Wire — 2026-07-20",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-20.",
+    "date": "2026-07-20",
+    "updated": null,
     "tags": [
       "ai-news",
       "research-wire",
@@ -12,9 +13,69 @@
       "arxiv",
       "frontier-models",
       "industry",
-      "mlops"
+      "mlops",
+      "open-source",
+      "openai"
     ],
     "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "4 min read",
+    "url": "/research/ai-news-wire-2026-07-20/",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-20.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-20/"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-19",
+    "title": "AI News Wire — 2026-07-19",
+    "description": "Automated AI news brief from Google DeepMind Blog, Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI. Newest source item: 2026-07-17.",
+    "date": "2026-07-19",
+    "updated": null,
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "deepmind",
+      "frontier-models",
+      "industry",
+      "mlops",
+      "open-source",
+      "openai"
+    ],
+    "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "4 min read",
+    "url": "/research/ai-news-wire-2026-07-19/",
+    "source_repo": "agilentic/ai-research-wire",
+    "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-19.md",
+    "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-19/"
+  },
+  {
+    "slug": "ai-news-wire-2026-07-18",
+    "title": "AI News Wire — 2026-07-18",
+    "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-18.",
+    "date": "2026-07-18",
+    "updated": null,
+    "tags": [
+      "ai-news",
+      "research-wire",
+      "academia",
+      "ai",
+      "arxiv",
+      "frontier-models",
+      "industry",
+      "mlops",
+      "open-source",
+      "openai"
+    ],
+    "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "4 min read",
+    "url": "/research/ai-news-wire-2026-07-18/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-18.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-18/"
@@ -24,17 +85,24 @@
     "title": "AI News Wire — 2026-07-17",
     "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-17.",
     "date": "2026-07-17",
+    "updated": null,
     "tags": [
       "ai-news",
       "research-wire",
+      "academia",
       "ai",
       "arxiv",
-      "deepmind",
       "frontier-models",
       "industry",
-      "mlops"
+      "mlops",
+      "open-source",
+      "openai"
     ],
     "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "4 min read",
+    "url": "/research/ai-news-wire-2026-07-17/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-17.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-17/"
@@ -44,6 +112,7 @@
     "title": "AI News Wire — 2026-07-16",
     "description": "Automated AI news brief from Google DeepMind Blog, Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-16.",
     "date": "2026-07-16",
+    "updated": null,
     "tags": [
       "ai-news",
       "research-wire",
@@ -52,9 +121,15 @@
       "arxiv",
       "deepmind",
       "frontier-models",
-      "industry"
+      "industry",
+      "mlops",
+      "open-source"
     ],
     "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "4 min read",
+    "url": "/research/ai-news-wire-2026-07-16/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-16.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-16/"
@@ -64,6 +139,7 @@
     "title": "AI News Wire — 2026-07-15",
     "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-15.",
     "date": "2026-07-15",
+    "updated": null,
     "tags": [
       "ai-news",
       "research-wire",
@@ -72,9 +148,15 @@
       "arxiv",
       "frontier-models",
       "mlops",
-      "open-source"
+      "open-source",
+      "openai",
+      "research"
     ],
     "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "3 min read",
+    "url": "/research/ai-news-wire-2026-07-15/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-15.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-15/"
@@ -84,6 +166,7 @@
     "title": "AI News Wire — 2026-07-14",
     "description": "Automated AI news brief from Google DeepMind Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-14.",
     "date": "2026-07-14",
+    "updated": null,
     "tags": [
       "ai-news",
       "research-wire",
@@ -92,9 +175,14 @@
       "arxiv",
       "deepmind",
       "frontier-models",
-      "openai"
+      "openai",
+      "research"
     ],
     "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "4 min read",
+    "url": "/research/ai-news-wire-2026-07-14/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-14.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-14/"
@@ -104,6 +192,7 @@
     "title": "AI News Wire — 2026-07-13",
     "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-13.",
     "date": "2026-07-13",
+    "updated": null,
     "tags": [
       "ai-news",
       "research-wire",
@@ -112,9 +201,15 @@
       "arxiv",
       "frontier-models",
       "mlops",
-      "open-source"
+      "open-source",
+      "openai",
+      "research"
     ],
     "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "3 min read",
+    "url": "/research/ai-news-wire-2026-07-13/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-13.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-13/"
@@ -124,6 +219,7 @@
     "title": "AI News Wire — 2026-07-12",
     "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News. Newest source item: 2026-07-10.",
     "date": "2026-07-12",
+    "updated": null,
     "tags": [
       "ai-news",
       "research-wire",
@@ -135,6 +231,10 @@
       "openai"
     ],
     "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "3 min read",
+    "url": "/research/ai-news-wire-2026-07-12/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-12.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-12/"
@@ -144,6 +244,7 @@
     "title": "AI News Wire — 2026-07-11",
     "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News. Newest source item: 2026-07-10.",
     "date": "2026-07-11",
+    "updated": null,
     "tags": [
       "ai-news",
       "research-wire",
@@ -155,6 +256,10 @@
       "openai"
     ],
     "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "3 min read",
+    "url": "/research/ai-news-wire-2026-07-11/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-11.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-11/"
@@ -164,6 +269,7 @@
     "title": "AI News Wire — 2026-07-10",
     "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-10.",
     "date": "2026-07-10",
+    "updated": null,
     "tags": [
       "ai-news",
       "research-wire",
@@ -172,9 +278,15 @@
       "arxiv",
       "frontier-models",
       "mlops",
-      "open-source"
+      "open-source",
+      "openai",
+      "research"
     ],
     "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "3 min read",
+    "url": "/research/ai-news-wire-2026-07-10/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-10.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-10/"
@@ -184,6 +296,7 @@
     "title": "AI News Wire — 2026-07-09",
     "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-09.",
     "date": "2026-07-09",
+    "updated": null,
     "tags": [
       "ai-news",
       "research-wire",
@@ -192,9 +305,15 @@
       "arxiv",
       "frontier-models",
       "mlops",
-      "open-source"
+      "open-source",
+      "openai",
+      "research"
     ],
     "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "3 min read",
+    "url": "/research/ai-news-wire-2026-07-09/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-09.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-09/"
@@ -204,6 +323,7 @@
     "title": "AI News Wire — 2026-07-08",
     "description": "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, arXiv cs.AI. Newest source item: 2026-07-08.",
     "date": "2026-07-08",
+    "updated": null,
     "tags": [
       "ai-news",
       "research-wire",
@@ -212,9 +332,15 @@
       "arxiv",
       "frontier-models",
       "mlops",
-      "open-source"
+      "open-source",
+      "openai",
+      "research"
     ],
     "category": "AI News Briefs",
+    "status": "brief",
+    "featured": false,
+    "readingTime": "3 min read",
+    "url": "/research/ai-news-wire-2026-07-08/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/ai-news-wire-2026-07-08.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/ai-news-wire-2026-07-08/"
@@ -224,6 +350,7 @@
     "title": "Agent evaluation after benchmark saturation",
     "description": "A practical note on moving from leaderboard thinking to task-level evidence for autonomous AI agents.",
     "date": "2026-07-03",
+    "updated": null,
     "tags": [
       "agents",
       "evaluation",
@@ -231,6 +358,10 @@
       "research-systems"
     ],
     "category": "Long-form Essays",
+    "status": "essay",
+    "featured": true,
+    "readingTime": "1 min read",
+    "url": "/research/agent-evaluation-after-benchmarks/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/agent-evaluation-after-benchmarks.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/agent-evaluation-after-benchmarks/"
@@ -240,6 +371,7 @@
     "title": "Why Markdown-first research sites age well",
     "description": "Markdown keeps research notes portable, reviewable, and automation-friendly while still supporting a polished publication layer.",
     "date": "2026-07-02",
+    "updated": null,
     "tags": [
       "publishing",
       "markdown",
@@ -247,6 +379,10 @@
       "knowledge-systems"
     ],
     "category": "Research Notes",
+    "status": "evergreen",
+    "featured": false,
+    "readingTime": "1 min read",
+    "url": "/research/markdown-first-research-sites/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/markdown-first-research-sites.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/markdown-first-research-sites/"
@@ -256,6 +392,7 @@
     "title": "Interface notes: Gwern durability, TuringWire clarity",
     "description": "A lightweight interface brief for dense AI research notes: typographic hierarchy, durable URLs, search, and visible metadata.",
     "date": "2026-07-01",
+    "updated": null,
     "tags": [
       "interface",
       "typography",
@@ -263,6 +400,10 @@
       "research-ux"
     ],
     "category": "Research Notes",
+    "status": "note",
+    "featured": false,
+    "readingTime": "1 min read",
+    "url": "/research/turingwire-gwern-interface-notes/",
     "source_repo": "agilentic/ai-research-wire",
     "imported_path": "sources/agilentic-ai-research-wire/research/posts/turingwire-gwern-interface-notes.md",
     "original_url": "https://agilentic.github.io/ai-research-wire/research/turingwire-gwern-interface-notes/"

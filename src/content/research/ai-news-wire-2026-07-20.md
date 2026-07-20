@@ -1,40 +1,41 @@
 ---
-title: "AI News Wire — 2026-07-18"
-description: "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-18."
-date: "2026-07-18"
+title: "AI News Wire — 2026-07-20"
+description: "Automated AI news brief from Hugging Face Blog, MIT News AI, OpenAI News, VentureBeat AI, arXiv cs.AI. Newest source item: 2026-07-20."
+date: "2026-07-20"
 tags: [ai-news, research-wire, academia, ai, arxiv, frontier-models, industry, mlops, open-source, openai]
 category: "AI News Briefs"
 status: "brief"
 author: "Agilentic News Bot"
 ---
 
-This automated brief was generated at **2026-07-18 18:04 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement.
+This automated brief was generated at **2026-07-20 08:16 UTC** from public RSS/Atom feeds. It is a link digest, not an endorsement.
 
 ## Top links
 
-### 1. [Intelligent Three Level Learning Architecture for Autonomous UAV Swarms in Search and Rescue](https://arxiv.org/abs/2607.14093)
-- **Source:** arXiv cs.AI · **Published:** 2026-07-18
-- **Feed summary:** arXiv:2607.14093v1 Announce Type: new Abstract: This paper presents a novel three level
-hierarchical learning architecture for autonomous UAV swarms performing search and rescue
-operations. Unlike conventional approaches that apply a single learning paradigm across all…
+### 1. [GraphDx: A Cost-Aware Knowledge-Enhanced Multi-Agent Framework for Sequential Diagnosis](https://arxiv.org/abs/2607.15280)
+- **Source:** arXiv cs.AI · **Published:** 2026-07-20
+- **Feed summary:** arXiv:2607.15280v1 Announce Type: new Abstract: Sequential diagnosis requires balancing
+diagnostic accuracy against resource costs through iterative information gathering. Existing
+Large Language Model (LLM) approaches exhibit a critical knowledge-reasoning gap: despite…
 
-### 2. [HG-RAG: Hierarchy-Guided Retrieval-Augmented Generation for Structured Knowledge Graphs](https://arxiv.org/abs/2607.14095)
-- **Source:** arXiv cs.AI · **Published:** 2026-07-18
-- **Feed summary:** arXiv:2607.14095v1 Announce Type: new Abstract: Retrieval Augmented Generation (RAG) has proven
-to be a widely successful process at improving the quality of outputs from a Large Language
-Model (LLM) for wider context. However, RAG systems typically retrieve context from flat…
+### 2. [Causal-Audit: Explicit and Auditable Graph-based Reasoning via Target-Aware Causal Chain Construction](https://arxiv.org/abs/2607.15281)
+- **Source:** arXiv cs.AI · **Published:** 2026-07-20
+- **Feed summary:** arXiv:2607.15281v1 Announce Type: new Abstract: Causal and intervention-based question answering
+is fundamental to advancing large language models (LLMs) toward reasoning beyond surface-level
+correlations and understanding underlying causal mechanisms. However, existing…
 
-### 3. [IMEX Interaction-Based Model Explanation](https://arxiv.org/abs/2607.14096)
-- **Source:** arXiv cs.AI · **Published:** 2026-07-18
-- **Feed summary:** arXiv:2607.14096v1 Announce Type: new Abstract: In predictive modeling, the ability to explain
-why a model produces a given target prediction has become increasingly important [5, 10]. Black-
-box models do not provide a transparent description of the internal mechanisms that…
+### 3. [Cura 1T: Specialized Model for Agentic Healthcare](https://arxiv.org/abs/2607.15314)
+- **Source:** arXiv cs.AI · **Published:** 2026-07-20
+- **Feed summary:** arXiv:2607.15314v1 Announce Type: new Abstract: Healthcare spans high-stakes communication,
+expert reasoning, and workflow execution, yet specialized LLMs that cover these use cases
+together remain limited. A healthcare model must handle patient consultation, clinical
+reasoning…
 
-### 4. [RegNetAgents: A Multi-Agent Framework for Cross-Network Regulatory Driver Identification in Cancer Genomics](https://arxiv.org/abs/2607.14097)
-- **Source:** arXiv cs.AI · **Published:** 2026-07-18
-- **Feed summary:** arXiv:2607.14097v1 Announce Type: new Abstract: We introduce RegNetAgents, an AI-oriented multi-
-agent framework for structured, query-driven regulatory candidate identification across
-heterogeneous gene regulatory networks. The system enables unified analysis of bulk tumor and…
+### 4. [AnovaX: A Local, Multi-Agent Voice Assistant with LLM Planning, Typed Executors, and Adaptive Recovery](https://arxiv.org/abs/2607.15367)
+- **Source:** arXiv cs.AI · **Published:** 2026-07-20
+- **Feed summary:** arXiv:2607.15367v1 Announce Type: new Abstract: Desktop voice assistants are still dominated by
+cloud pipelines that ship raw audio off the machine and expose a fixed set of skills. We
+describe AnovaX, a small local-first assistant that runs entirely on the user's computer and…
 
 ### 5. [Following the questions where they lead](https://news.mit.edu/2026/following-questions-where-they-lead-bailey-flanigan-0717)
 - **Source:** MIT News AI · **Published:** 2026-07-17

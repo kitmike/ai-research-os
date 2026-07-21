@@ -1018,5 +1018,113 @@
       "What is the finance-specific benchmark for final-diff/memo minimization: fewer claims, stronger citations, better auditability, or lower review time?"
     ],
     "report_path": "reports/2026-07-21_morning_briefing.md"
+  },
+  {
+    "id": "2026-07-21-afternoon",
+    "date": "2026-07-21",
+    "cadence": "afternoon",
+    "title": "Harnesses Are Models Too: Why Automated Discovery Needs Online Allocation, Not Recipes",
+    "executive_summary": "Gupta et al.’s 'Automated Discovery Has No Universally Superior Harness' is the afternoon signal because it turns autonomous discovery from a recipe story into an allocation story. Across 30 budget-matched harnesses, 12 model–problem pairs, and more than 3.1M LLM rollouts, the paper finds no fixed harness that reliably dominates; complete OpenEvolve-style machinery can underperform simpler alternatives; and partial-run progress is predictive enough for adaptive pruning/allocation to beat fixed-harness commitment and non-adaptive portfolios under the same compute budget. The practical lesson: agent products need harness portfolios, checkpoints, run-pool statistics, and operator-visible allocation ledgers—not one magic workflow.",
+    "key_claims": [
+      "Autonomous discovery harnesses bundle many separable choices—archive construction, parent selection, exploration, search structure, and budget allocation—so named systems should be treated as component recipes, not indivisible methods.",
+      "The paper evaluates 30 budget-matched harnesses across 12 model–problem pairs using more than 3.1M LLM rollouts and repeated-trial statistical analysis.",
+      "No tested fixed harness is significantly better than a simple Sequential Best-of-N baseline across the suite after correction; the strongest observed fixed choice varies by setting.",
+      "Complete OpenEvolve-style configurations rank poorly in the reported representative cross-pair analysis, while lightweight exploration and simpler UCT/PUCT variants often look stronger but still fail as universal recipes.",
+      "Partial-run scores become informative: at the 50% checkpoint, Spearman correlation with final performance exceeds 0.70 for 11 of 12 model–problem pairs and remains positive for the twelfth.",
+      "Under a five-full-run-equivalent budget, adaptive pruning schedules average 84.87%–85.75%, beating single-harness commitment, unpruned harness portfolios, and the 84.35% Sequential BoN reference in the authors’ resampling protocol.",
+      "The broader product implication is that agentic systems should expose run governance: harness variants, evaluator versions, checkpoints, pruning decisions, remaining budget, and survivor rationale.",
+      "Finance and trading agents should copy the allocation idea only with strong anti-overfitting controls; adaptive allocation can accelerate specification gaming if the evaluator is wrong."
+    ],
+    "papers": [
+      {
+        "title": "Automated Discovery Has No Universally Superior Harness",
+        "url": "https://arxiv.org/abs/2607.18235v1",
+        "arxiv_id": "2607.18235v1",
+        "implication": "Treat harness choice as an online allocation/hyperparameter problem rather than as a universal agent recipe."
+      },
+      {
+        "title": "Autoresearch with Coding Agents: Generalizers and Metric-Maximizers on Quran Recitation Data",
+        "url": "https://arxiv.org/abs/2607.18064v1",
+        "arxiv_id": "2607.18064v1",
+        "implication": "Adaptive search must be paired with held-out evaluation because agents can optimize literal metrics through memorization or other specification gaming."
+      },
+      {
+        "title": "TRIM: Reducing AI-Generated CodeSlop via Agent Trajectory Minimization",
+        "url": "https://arxiv.org/abs/2607.18161v1",
+        "arxiv_id": "2607.18161v1",
+        "implication": "Harnesses shape final artifacts, not just scores; agent trajectories need cleanup/minimization before production handoff."
+      },
+      {
+        "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+        "url": "https://arxiv.org/abs/2506.13131",
+        "arxiv_id": "2506.13131",
+        "implication": "AlphaEvolve-style systems make the generate–evaluate–select loop strategically important, motivating careful harness evaluation."
+      }
+    ],
+    "concepts": [
+      "autonomous discovery",
+      "harness generalization",
+      "Sequential Best-of-N",
+      "OpenEvolve-style search",
+      "TTT-Discover-style search",
+      "UCT/PUCT parent selection",
+      "archive exploration",
+      "budget-matched evaluation",
+      "partial-run predictiveness",
+      "adaptive harness ensemble",
+      "run-pool statistics",
+      "harness ledger",
+      "specification gaming",
+      "agent experiment infrastructure"
+    ],
+    "sources": [
+      {
+        "title": "arXiv 2607.18235: Automated Discovery Has No Universally Superior Harness",
+        "url": "https://arxiv.org/abs/2607.18235v1"
+      },
+      {
+        "title": "GitHub: akshat57/harness-generalization",
+        "url": "https://github.com/akshat57/harness-generalization"
+      },
+      {
+        "title": "Raw README: harness-generalization",
+        "url": "https://raw.githubusercontent.com/akshat57/harness-generalization/main/README.md"
+      },
+      {
+        "title": "arXiv 2607.18064: Autoresearch with Coding Agents",
+        "url": "https://arxiv.org/abs/2607.18064v1"
+      },
+      {
+        "title": "arXiv 2607.18161: TRIM CodeSlop via Agent Trajectory Minimization",
+        "url": "https://arxiv.org/abs/2607.18161v1"
+      },
+      {
+        "title": "arXiv 2506.13131: AlphaEvolve",
+        "url": "https://arxiv.org/abs/2506.13131"
+      },
+      {
+        "title": "Google DeepMind: AlphaEvolve blog",
+        "url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+      },
+      {
+        "title": "AI Research OS morning context: 2026-07-21 briefing",
+        "url": "reports/2026-07-21_morning_briefing.md"
+      }
+    ],
+    "implications": {
+      "AI/product": "Sell adaptive, auditable agent experimentation rather than a single universal workflow: portfolio harnesses, early checkpoints, pruning, run pools, and budget controls should be first-class product surfaces.",
+      "finance/trading": "Use adaptive allocation for research variants, not direct trading decisions; require held-out periods, walk-forward tests, slippage/transaction costs, regime splits, and no-trade baselines so the agent does not merely overfit faster.",
+      "agentic company OS": "Add a harness ledger next to source/action/memory ledgers: every autonomous run records harness variant, evaluator version, budget, checkpoints, pruned alternatives, survivor rationale, artifacts, and final decision.",
+      "career/opportunities": "High-leverage niche: agent experiment infrastructure engineer—building the statistical control plane that makes autonomous search comparable, budgeted, auditable, and resistant to metric gaming."
+    },
+    "open_questions": [
+      "Does adaptive harness allocation still help on real software-engineering tasks with incomplete tests and maintainability constraints?",
+      "How predictive are early scores when evaluators are noisy, delayed, adversarial, human-rated, or multi-objective?",
+      "Can an agentic company OS learn per-domain harness priors without collapsing into stale recipes?",
+      "What dashboard/UI best communicates harness allocation, confidence, and pruning rationale to non-research operators?",
+      "How should finance agents combine adaptive research allocation with anti-overfitting controls such as walk-forward validation and no-trade baselines?",
+      "Should agent papers publish reusable run pools and null distributions as standard benchmark artifacts?"
+    ],
+    "report_path": "reports/2026-07-21_afternoon_gwern_essay.md"
   }
 ]

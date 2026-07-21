@@ -883,5 +883,140 @@
       "What is the right finance benchmark for hidden long-range dependencies across filings, transcripts, corporate actions, and portfolio constraints?"
     ],
     "report_path": "reports/2026-07-20_afternoon_gwern_essay.md"
+  },
+  {
+    "id": "2026-07-21-morning",
+    "date": "2026-07-21",
+    "cadence": "morning",
+    "title": "AI Research OS Morning Briefing — 2026-07-21",
+    "executive_summary": "The overnight signal is agent infrastructure hardening: coding agents are getting context-pruning and cleanup layers; real-time multimodal agents need deployment harnesses, not just better models; adaptive prompt-injection benchmarks are moving agent security toward multi-turn adversaries; and product engineering posts emphasize reversible execution, ownership cost, and containment. For Michael, the practical edge is an agentic company OS with explicit context budgets, snapshot/rollback semantics, and evidence-aware action governance.",
+    "key_claims": [
+      "SWE-Pruner Pro argues coder LLMs already encode tool-output relevance signals, enabling context pruning directly inside the agent rather than through a separate classifier.",
+      "TRIM frames verbose AI-generated code as an artifact of accumulated speculative edits and abandoned hypotheses during agent search, motivating trajectory minimization before handoff.",
+      "FlashRT highlights that real-time multimodal apps need agent harnesses for placement, streaming, and parallelism decisions, not only stronger voice/video models.",
+      "Adaptive Adversaries introduces a 21-scenario multi-turn agent-security benchmark where an LLM attacker observes defender responses and pivots across rounds.",
+      "Replit positions instant filesystem forks, versioned databases, and isolated sandboxes as the snapshot layer that makes agentic development reversible.",
+      "Anthropic’s Claude Code migration case shows AI makes large migrations more option-like, but still costly: one Bun migration used 5.9B uncached input tokens and 690M output tokens, around $165k at API pricing.",
+      "GitHub’s engineering post argues generated patches should be treated as fast price checks because the cost of owning code has not fallen with the cost of writing it.",
+      "NVIDIA claims LangChain harness tuning for Nemotron 3 Ultra reached leading open-model agent benchmark accuracy and 10x lower inference cost per run than leading closed models without model retraining."
+    ],
+    "papers": [
+      {
+        "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+        "url": "https://arxiv.org/abs/2607.18213v1",
+        "arxiv_id": "2607.18213v1",
+        "implication": "Context pruning should become an internal agent/runtime primitive for lower-cost, lower-latency code work."
+      },
+      {
+        "title": "TRIM: Reducing AI-Generated CodeSlop via Agent Trajectory Minimization",
+        "url": "https://arxiv.org/abs/2607.18161v1",
+        "arxiv_id": "2607.18161v1",
+        "implication": "Evaluate coding agents on final diff maintainability and trajectory cleanup, not only passing tests."
+      },
+      {
+        "title": "Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security",
+        "url": "https://arxiv.org/abs/2607.18063v1",
+        "arxiv_id": "2607.18063v1",
+        "implication": "Company-OS agents need adaptive, multi-turn security evaluation before exposure to external content."
+      },
+      {
+        "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+        "url": "https://arxiv.org/abs/2607.18171v1",
+        "arxiv_id": "2607.18171v1",
+        "implication": "Voice/video agents will compete on deployment orchestration as much as model quality."
+      },
+      {
+        "title": "HyMCache: A KV Cache Framework for Multi-Turn LLM Serving with CXL-Hybrid Memory",
+        "url": "https://arxiv.org/abs/2607.18141v1",
+        "arxiv_id": "2607.18141v1",
+        "implication": "Long-lived agent memory and multi-turn serving economics need explicit cache-tier design."
+      },
+      {
+        "title": "AI Trading: Evaluating Large Language Models for Technical Market Analysis",
+        "url": "https://arxiv.org/abs/2607.15414v1",
+        "arxiv_id": "2607.15414v1",
+        "implication": "Trading LLM evaluation should be task-structured and audited before any automation touches decisions."
+      }
+    ],
+    "concepts": [
+      "agent-internal context pruning",
+      "trajectory minimization",
+      "CodeSlop",
+      "real-time multimodal agents",
+      "deployment harnesses",
+      "adaptive prompt injection",
+      "multi-turn agent security",
+      "snapshot rollback",
+      "AI migration economics",
+      "ownership-cost gates",
+      "open-stack agent harness",
+      "KV-cache economics",
+      "finance agent auditability"
+    ],
+    "sources": [
+      {
+        "title": "arXiv 2607.18213: SWE-Pruner Pro",
+        "url": "https://arxiv.org/abs/2607.18213v1"
+      },
+      {
+        "title": "arXiv 2607.18161: TRIM: Reducing AI-Generated CodeSlop",
+        "url": "https://arxiv.org/abs/2607.18161v1"
+      },
+      {
+        "title": "arXiv 2607.18171: FlashRT",
+        "url": "https://arxiv.org/abs/2607.18171v1"
+      },
+      {
+        "title": "arXiv 2607.18063: Adaptive Adversaries",
+        "url": "https://arxiv.org/abs/2607.18063v1"
+      },
+      {
+        "title": "arXiv 2607.18141: HyMCache",
+        "url": "https://arxiv.org/abs/2607.18141v1"
+      },
+      {
+        "title": "arXiv 2607.17586: Explainable Money Mule Identification",
+        "url": "https://arxiv.org/abs/2607.17586v1"
+      },
+      {
+        "title": "arXiv 2607.15414: AI Trading evaluation",
+        "url": "https://arxiv.org/abs/2607.15414v1"
+      },
+      {
+        "title": "Replit: Inside Replit’s Snapshot Engine",
+        "url": "https://replit.com/blog/inside-replits-snapshot-engine"
+      },
+      {
+        "title": "Claude/Anthropic: large-scale code migrations with Claude Code",
+        "url": "https://claude.com/blog/ai-code-migration"
+      },
+      {
+        "title": "GitHub Blog: The cost of saying yes has changed",
+        "url": "https://github.blog/engineering/the-cost-of-saying-yes-has-changed/"
+      },
+      {
+        "title": "Anthropic Research: Claude plays robotics",
+        "url": "https://www.anthropic.com/research/claude-plays-robotics"
+      },
+      {
+        "title": "NVIDIA Blog: Nemotron with LangChain Deep Agents Harness",
+        "url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/"
+      }
+    ],
+    "implications": {
+      "AI/product": "Prioritize product primitives that make agents governable: context budget controls, final-diff minimization, reversible sandboxes, source-linked action logs, and benchmark-backed model/harness routing.",
+      "finance/trading": "For trading/research agents, context pruning and rollback are risk controls. Agents should minimize noisy trajectory residue before producing investment memos, preserve bridge evidence, and treat no-trade/no-publish as valid outcomes.",
+      "agentic company OS": "Make snapshotting, permission classes, and action receipts native. Every tool call should know whether it is read-only, reversible, externally visible, regulated, or irreversible; every long-running agent should have a context ledger and cleanup pass.",
+      "career/opportunities": "High-leverage niche: agent infrastructure engineer / product architect for reliable agentic workflows, spanning context compression, agent-security evals, sandbox orchestration, migration economics, and finance-grade audit trails."
+    },
+    "open_questions": [
+      "Do SWE-Pruner Pro and TRIM improve real production repositories, or mainly benchmark trajectories?",
+      "What is the right UI for showing agent context budget and trajectory cleanup to non-technical operators?",
+      "Can snapshot/rollback semantics be standardized across code, databases, SaaS APIs, and finance workflows?",
+      "How should adaptive multi-turn prompt-injection tests be incorporated into procurement gates for agent platforms?",
+      "Does open-stack harness tuning transfer to proprietary company tasks after realistic tool latency, secrets, and data-governance constraints?",
+      "What is the finance-specific benchmark for final-diff/memo minimization: fewer claims, stronger citations, better auditability, or lower review time?"
+    ],
+    "report_path": "reports/2026-07-21_morning_briefing.md"
   }
 ]

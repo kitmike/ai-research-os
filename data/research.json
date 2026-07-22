@@ -1126,5 +1126,147 @@
       "Should agent papers publish reusable run pools and null distributions as standard benchmark artifacts?"
     ],
     "report_path": "reports/2026-07-21_afternoon_gwern_essay.md"
+  },
+  {
+    "id": "2026-07-22-morning",
+    "date": "2026-07-22",
+    "cadence": "morning",
+    "title": "AI Research OS Morning Briefing — 2026-07-22",
+    "executive_summary": "The overnight signal is that production agents are becoming governed execution systems: recovery routing after failed code runs, authority-laundering risks in CI/CD, provenance graphs, cache-aware costs, and enterprise usage/billing controls. GitHub’s Copilot platform changes and the latest arXiv papers point in the same direction: the next opportunity is reliable agent control planes, especially for code, finance, and company-OS workflows.",
+    "key_claims": [
+      "Agents in the Wild frames production agents around robustness, safety, reliability, verification pipelines, fallback mechanisms, and human-in-the-loop supervision across software, science, and finance.",
+      "CodeRescue treats failed coding-agent attempts as routing evidence: after execution feedback, the agent can retry cheaply, escalate to a stronger model, or control expected cost through a conformal risk-control layer.",
+      "A new CI/CD attack paper reports that authority-framed instructions can cause downstream verifier agents to pass secret-exfiltrating code; the abstract reports scanner pass rates around 80% and a worst-case 55% compromise cell.",
+      "GitHub is professionalizing Copilot governance: Gemini 3.6 Flash is rolling into Copilot, GitHub Code Quality is generally available, repo-level usage metrics are GA, and AI credit pools are manageable in the billing UI.",
+      "Keepalive Economics argues long-running agent pauses can destroy prompt-prefix cache benefits and that timed keepalives can cut post-pause request costs by up to 12.5x under provider TTL assumptions.",
+      "AgentTrails moves agent audit from chronological logs to structured provenance graphs for debugging, comparison, reuse, and skill abstraction.",
+      "The auditable fraud-detection paper is a finance warning: a bounded LLM investigator can improve review workflow context while still underperforming direct thresholding on a small balanced sample.",
+      "SciHazard reflects a safety-evals trend toward domain-grounded, decomposed harm scoring rather than generic LLM-as-judge safety labels."
+    ],
+    "papers": [
+      {
+        "title": "Agents in the Wild: Where Research Meets Deployment",
+        "url": "https://arxiv.org/abs/2607.19336v1",
+        "arxiv_id": "2607.19336v1",
+        "implication": "Production-agent advantage is shifting from benchmark scores to verification, fallback, supervision, and operational reliability patterns."
+      },
+      {
+        "title": "CodeRescue: Budget-Calibrated Recovery Routing for Coding Agents",
+        "url": "https://arxiv.org/abs/2607.19338v1",
+        "arxiv_id": "2607.19338v1",
+        "implication": "Failed tests should become routing evidence for retry/escalate/stop policies, not just a reason to call a stronger model."
+      },
+      {
+        "title": "They’ll Verify. They Just Won’t Act. How Authority Framing and Laundered Code Turn a Trusted Agentic CI/CD Pipeline Into an Attack Surface",
+        "url": "https://arxiv.org/abs/2607.19267v1",
+        "arxiv_id": "2607.19267v1",
+        "implication": "Agentic software pipelines need authority-provenance and intent review; syntactic scanners alone can miss malicious purpose."
+      },
+      {
+        "title": "Toward Auditable Fraud Detection: Combining Graph Features, Model Explanations, and Agentic Case Investigation",
+        "url": "https://arxiv.org/abs/2607.19266v1",
+        "arxiv_id": "2607.19266v1",
+        "implication": "Finance agents should start as bounded case-investigation and evidence-pack tools around existing models, not autonomous decision makers."
+      },
+      {
+        "title": "Keeping the Cache Warm Pays: Keepalive Economics for Agentic Workloads",
+        "url": "https://arxiv.org/abs/2607.19214v1",
+        "arxiv_id": "2607.19214v1",
+        "implication": "Long-running agents need cache TTL, pause/resume, and keepalive policy as part of cost engineering."
+      },
+      {
+        "title": "AgentTrails: Towards Trust and Reuse for Agentic Tasks",
+        "url": "https://arxiv.org/abs/2607.18816v1",
+        "arxiv_id": "2607.18816v1",
+        "implication": "Store agent activity as replayable provenance graphs, not opaque chat transcripts."
+      },
+      {
+        "title": "SciHazard: A Benchmark for Measuring Scientific Safety Risks with Decomposed Harm Scoring",
+        "url": "https://arxiv.org/abs/2607.18665v1",
+        "arxiv_id": "2607.18665v1",
+        "implication": "Internal release gates should decompose harm into severity, refusal, executability, and net-new risk rather than relying on a single judge label."
+      }
+    ],
+    "concepts": [
+      "governed agent execution",
+      "recovery routing",
+      "authority laundering",
+      "agentic CI/CD security",
+      "repo-level Copilot metrics",
+      "AI credit pools",
+      "agent cost engineering",
+      "prefix-cache keepalive",
+      "agent provenance graphs",
+      "bounded LLM investigation",
+      "finance audit trails",
+      "scientific safety evals",
+      "decomposed harm scoring",
+      "enterprise AI governance"
+    ],
+    "sources": [
+      {
+        "title": "arXiv 2607.19336: Agents in the Wild: Where Research Meets Deployment",
+        "url": "https://arxiv.org/abs/2607.19336v1"
+      },
+      {
+        "title": "arXiv 2607.19338: CodeRescue: Budget-Calibrated Recovery Routing for Coding Agents",
+        "url": "https://arxiv.org/abs/2607.19338v1"
+      },
+      {
+        "title": "arXiv 2607.19267: They'll Verify. They Just Won't Act",
+        "url": "https://arxiv.org/abs/2607.19267v1"
+      },
+      {
+        "title": "arXiv 2607.19266: Toward Auditable Fraud Detection",
+        "url": "https://arxiv.org/abs/2607.19266v1"
+      },
+      {
+        "title": "arXiv 2607.19214: Keeping the Cache Warm Pays",
+        "url": "https://arxiv.org/abs/2607.19214v1"
+      },
+      {
+        "title": "arXiv 2607.18816: AgentTrails: Towards Trust and Reuse for Agentic Tasks",
+        "url": "https://arxiv.org/abs/2607.18816v1"
+      },
+      {
+        "title": "arXiv 2607.18665: SciHazard",
+        "url": "https://arxiv.org/abs/2607.18665v1"
+      },
+      {
+        "title": "GitHub Changelog: Gemini 3.6 Flash is now available in GitHub Copilot",
+        "url": "https://github.blog/changelog/2026-07-21-gemini-3-6-flash-is-now-available-in-github-copilot"
+      },
+      {
+        "title": "GitHub Changelog: GitHub Code Quality is now generally available",
+        "url": "https://github.blog/changelog/2026-07-20-github-code-quality-is-now-generally-available"
+      },
+      {
+        "title": "GitHub Changelog: AI credit pools for cost centers in the billing UI",
+        "url": "https://github.blog/changelog/2026-07-20-ai-credit-pools-for-cost-centers-in-the-billing-ui"
+      },
+      {
+        "title": "GitHub Changelog: Repository-level GitHub Copilot usage metrics generally available",
+        "url": "https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available"
+      },
+      {
+        "title": "Meta AI: Introducing Muse Spark 1.1",
+        "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+      }
+    ],
+    "implications": {
+      "AI/product": "Build an agent control plane around recovery routing, provenance, budget caps, evidence gates, and policy-aware deployment. The product demo should show what happens after failure: retry, route, escalate, explain, or refuse.",
+      "finance/trading": "Use LLMs first as evidence-pack builders and hypothesis auditors around established models. Give them bounded investigation roles before execution authority, especially in fraud, AML, trading, or compliance workflows.",
+      "agentic company OS": "Implement ledgers for action, evidence, cost, authority, and provenance. Treat every agent action as a replayable, accountable operation with source links, approval lineage, and cost metadata.",
+      "career/opportunities": "High-value opportunities are agent reliability engineering, AI security review, code-agent governance, repo-level AI productivity analytics, and finance-domain audit trails."
+    },
+    "open_questions": [
+      "Do CodeRescue-style recovery routers beat simple retry/escalation heuristics on real repositories with flaky tests, hidden dependencies, and long feedback loops?",
+      "Will GitHub’s repo-level Copilot metrics become a de facto management layer for measuring AI-assisted software productivity?",
+      "Can authority-laundering attacks be mitigated with explicit approval provenance, capability-scoped roles, and independent intent review?",
+      "Are keepalive economics robust under changing provider TTLs, cache policies, and usage-based billing terms?",
+      "Which provenance representation becomes standard for agent audit: logs, DAGs, OpenTelemetry spans, notebooks, or something MCP-native?",
+      "In finance, what evidence packet is sufficient for regulators or compliance teams to trust an LLM-assisted investigation?"
+    ],
+    "report_path": "reports/2026-07-22_morning_briefing.md"
   }
 ]

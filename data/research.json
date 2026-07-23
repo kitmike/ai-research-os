@@ -1512,5 +1512,124 @@
       "Which safety-bound methods become practical enough to sit in pre-deployment CI for LLM products?"
     ],
     "report_path": "reports/2026-07-23_morning_briefing.md"
+  },
+  {
+    "id": "2026-07-23-afternoon",
+    "date": "2026-07-23",
+    "cadence": "afternoon",
+    "title": "Programmatic Memory Is the Agent’s Real Context Window",
+    "executive_summary": "PRO-LONG is this afternoon’s key paper because it makes a clean agent-architecture claim: long-horizon agents need lossless accessible memory plus programmable reads, not just larger active context or early summaries. On ARC-AGI-3 public games, the authors report an 18.0 percentage-point average gain over a no-log coding-agent baseline, matched performance at 4.2–5.8× fewer billed tokens than specialized harnesses, and up to 97.4% best@2 with Fable 5 at a reported $1,750 cost. The durable lesson for company OS and finance agents is to treat the append-only event ledger as the real context window, with summaries as views rather than source of truth.",
+    "key_claims": [
+      "PRO-LONG defines agent memory as a complete structured interaction log with append-all writes and code-based reads over that log.",
+      "On the full ARC-AGI-3 public game set, the paper reports an average 18.0 percentage-point improvement over a no-log coding-agent baseline across frontier models.",
+      "Under matched scoring setups, PRO-LONG is reported as comparable to or better than specialized harnesses while using 4.2–5.8× fewer billed tokens.",
+      "The paper reports Fable 5 with PRO-LONG at 94.6% pass@1 under a 2,000-action budget and 97.4% best@2 at a total cost of about $1,750.",
+      "A tool-ladder ablation reports GPT-5.5 scores rising from 23.1% with read-only access to 41.2% with grep/regex, Python, write, and edit access, supporting programmatic read as a causal harness feature.",
+      "A workspace-clearing ablation leaves PRO-LONG nearly unchanged (41.2 ± 3.5 persistent versus 40.7 ± 3.6 cleared) while weakening the no-log baseline, suggesting the structured log rather than arbitrary scratch state carries much of the benefit.",
+      "The paper’s own caveats include high run-to-run variance and public-set evaluation; this run also could not verify the arXiv-claimed GitHub repository because it returned 404."
+    ],
+    "papers": [
+      {
+        "title": "PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning",
+        "url": "https://arxiv.org/abs/2607.20064v1",
+        "arxiv_id": "2607.20064v1",
+        "implication": "Long-horizon agents should preserve complete event logs and use code/search/Python to retrieve relevance after the fact."
+      },
+      {
+        "title": "ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence",
+        "url": "https://arxiv.org/abs/2603.24621",
+        "arxiv_id": "2603.24621",
+        "implication": "Interactive unknown-rule environments make memory, exploration, and world-model inference measurable."
+      },
+      {
+        "title": "Coding Agents are Effective Long-Context Processors",
+        "url": "https://arxiv.org/abs/2603.20432",
+        "arxiv_id": "2603.20432",
+        "implication": "File systems and executable tooling can turn long-context processing into explicit computation rather than latent attention."
+      },
+      {
+        "title": "MemGPT: Towards LLMs as Operating Systems",
+        "url": "https://arxiv.org/abs/2310.08560",
+        "arxiv_id": "2310.08560",
+        "implication": "Agent memory design continues the OS-like theme of virtual context management and tiered memory."
+      },
+      {
+        "title": "A Survey on the Memory Mechanism of Large Language Model based Agents",
+        "url": "https://arxiv.org/abs/2404.13501",
+        "arxiv_id": "2404.13501",
+        "implication": "PRO-LONG should be situated among broader write/read/retrieve/summarize memory mechanisms for LLM agents."
+      }
+    ],
+    "concepts": [
+      "programmatic memory",
+      "append-only event log",
+      "accessible vs accessed context",
+      "long-horizon reasoning",
+      "ARC-AGI-3",
+      "Relative Human Action Efficiency",
+      "context rot",
+      "coding agents as long-context processors",
+      "tool-ladder ablation",
+      "workspace persistence",
+      "best@k variance",
+      "agent event ledger",
+      "finance evidence ledger",
+      "programmable retrieval",
+      "agent memory governance"
+    ],
+    "sources": [
+      {
+        "title": "arXiv: PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning",
+        "url": "https://arxiv.org/abs/2607.20064v1"
+      },
+      {
+        "title": "arXiv HTML: PRO-LONG full text",
+        "url": "https://arxiv.org/html/2607.20064v1"
+      },
+      {
+        "title": "arXiv: ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence",
+        "url": "https://arxiv.org/abs/2603.24621"
+      },
+      {
+        "title": "arXiv: Coding Agents are Effective Long-Context Processors",
+        "url": "https://arxiv.org/abs/2603.20432"
+      },
+      {
+        "title": "Chroma: Context Rot: How Increasing Input Tokens Impacts LLM Performance",
+        "url": "https://www.trychroma.com/research/context-rot"
+      },
+      {
+        "title": "Impossible Research: Schema harness achieves ~99% on ARC-AGI-3 Public",
+        "url": "https://schema-harness.github.io"
+      },
+      {
+        "title": "arXiv: MemGPT: Towards LLMs as Operating Systems",
+        "url": "https://arxiv.org/abs/2310.08560"
+      },
+      {
+        "title": "arXiv: A Survey on the Memory Mechanism of Large Language Model based Agents",
+        "url": "https://arxiv.org/abs/2404.13501"
+      },
+      {
+        "title": "arXiv: Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory",
+        "url": "https://arxiv.org/abs/2504.19413"
+      }
+    ],
+    "implications": {
+      "AI/product": "Build programmable memory products: event ledgers, saved log queries, state parsers, replay views, and source-linked memory controls instead of only chat-history search or generic vector memory.",
+      "finance/trading": "Separate raw evidence ledgers from memo summaries. Filings, transcript snippets, market data revisions, and broker notes should remain queryable by code so late-discovered relevance is not destroyed by early summarization.",
+      "agentic company OS": "Make structured events.jsonl the source of truth for long-running agents, with derived scripts, hypotheses, summaries, and action receipts as auditable views over that ledger.",
+      "career/opportunities": "Agent memory infrastructure—event schemas, programmable retrieval, retention policy, replay tooling, and eval harnesses for regulated workflows—is a defensible niche with immediate product value."
+    },
+    "open_questions": [
+      "Can PRO-LONG’s append-only log pattern improve code migration, fraud investigation, market research, and due-diligence memos outside ARC-AGI-3?",
+      "What is the minimum event-log schema that supports replay, privacy controls, source deletion, and programmatic querying across tools?",
+      "Does code-based log search outperform vector retrieval on workflows where relevance is discovered late?",
+      "How much of PRO-LONG’s gain comes from full-history access versus executable world-model induction?",
+      "What public-to-private-set transfer should be expected for PRO-LONG-style harnesses on ARC-AGI-3?",
+      "Can cost-aware retry policies close pass@1/best@k gaps without uncontrolled spend?",
+      "How should companies retain complete agent logs while respecting privacy, privilege, and retention limits?"
+    ],
+    "report_path": "reports/2026-07-23_afternoon_gwern_essay.md"
   }
 ]

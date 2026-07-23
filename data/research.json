@@ -1380,5 +1380,137 @@
       "How should production systems allocate expensive artifact probes across draft, internal, external, regulated, and model-training commits?"
     ],
     "report_path": "reports/2026-07-22_afternoon_gwern_essay.md"
+  },
+  {
+    "id": "2026-07-23-morning",
+    "date": "2026-07-23",
+    "cadence": "morning",
+    "title": "AI Research OS Morning Briefing — 2026-07-23",
+    "executive_summary": "The morning signal is that agent work is shifting from model demos to operating controls: harness economics, memory, routing, safe remediation, probabilistic safety bounds, and incident response. Today’s arXiv list adds fresh memory/safety/cost papers, while GitHub, Google, Hugging Face, Ai2, and IBM show production agents becoming infrastructure rather than a chat feature.",
+    "key_claims": [
+      "GitHub argues Copilot competes with raw API use at the harness/workflow layer: context selection, tool use, retries, org budgets, policies, and issue-to-PR integration can dominate token sticker price.",
+      "GitHub’s agentic-harness evaluation compares Copilot CLI with vendor-native harnesses across SWE-bench Verified, SWE-bench Pro, SkillsBench, TerminalBench, and Win-Hill, reporting task-resolution parity with fewer tokens in several configurations.",
+      "Hugging Face disclosed a July 2026 security incident it describes as driven end-to-end by an autonomous AI agent system; it reported limited internal dataset/credential exposure and no evidence of public model/dataset/Spaces tampering.",
+      "Ai2’s Shippy case study describes a high-stakes maritime agent pattern: deterministic tools, provenance-rich answers, sandboxed isolation, Harbor-based agent evaluation, and roadmap items including UI control, model routing, and cross-thread memory.",
+      "IBM Research’s model-routing analysis argues routing is systems optimization, not simple classification; cache behavior, latency, specialization, and reliability can reverse naïve token-price rankings.",
+      "arXiv 2607.20064 proposes PRO-LONG, a programmatic-memory context-management framework for long-horizon exploratory LLM agents.",
+      "arXiv 2607.20286 proposes sound lower bounds on harmful-output probability for LLMs using PAC-style confidence intervals and latent-space guided exploration of generation branches.",
+      "arXiv 2607.20005 frames IT-ops remediation as a risk-constrained intervention decision where a wrong repair can cost more than no action, adding blast-radius/reversibility/uncertainty risk decomposition and adaptive human-in-the-loop gates."
+    ],
+    "papers": [
+      {
+        "title": "PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning",
+        "url": "https://arxiv.org/abs/2607.20064",
+        "arxiv_id": "2607.20064",
+        "implication": "Memory design is now a primary agent-performance lever; do not treat context management as a prompt-engineering afterthought."
+      },
+      {
+        "title": "Sound Probabilistic Safety Bounds for Large Language Models",
+        "url": "https://arxiv.org/abs/2607.20286",
+        "arxiv_id": "2607.20286",
+        "implication": "Safety evaluation is moving toward formally sound probability bounds, useful for compliance gates where anecdotal red-teaming is insufficient."
+      },
+      {
+        "title": "PyroDash: Cost-Efficient Token-Level Small-Large Language Model Collaborative Inference",
+        "url": "https://arxiv.org/abs/2607.20327",
+        "arxiv_id": "2607.20327",
+        "implication": "Cost-aware small/large collaboration can shift routing from per-request choice to token-level escalation."
+      },
+      {
+        "title": "Safe Remediation as Risk-Constrained Intervention Decision in Microservice Systems",
+        "url": "https://arxiv.org/abs/2607.20005",
+        "arxiv_id": "2607.20005",
+        "implication": "No-action and escalation decisions should be first-class success states in agentic operations and trading automation."
+      },
+      {
+        "title": "EvoDRC: A Self-Evolving Agentic Framework for Automated DRC Violation Repair",
+        "url": "https://arxiv.org/abs/2607.20019",
+        "arxiv_id": "2607.20019",
+        "implication": "Industrial agents are becoming domain-specific repair systems with traceable experience, bounded work regions, and impact-preview tools."
+      }
+    ],
+    "concepts": [
+      "agent harness economics",
+      "programmatic memory",
+      "long-horizon agents",
+      "probabilistic safety bounds",
+      "risk-constrained remediation",
+      "model routing",
+      "cache-aware cost",
+      "small-large collaboration",
+      "autonomous agent security",
+      "deterministic tools",
+      "provenance-rich answers",
+      "human-in-the-loop gates",
+      "agentic company OS"
+    ],
+    "sources": [
+      {
+        "title": "GitHub Blog: Copilot vs. raw API access: What are you actually paying for?",
+        "url": "https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for/"
+      },
+      {
+        "title": "GitHub Blog: Evaluating performance and efficiency of the GitHub Copilot agentic harness across models and tasks",
+        "url": "https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/"
+      },
+      {
+        "title": "Google Blog: Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/"
+      },
+      {
+        "title": "Hugging Face Blog: Security incident disclosure — July 2026",
+        "url": "https://huggingface.co/blog/security-incident-july-2026"
+      },
+      {
+        "title": "Ai2 on Hugging Face: What building Shippy taught us about building agents",
+        "url": "https://huggingface.co/blog/allenai/shippy-tech-blog"
+      },
+      {
+        "title": "IBM Research on Hugging Face: Model Routing Is Simple. Until It Isn’t.",
+        "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt"
+      },
+      {
+        "title": "arXiv recent cs.AI list — 23 Jul 2026",
+        "url": "https://arxiv.org/list/cs.AI/recent"
+      },
+      {
+        "title": "arXiv recent cs.CL list — 23 Jul 2026",
+        "url": "https://arxiv.org/list/cs.CL/recent"
+      },
+      {
+        "title": "arXiv 2607.20064: PRO-LONG",
+        "url": "https://arxiv.org/abs/2607.20064"
+      },
+      {
+        "title": "arXiv 2607.20286: Sound Probabilistic Safety Bounds for Large Language Models",
+        "url": "https://arxiv.org/abs/2607.20286"
+      },
+      {
+        "title": "arXiv 2607.20327: PyroDash",
+        "url": "https://arxiv.org/abs/2607.20327"
+      },
+      {
+        "title": "arXiv 2607.20005: Safe Remediation as Risk-Constrained Intervention Decision in Microservice Systems",
+        "url": "https://arxiv.org/abs/2607.20005"
+      },
+      {
+        "title": "arXiv 2607.20019: EvoDRC",
+        "url": "https://arxiv.org/abs/2607.20019"
+      }
+    ],
+    "implications": {
+      "AI/product": "Package agents as controlled work systems, not chats: memory policy, source provenance, routing economics, audit logs, human gates, and explicit no-action states are increasingly the sellable product surface.",
+      "finance/trading": "Apply the safe-remediation pattern to trading: wrong action can be worse than no trade. Encode blast radius, reversibility, confidence, and escalation before allowing automated execution.",
+      "agentic company OS": "The OS layer should expose harness metrics: cost per completed task, retries, cache hit rate, tool-call provenance, memory writes, sandbox boundaries, and approval/rollback state.",
+      "career/opportunities": "High-value wedge: agent reliability/economics engineer for domain workflows—someone who can combine evals, cost routing, secure tool integration, and compliance-grade source ledgers."
+    },
+    "open_questions": [
+      "Can PRO-LONG-style programmatic memory transfer from ARC-style exploratory tasks to finance research workflows with noisy, time-varying evidence?",
+      "What operational threshold should trigger no-trade/no-remediation versus human escalation in a Michael-specific trading agent?",
+      "How should cache-aware routing be measured in a multi-model agent stack: dollars per token, dollars per completed task, or dollars per verified outcome?",
+      "Will autonomous agent security incidents push platforms toward mandatory sandboxing and credential-scoped MCP/tool sessions?",
+      "Which safety-bound methods become practical enough to sit in pre-deployment CI for LLM products?"
+    ],
+    "report_path": "reports/2026-07-23_morning_briefing.md"
   }
 ]

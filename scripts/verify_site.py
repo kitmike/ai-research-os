@@ -19,6 +19,10 @@ REQUIRED_FILES = [
 HTML_SENTINELS = [
     "AI Research OS",
     "Briefings & Essays",
+    "Research Wire",
+    "Wire Sync Packet",
+    "wireSyncPacket",
+    "Imported freshness",
     "Research Ledger",
     "Latest cited-source ledger",
     "sourceAudit",

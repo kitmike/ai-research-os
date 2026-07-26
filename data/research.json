@@ -1631,5 +1631,117 @@
       "How should companies retain complete agent logs while respecting privacy, privilege, and retention limits?"
     ],
     "report_path": "reports/2026-07-23_afternoon_gwern_essay.md"
+  },
+  {
+    "id": "2026-07-26-morning",
+    "date": "2026-07-26",
+    "cadence": "morning",
+    "title": "AI Research OS Morning Briefing — 2026-07-26",
+    "executive_summary": "The weekend signal is operationalization: GitHub pushed Copilot deeper into issue trackers, mobile CI repair, MCP scale-out, and high-end coding models, while arXiv’s OpenForgeRL reframes agent improvement as harness-native RL rather than prompt engineering. Infrastructure work is also moving down-stack: Diffusers gains Nunchaku 4-bit diffusion loading, and NVIDIA/Hugging Face emphasize simulation as the data engine for physical AI. For Michael, the edge is an agentic company OS with explicit harness training, stateless tool servers, CI repair loops, and domain-specific evaluation gates.",
+    "key_claims": [
+      "GitHub says Claude Opus 5 is now available in Copilot for Pro+, Max, Business, and Enterprise users, and frames it as suited to complex long-running coding tasks, tool use, autonomous code changes, regression verification, and multi-step execution.",
+      "GitHub made Copilot cloud agent for Linear generally available, adding model selection, custom repository agents, base/working branch control, session steering via comments, and workspace/team guidance.",
+      "GitHub MCP Server supports the next MCP specification before the July 28 stateless-protocol change; GitHub highlights easier scaling, removed sessions/initialize, faster handshakes, less Redis use, less packet inspection, and upgraded elicitation.",
+      "GitHub Mobile now lets users ask Copilot coding agent to investigate failed GitHub Actions checks and open a follow-on pull request with a proposed fix from iOS/Android.",
+      "OpenForgeRL introduces an open-source framework for training harness-native agents end-to-end with a proxy that records harness model calls for RL stacks and a Kubernetes orchestrator that runs rollouts in remote containers.",
+      "OpenForgeRL reports OpenForgeGUI at 37.7 on OSWorld-Verified, 63.0 on Online-Mind2Web, and 72.3 on WebVoyager, while noting error recovery remains weak despite RL improving self-verification, tool coverage, and multi-step completion.",
+      "Hugging Face Diffusers added Nunchaku Lite support for loading SVDQuant-style 4-bit diffusion checkpoints via from_pretrained without a custom inference engine or local CUDA compilation, lowering the barrier to consumer-GPU image/video generation workflows.",
+      "NVIDIA’s Hugging Face simulation overview argues physical AI’s core bottleneck is data availability, positioning GPU simulation and Isaac Lab 3.0-style agent-ready environments as the scaling path for robot learning and evaluation."
+    ],
+    "papers": [
+      {
+        "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+        "url": "https://arxiv.org/abs/2607.21557v1",
+        "arxiv_id": "2607.21557v1",
+        "implication": "Agent capability gains may increasingly come from training inside the same harnesses used at deployment, not from prompts layered around frozen models."
+      },
+      {
+        "title": "Beyond Sycophancy: Structured Resistance and Compliance in LLM Moral Reasoning",
+        "url": "https://arxiv.org/abs/2607.21558v1",
+        "arxiv_id": "2607.21558v1",
+        "implication": "Alignment work should measure how models revise judgments under social influence, not only whether they flatter or comply."
+      },
+      {
+        "title": "Beyond Sufficiency: Time Series Explanation with Counterfactual Necessity",
+        "url": "https://arxiv.org/abs/2607.21573v1",
+        "arxiv_id": "2607.21573v1",
+        "implication": "Finance/trading explanations need necessity-style counterfactual tests, because sufficient patterns can still be spurious and non-essential."
+      }
+    ],
+    "concepts": [
+      "harness-native agents",
+      "agent RL",
+      "Claude Opus 5",
+      "GitHub Copilot",
+      "Copilot cloud agent",
+      "Linear integration",
+      "stateless MCP",
+      "elicitation",
+      "CI repair loops",
+      "mobile coding agents",
+      "Nunchaku Lite",
+      "4-bit diffusion inference",
+      "physical AI simulation",
+      "Isaac Lab 3.0",
+      "sycophancy",
+      "counterfactual necessity",
+      "time-series explainability"
+    ],
+    "sources": [
+      {
+        "title": "GitHub Changelog: Claude Opus 5 is now available in GitHub Copilot",
+        "url": "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot"
+      },
+      {
+        "title": "GitHub Changelog: Copilot cloud agent for Linear is now generally available",
+        "url": "https://github.blog/changelog/2026-07-23-copilot-cloud-agent-for-linear-is-now-generally-available"
+      },
+      {
+        "title": "GitHub Changelog: GitHub MCP Server supports the next MCP specification",
+        "url": "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification"
+      },
+      {
+        "title": "GitHub Changelog: GitHub Mobile can fix failing Actions checks with Copilot cloud agent",
+        "url": "https://github.blog/changelog/2026-07-23-github-mobile-fix-failing-actions-checks-with-copilot-cloud-agent"
+      },
+      {
+        "title": "arXiv 2607.21557: OpenForgeRL: Train Harness-native Agents in Any Environment",
+        "url": "https://arxiv.org/abs/2607.21557v1"
+      },
+      {
+        "title": "arXiv 2607.21558: Beyond Sycophancy: Structured Resistance and Compliance in LLM Moral Reasoning",
+        "url": "https://arxiv.org/abs/2607.21558v1"
+      },
+      {
+        "title": "arXiv 2607.21573: Beyond Sufficiency: Time Series Explanation with Counterfactual Necessity",
+        "url": "https://arxiv.org/abs/2607.21573v1"
+      },
+      {
+        "title": "Hugging Face Blog: Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
+        "url": "https://huggingface.co/blog/nunchaku-diffusers"
+      },
+      {
+        "title": "Hugging Face / NVIDIA: The State of Simulation for Physical AI: An Overview",
+        "url": "https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai"
+      },
+      {
+        "title": "Google Blog: 3 Google updates from Galaxy Unpacked 2026",
+        "url": "https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/"
+      }
+    ],
+    "implications": {
+      "AI/product": "Treat agent products as operating loops: issue intake, model choice, custom agent policy, branch control, CI repair, and review handoff. The winning UI is less chat and more reliable work orchestration.",
+      "finance/trading": "Use the TimePNS lesson: explanations for time-series signals should test whether a subsequence is necessary, not merely sufficient. For trading agents, no-trade and rollback gates should be tied to counterfactual evidence.",
+      "agentic company OS": "Prioritize stateless MCP servers, per-task containers, provenance capture, and harness-native training data. OpenForgeRL’s proxy/orchestrator pattern maps directly onto a company OS for learning from real agent runs.",
+      "career/opportunities": "Agent reliability engineering remains the opportunity: MCP migration, custom Copilot/Linear agents, harness RL, eval datasets, and CI-remediation workflows are practical services companies can buy now."
+    },
+    "open_questions": [
+      "Will stateless MCP meaningfully reduce operational complexity for enterprise tool servers, or mostly shift complexity into auth, elicitation, and observability?",
+      "Does Claude Opus 5 in Copilot materially improve real-world autonomous PR success versus earlier frontier coding models once cost and review time are included?",
+      "Can OpenForgeRL-style harness-native RL be applied to proprietary company workflows without leaking sensitive traces or overfitting to internal harness quirks?",
+      "How much does Nunchaku Lite change production economics for diffusion media agents on consumer or prosumer GPUs?",
+      "For financial time-series agents, what benchmark would test necessity-aware explanations against PnL, drawdown, and regime-shift robustness?"
+    ],
+    "report_path": "reports/2026-07-26_morning_briefing.md"
   }
 ]

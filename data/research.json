@@ -1743,5 +1743,155 @@
       "For financial time-series agents, what benchmark would test necessity-aware explanations against PnL, drawdown, and regime-shift robustness?"
     ],
     "report_path": "reports/2026-07-26_morning_briefing.md"
+  },
+  {
+    "id": "2026-07-26-afternoon",
+    "date": "2026-07-26",
+    "cadence": "afternoon",
+    "title": "Harness-Native RL and the End of Prompt-Only Agents",
+    "executive_summary": "OpenForgeRL is this afternoon’s key paper because it reframes agent progress as a trainable model–harness–environment loop rather than prompt engineering around a frozen model. Its proxy records model calls from real inference harnesses into RL-compatible trajectories, while a Kubernetes orchestrator runs each rollout in an isolated remote container. The reported results—OpenForge-Claw at 31.7 pass^3 / 55.9 pass@3 on ClawEval, 33.7 on QwenClawBench, and 28.1 on MCPAtlas; OpenForge-GUI at 37.7 on OSWorld-Verified, 63.0 on Online-Mind2Web, and 72.3 on WebVoyager—are less important than the architectural implication: the harness is now part of the policy and should become an optimization, telemetry, governance, and product surface.",
+    "key_claims": [
+      "OpenForgeRL targets the train–deploy mismatch created when agents are trained in simplified loops but deployed inside stateful harnesses such as Claude Code, Codex, OpenClaw, browser controllers, GUI agents, and MCP-connected tools.",
+      "The framework uses a lightweight proxy to serve harness model calls and record prompt-response trajectories that can be reconstructed for standard RL stacks such as veRL.",
+      "A Kubernetes orchestrator launches each rollout in a remote container, allowing executable environments, virtual displays, tools, and failures to be isolated from trainer nodes.",
+      "The paper reports OpenForge-Claw (SFT+RL) at 31.7 pass^3 and 55.9 pass@3 on ClawEval, 33.7 on QwenClawBench, and 28.1 on MCPAtlas, improving over the untrained Qwen3-30B-A3B-Thinking backbone and SFT-only checkpoint on several columns.",
+      "The paper reports OpenForge-GUI (SFT+RL) at 37.7 on OSWorld-Verified, 63.0 on Online-Mind2Web, and 72.3 on WebVoyager, using hundreds to a few thousand automatically curated tasks rather than very large task corpora.",
+      "Behaviorally, RL reduced generic shell calls under ZeroClaw from 22.6% to 13.9% of tool calls and shifted behavior toward dedicated service tools, while improving self-verification/tool coverage/task completion but leaving error recovery weak.",
+      "The strategic lesson is that agent products should capture governed episodes—instruction, context, tools, observations, failures, reviewer feedback, final artifact, and outcome—as a future learning substrate.",
+      "For finance and trading workflows, harness-native optimization must reward no-trade, data quarantine, source reconciliation, regime robustness, and counterfactual necessity rather than only memo or trade-idea production."
+    ],
+    "papers": [
+      {
+        "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+        "url": "https://arxiv.org/abs/2607.21557v1",
+        "arxiv_id": "2607.21557v1",
+        "implication": "Agent improvement should train inside the real deployment harness, not only inside simplified ReAct-style loops."
+      },
+      {
+        "title": "Beyond Sufficiency: Time Series Explanation with Counterfactual Necessity",
+        "url": "https://arxiv.org/abs/2607.21573v1",
+        "arxiv_id": "2607.21573v1",
+        "implication": "Finance explanations should test whether a subsequence is necessary for a decision, not merely sufficient or supportive."
+      },
+      {
+        "title": "Toward cryptographically verifiable authorization for autonomous AI agents",
+        "url": "https://arxiv.org/abs/2607.21325v1",
+        "arxiv_id": "2607.21325v1",
+        "implication": "Harness-native agents need authorization evidence for concrete requests and execution context, not just identity delegation."
+      },
+      {
+        "title": "Which Model Is Actually Serving You? IRIS: Budgeted Black-Box Auditing of Model Substitution and Routing Dilution in LLM Gateways",
+        "url": "https://arxiv.org/abs/2607.20860v1",
+        "arxiv_id": "2607.20860v1",
+        "implication": "If products route models through gateways, audits should verify the actual served backend and dilution behavior as part of trust telemetry."
+      },
+      {
+        "title": "Agentic Context Management: Solving Agent Memory and Cost by Treating Them as Lifecycle and Architecture Problems",
+        "url": "https://arxiv.org/abs/2607.21503v1",
+        "arxiv_id": "2607.21503v1",
+        "implication": "Context/memory/cost should be governed across the agent lifecycle, reinforcing the harness-as-architecture thesis."
+      }
+    ],
+    "concepts": [
+      "harness-native RL",
+      "train–deploy mismatch",
+      "inference harness",
+      "OpenForgeRL",
+      "proxy recorder",
+      "trajectory reconstruction",
+      "remote rollout containers",
+      "Kubernetes orchestrator",
+      "veRL",
+      "ClawEval",
+      "OSWorld-Verified",
+      "Online-Mind2Web",
+      "WebVoyager",
+      "agentic reliability",
+      "self-verification",
+      "tool coverage",
+      "error recovery",
+      "agent episode ledger",
+      "stateless MCP",
+      "counterfactual necessity",
+      "finance no-action gates"
+    ],
+    "sources": [
+      {
+        "title": "arXiv: OpenForgeRL: Train Harness-native Agents in Any Environment",
+        "url": "https://arxiv.org/abs/2607.21557v1"
+      },
+      {
+        "title": "arXiv HTML: OpenForgeRL full text",
+        "url": "https://arxiv.org/html/2607.21557v1"
+      },
+      {
+        "title": "GitHub Changelog: Claude Opus 5 is now available in GitHub Copilot",
+        "url": "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/"
+      },
+      {
+        "title": "GitHub Changelog: Copilot cloud agent for Linear is now generally available",
+        "url": "https://github.blog/changelog/2026-07-23-copilot-cloud-agent-for-linear-is-now-generally-available/"
+      },
+      {
+        "title": "GitHub Changelog: GitHub MCP Server supports the next MCP specification",
+        "url": "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification/"
+      },
+      {
+        "title": "GitHub Changelog: GitHub Mobile can fix failing Actions checks with Copilot cloud agent",
+        "url": "https://github.blog/changelog/2026-07-23-github-mobile-fix-failing-actions-checks-with-copilot-cloud-agent/"
+      },
+      {
+        "title": "arXiv: Beyond Sufficiency: Time Series Explanation with Counterfactual Necessity",
+        "url": "https://arxiv.org/abs/2607.21573v1"
+      },
+      {
+        "title": "arXiv: Toward cryptographically verifiable authorization for autonomous AI agents",
+        "url": "https://arxiv.org/abs/2607.21325v1"
+      },
+      {
+        "title": "arXiv: IRIS budgeted black-box auditing of model substitution and routing dilution",
+        "url": "https://arxiv.org/abs/2607.20860v1"
+      },
+      {
+        "title": "arXiv: Agentic Context Management",
+        "url": "https://arxiv.org/abs/2607.21503v1"
+      },
+      {
+        "title": "arXiv: Delivery, Not Storage: Cue-Anchored Working Memory as a Harness Property for Coding Agents",
+        "url": "https://arxiv.org/abs/2607.20972v1"
+      },
+      {
+        "title": "arXiv: Agentic coding without the cloud",
+        "url": "https://arxiv.org/abs/2607.21482v1"
+      },
+      {
+        "title": "arXiv: Tencent WorkBuddy Bench",
+        "url": "https://arxiv.org/abs/2607.20911v1"
+      },
+      {
+        "title": "arXiv: Setup Complete, Now You Are Compromised",
+        "url": "https://arxiv.org/abs/2607.15143v1"
+      },
+      {
+        "title": "arXiv: ResearchArena: Evaluating Sabotage and Monitoring in Automated AI R&D",
+        "url": "https://arxiv.org/abs/2607.19321v1"
+      }
+    ],
+    "implications": {
+      "AI/product": "Build agents as learning operating loops: harness versions, task intake, sandbox rollout, trace capture, evaluator packs, reviewer feedback, and cost/reliability dashboards should be product primitives.",
+      "finance/trading": "Train and evaluate finance agents on no-trade, data quarantine, source reconciliation, regime-split checks, leakage detection, slippage/liquidity assumptions, and counterfactual necessity—not just on fluent memos.",
+      "agentic company OS": "Make the episode ledger canonical: instruction, context, tool calls, environment state, observations, failures, recovery attempts, human review, final artifact, and business outcome should be governed and queryable.",
+      "career/opportunities": "High-value niche: agent reliability and harness infrastructure—trace instrumentation, eval/reward design, sandbox orchestration, privacy-safe training data, MCP/tool auth, and cost per verified outcome."
+    },
+    "open_questions": [
+      "Can OpenForgeRL-style training improve error recovery if the reward explicitly values diagnosis, rollback, and escalation after failed commands?",
+      "How can proprietary company traces become SFT/RL tasks without exposing secrets, violating deletion requirements, or overfitting to bad historical workflows?",
+      "How much of harness-native benchmark gain transfers when the deployed harness version, tool schema, MCP server, or CI environment changes?",
+      "What reward functions discourage agents from shortcutting tests or gaming metrics while remaining cheap enough for thousands of rollouts?",
+      "What is the trading analogue of OSWorld or ClawEval: a benchmark that rewards no-trade, source reconciliation, regime robustness, liquidity realism, and leakage detection?",
+      "Can stateless MCP tool calls be logged and replayed for training while preserving auth boundaries, user privacy, and execution-context integrity?",
+      "Should agent operations optimize dollars per token, dollars per completed task, or dollars per verified business outcome?"
+    ],
+    "report_path": "reports/2026-07-26_afternoon_gwern_essay.md"
   }
 ]

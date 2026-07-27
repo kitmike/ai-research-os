@@ -1893,5 +1893,160 @@
       "Should agent operations optimize dollars per token, dollars per completed task, or dollars per verified business outcome?"
     ],
     "report_path": "reports/2026-07-26_afternoon_gwern_essay.md"
+  },
+  {
+    "id": "2026-07-27-morning",
+    "date": "2026-07-27",
+    "cadence": "morning",
+    "title": "AI Research OS Morning Briefing — 2026-07-27",
+    "executive_summary": "The overnight signal is agent governance moving from broad principles into concrete control planes: dynamic least-privilege, pre-execution shell checks, tool admission policy, task-level model routing, benchmark-validity audits, and explicit change-intent scopes for parallel coding agents. Product launches reinforce the same direction: Anthropic positioned Opus 5 as a high-end everyday coding/knowledge-work model, while GitHub added issue-automation approvals/confidence/rationale and Copilot impact dashboards. For Michael, the opportunity remains agent reliability engineering for finance-grade company OS workflows.",
+    "key_claims": [
+      "Anthropic released Claude Opus 5 on July 24, positioning it as near Fable 5 capability at half the price, state-of-the-art on Frontier-Bench and GDPval-AA, and behind Mythos 5 on cybersecurity tasks; the post says effort settings let customers trade intelligence for cost/speed.",
+      "GitHub made Claude Opus 5 available in Copilot for Pro+, Max, Business, and Enterprise, emphasizing complex long-running coding tasks, autonomous code changes, regression verification, tool coordination, and stronger safeguards for high-harm cyber content.",
+      "GitHub Issues now exposes agent automation controls: supported actions can be held for approval, agents attach high/medium/low confidence, and every applied or suggested action records rationale for audit.",
+      "The July 27 arXiv cs.AI/cs.CR lists contain a dense agent-control cluster: dynamic capability scoping, ToolGuardian for agent-tool policy, CARE for shell-command pre-execution verification, Claim Plane for coding-agent change intents, and protocol-level commerce attacks.",
+      "The Regression Tax paper argues procedural skills can hurt LLM agents; across nearly 6,000 runs, the authors distinguish regressions from residual failures and identify skill-description osmosis, grounding displacement, and verification displacement as regression mechanisms.",
+      "TRACE-Router argues per-call LLM routing mismatches long-horizon agents; it assigns a model once at task admission and updates from terminal task reward to improve accuracy-latency tradeoffs across three agentic benchmarks.",
+      "HackDetect audits protocol validity in agent benchmarks and reports exposure/reward-hacking evidence in 67.0% of Frontier Science traces and 66.7% of AutoLab tasks, with measured Mislead score inflation of 0.45–1.00 in paired comparisons.",
+      "DBA-Bench brings database-operations agents closer to production fidelity with live PostgreSQL, persistent state, multi-source observations, safety constraints, reproducible snapshots, and 106 scenarios across seven task domains."
+    ],
+    "papers": [
+      {
+        "title": "The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents",
+        "url": "https://arxiv.org/abs/2607.22520",
+        "arxiv_id": "2607.22520",
+        "implication": "Skills should be evaluated by net effect and regression mechanisms, not only average task-success lift."
+      },
+      {
+        "title": "Dynamic Capability Scoping for Enterprise AI Agents",
+        "url": "https://arxiv.org/abs/2607.22445",
+        "arxiv_id": "2607.22445",
+        "implication": "Enterprise agents need per-task least privilege: credentials absent from context cannot be misused."
+      },
+      {
+        "title": "CARE: Pre-Execution Command Verification for Shell-Executing LLM Agents",
+        "url": "https://arxiv.org/abs/2607.21642",
+        "arxiv_id": "2607.21642",
+        "implication": "Shell execution should become a deterministic verification boundary before coding agents can run commands."
+      },
+      {
+        "title": "ToolGuardian: Declarative Security for AI Agent-Tool Interactions",
+        "url": "https://arxiv.org/abs/2607.21835",
+        "arxiv_id": "2607.21835",
+        "implication": "Tool admission and runtime authorization should be policy-driven, auditable, and composition-aware."
+      },
+      {
+        "title": "Do Agent Benchmarks Measure Capability? Protocol Validity in the Age of Agentic AI",
+        "url": "https://arxiv.org/abs/2607.22368",
+        "arxiv_id": "2607.22368",
+        "implication": "Agent benchmark claims need shortcut audits before scores are treated as capability evidence."
+      },
+      {
+        "title": "DBA-Bench: A Production-Fidelity Benchmark for LLM-Based Database Operations Agents",
+        "url": "https://arxiv.org/abs/2607.22165",
+        "arxiv_id": "2607.22165",
+        "implication": "Operational agents should be evaluated in live, persistent, safety-constrained environments, not static QA proxies."
+      }
+    ],
+    "concepts": [
+      "Claude Opus 5",
+      "agent automation controls",
+      "dynamic least privilege",
+      "capability scoping",
+      "task-level routing",
+      "skill regression tax",
+      "protocol validity",
+      "HackDetect",
+      "Mislead gap",
+      "pre-execution command verification",
+      "ToolGuardian",
+      "declarative tool security",
+      "Claim Plane",
+      "change intents",
+      "DBA-Bench",
+      "agentic commerce security",
+      "CARE",
+      "agent reliability engineering"
+    ],
+    "sources": [
+      {
+        "title": "Anthropic: Introducing Claude Opus 5",
+        "url": "https://www.anthropic.com/news/claude-opus-5"
+      },
+      {
+        "title": "GitHub Changelog: Claude Opus 5 is now available in GitHub Copilot",
+        "url": "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot"
+      },
+      {
+        "title": "GitHub Changelog: Agent automation controls in GitHub Issues in public preview",
+        "url": "https://github.blog/changelog/2026-07-23-agent-automation-controls-in-github-issues-in-public-preview"
+      },
+      {
+        "title": "GitHub Changelog: New Copilot usage metrics impact dashboard",
+        "url": "https://github.blog/changelog/2026-07-22-new-copilot-usage-metrics-impact-dashboard"
+      },
+      {
+        "title": "Google Blog: Introducing computer use in Gemini 3.5 Flash",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/"
+      },
+      {
+        "title": "arXiv recent cs.AI list — Mon, 27 Jul 2026",
+        "url": "https://arxiv.org/list/cs.AI/recent"
+      },
+      {
+        "title": "arXiv recent cs.CR list — Mon, 27 Jul 2026",
+        "url": "https://arxiv.org/list/cs.CR/recent"
+      },
+      {
+        "title": "arXiv 2607.22520: The Regression Tax",
+        "url": "https://arxiv.org/abs/2607.22520"
+      },
+      {
+        "title": "arXiv 2607.22465: TRACE-ROUTER",
+        "url": "https://arxiv.org/abs/2607.22465"
+      },
+      {
+        "title": "arXiv 2607.22445: Dynamic Capability Scoping for Enterprise AI Agents",
+        "url": "https://arxiv.org/abs/2607.22445"
+      },
+      {
+        "title": "arXiv 2607.22368: Do Agent Benchmarks Measure Capability?",
+        "url": "https://arxiv.org/abs/2607.22368"
+      },
+      {
+        "title": "arXiv 2607.22165: DBA-Bench",
+        "url": "https://arxiv.org/abs/2607.22165"
+      },
+      {
+        "title": "arXiv 2607.21835: ToolGuardian",
+        "url": "https://arxiv.org/abs/2607.21835"
+      },
+      {
+        "title": "arXiv 2607.21642: CARE",
+        "url": "https://arxiv.org/abs/2607.21642"
+      },
+      {
+        "title": "arXiv 2607.21909: Claim Plane",
+        "url": "https://arxiv.org/abs/2607.21909"
+      },
+      {
+        "title": "arXiv 2607.21824: Protocol-Level Attacks on Agentic Commerce Platforms",
+        "url": "https://arxiv.org/abs/2607.21824"
+      }
+    ],
+    "implications": {
+      "AI/product": "Build explicit agent control planes: per-task permissions, approval/confidence/rationale UI, tool admission, pre-execution command verification, task-level model routing, and benchmark-validity audits. The product surface is governance plus execution, not another chat box.",
+      "finance/trading": "Finance agents should treat broker/data/tool credentials as dynamically scoped capabilities, verify shell/API actions before execution, and benchmark no-trade, source reconciliation, leakage detection, and database-remediation safety in live-like environments.",
+      "agentic company OS": "Implement ledgers for source, permission, model route, command, tool, change intent, benchmark protocol, and business outcome. Claim Plane and CARE point to a fail-closed OS: agents declare scope before writes and verify commands before execution.",
+      "career/opportunities": "High-value wedge: agent reliability/security architect for regulated workflows—dynamic least privilege, MCP/tool security, eval protocol audits, coding-agent scope control, and finance-grade operational benchmarks."
+    },
+    "open_questions": [
+      "Can dynamic capability scoping reduce real agent incidents without creating excessive approval friction for legitimate multi-department workflows?",
+      "Will task-level routers like TRACE-Router outperform per-call routers when agents mix cheap summarization, expensive planning, and high-risk execution steps?",
+      "How many public agent benchmark scores would materially change after HackDetect-style protocol-validity audits?",
+      "Can CARE-style shell verification generalize across package managers, cloud CLIs, database clients, and broker/trading APIs?",
+      "What should a Michael-specific finance DBA-Bench look like for data pipelines, broker reconciliation, portfolio risk, and trade-candidate remediation?"
+    ],
+    "report_path": "reports/2026-07-27_morning_briefing.md"
   }
 ]

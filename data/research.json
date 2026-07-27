@@ -2048,5 +2048,99 @@
       "What should a Michael-specific finance DBA-Bench look like for data pipelines, broker reconciliation, portfolio risk, and trade-candidate remediation?"
     ],
     "report_path": "reports/2026-07-27_morning_briefing.md"
+  },
+  {
+    "id": "2026-07-27-afternoon",
+    "date": "2026-07-27",
+    "cadence": "afternoon",
+    "title": "The Regression Tax: Why Agent Skills Need a Loss Function",
+    "executive_summary": "Darshan Tank and Baran Nama’s 24 July 2026 arXiv paper, The Regression Tax, is the most important agent paper in this window because it changes skill evaluation from average uplift to adverse-event accounting. Across 5,832 paired office-agent task-condition runs, the authors report 553 gross gains but 324 regressions, so newly broken tasks offset 59% of gross improvement. Mechanistically, many failures occur not in the procedural method step skills target, but in grounding and verification: skill descriptions can perturb behavior merely by being present, and skill procedures can displace evidence selection or output checks. The practical implication is to treat agent skills like deployable infrastructure: versioned, canaried, rolled back, and reported with gain/regression ledgers rather than net pass rate alone.",
+    "key_claims": [
+      "The paper evaluates procedural agent skills by pairing no-skill and with-skill outcomes, separating gross gains from regressions instead of reporting only aggregate pass-rate improvement.",
+      "Across 5,832 task-condition runs on OfficeQA-Pro and SpreadsheetBench with three model/harness stacks, the authors report 553 gains and 324 regressions, meaning regressions offset 59% of gross gains.",
+      "No reported library condition has zero regressions; regression counts range from 2 to 41 across the eighteen library conditions in Table 2.",
+      "On OfficeQA-Pro, Table 3 codes 59 of 81 regressions (72.8%) as grounding displacement and 14 of 81 (17.3%) as osmosis, where skill descriptions affect behavior without body invocation.",
+      "On SpreadsheetBench cell-level regressions, Table 4 codes 70 of 243 (28.8%) as osmosis, 46 (18.9%) as body engaged, 32 (13.2%) as grader artifacts, and 95 (39.1%) as other.",
+      "The paper’s design lesson is that skills over-target method/procedure while many observed failures occur at grounding and verification boundaries.",
+      "For production agents, skill libraries should be versioned, ablated for presence-only effects, canaried, monitored for regressions, and rolled back like software deployments."
+    ],
+    "papers": [
+      {
+        "title": "The Regression Tax: Decomposing Why Skills Help — and Hurt — LLM Agents",
+        "url": "https://arxiv.org/abs/2607.22520v1",
+        "arxiv_id": "2607.22520v1",
+        "implication": "Agent skill evaluation should report gross gains, regressions, and mechanism-coded adverse events rather than net pass-rate deltas alone."
+      },
+      {
+        "title": "TRACE-Router: Task-Consistent and Adaptive Online Routing for Agentic AI",
+        "url": "https://arxiv.org/abs/2607.22465v1",
+        "arxiv_id": "2607.22465v1",
+        "implication": "Task-level routing with terminal reward is a complementary systems idea: routing, like skills, should align with whole-workflow outcomes rather than isolated calls."
+      },
+      {
+        "title": "Do LLM-Generated Skills Make Better AI Data Scientists? A Component Ablation Across Data-Science Workflows",
+        "url": "https://arxiv.org/abs/2607.07504",
+        "arxiv_id": "2607.07504",
+        "implication": "Prior component ablations reinforce the need to measure when generic skill guidance conflicts with task-specific instructions."
+      }
+    ],
+    "concepts": [
+      "regression tax",
+      "agent skills",
+      "paired evaluation",
+      "gross gains",
+      "regressions",
+      "skill-description osmosis",
+      "grounding displacement",
+      "verification displacement",
+      "presence-only ablation",
+      "skill lifecycle management",
+      "agent reliability engineering",
+      "finance grounding risk"
+    ],
+    "sources": [
+      {
+        "title": "The Regression Tax: Decomposing Why Skills Help — and Hurt — LLM Agents (arXiv abstract)",
+        "url": "https://arxiv.org/abs/2607.22520v1"
+      },
+      {
+        "title": "The Regression Tax: Decomposing Why Skills Help — and Hurt — LLM Agents (arXiv HTML full text)",
+        "url": "https://arxiv.org/html/2607.22520v1"
+      },
+      {
+        "title": "Anthropic skill-creator repository referenced by The Regression Tax",
+        "url": "https://github.com/anthropics/skills/tree/main/skills/skill-creator"
+      },
+      {
+        "title": "OpenAI skill-creator repository referenced by The Regression Tax",
+        "url": "https://github.com/openai/skills/tree/main/skills/.system/skill-creator"
+      },
+      {
+        "title": "Lost in the Middle: How Language Models Use Long Contexts",
+        "url": "https://arxiv.org/abs/2307.03172"
+      },
+      {
+        "title": "TRACE-Router: Task-Consistent and Adaptive Online Routing for Agentic AI",
+        "url": "https://arxiv.org/abs/2607.22465v1"
+      },
+      {
+        "title": "Do LLM-Generated Skills Make Better AI Data Scientists? A Component Ablation Across Data-Science Workflows",
+        "url": "https://arxiv.org/abs/2607.07504"
+      }
+    ],
+    "implications": {
+      "AI/product": "Make the regression ledger a product feature: every workflow template or skill should show gross gains, regressions, scope, presence-only effects, and last-tested benchmark rather than only a headline uplift.",
+      "finance/trading": "Finance agents should treat grounding as the core risk surface. A skill that teaches a valuation, factor, or spreadsheet procedure can silently regress by using the wrong filing, table, vintage, or definition; no-trade/no-update should remain a valid outcome when grounding is uncertain.",
+      "agentic company OS": "Skills should be managed like deployable infrastructure: version, hash, evaluate, canary, monitor, quarantine, and roll back. Presence-only ablations and grounding/verification probes belong in the OS runtime, not in ad hoc notebooks.",
+      "career/opportunities": "Agent reliability engineering is an emerging niche: building paired evals, trace taxonomies, adverse-event dashboards, skill rollout controls, and reliability UX for enterprise agent systems."
+    },
+    "open_questions": [
+      "Does the 59% regression-tax pattern replicate in coding agents, browser agents, customer-support agents, and research agents, or is it strongest in office-document/spreadsheet work?",
+      "Can context isolation or stricter retrieval eliminate skill-description osmosis without losing the recall benefits of reusable skills?",
+      "Do large skill libraries accumulate interaction effects over time, causing regressions to grow superlinearly with library size?",
+      "Can grounding displacement and verification displacement be detected automatically from traces rather than manually coded?",
+      "What would a finance-specific paired benchmark look like for filings, spreadsheets, macro releases, and trading-research notebooks?"
+    ],
+    "report_path": "reports/2026-07-27_afternoon_gwern_essay.md"
   }
 ]

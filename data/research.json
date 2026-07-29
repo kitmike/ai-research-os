@@ -1,5 +1,142 @@
 [
   {
+    "id": "2026-07-29-afternoon",
+    "date": "2026-07-29",
+    "cadence": "afternoon",
+    "title": "The Tool Output Is Not Your Boss",
+    "executive_summary": "IH-Benchmark is the most important new agent paper in this window because it shows instruction hierarchy is not a single solved model trait. The benchmark contains 2,336 executable scenarios spanning system-over-user and user-over-tool conflicts, built from 44 constraint families across generic, health, finance, retail, and coding settings. Across 37 evaluated models, conflict compliance ranges from 98.2% to 20.5%; average compliance in the representative table is 85.4% for direct S≻U conflicts but only 68.6% for tool-mediated U≻T conflicts. The practical lesson is that agent runtimes need source-priority metadata, tool-output quarantine, skill-file screening, action-intent verification, and audit traces—not merely stronger prompts asking the model to obey the hierarchy.",
+    "key_claims": [
+      "IH-Benchmark evaluates two hierarchy edges: system instructions over user instructions (S≻U), and user instructions over tool outputs (U≻T).",
+      "The benchmark contains 2,336 scenarios: 459 conflict and 275 non-conflict S≻U scenarios, plus 1,536 conflict and 66 non-conflict U≻T scenarios.",
+      "The paper builds its scenario taxonomy from 44 constraint families across generic, health, finance, retail, and coding settings, with binary pass/fail grading via predicate DSL plus category-scoped LLM judges.",
+      "Across 37 evaluated models, conflict compliance ranges from 98.2% to 20.5%; the representative table reports a 72.5% average overall conflict compliance rate.",
+      "Strong direct system-user compliance does not reliably predict tool-output robustness: the table-average S≻U compliance is 85.4%, while U≻T compliance is 68.6%.",
+      "Constraint hardening improves some failures, but the paper reports a split where other failures persist across strictness levels, implying prompt hardening is not a complete defense.",
+      "SkillGate, Desktop-Delta Bench, and ARC corroborate the same systems theme: untrusted skill files, GUI observations, and memory records need typed provenance and runtime controls rather than being poured into a flat prompt."
+    ],
+    "papers": [
+      {
+        "title": "IH-Benchmark: A Conflict-Centered Benchmark for Instruction-Hierarchy Robustness in LLM Applications",
+        "url": "https://arxiv.org/abs/2607.25987",
+        "arxiv_id": "2607.25987v1",
+        "implication": "Evaluate tool-output conflicts separately from direct jailbreaks; user-over-tool robustness is a distinct agent safety surface."
+      },
+      {
+        "title": "SkillGate: Cost Efficient Runtime Malicious Skill File Detection in Coding Agents",
+        "url": "https://arxiv.org/abs/2607.25619",
+        "arxiv_id": "2607.25619v1",
+        "implication": "Treat agent skill files as supply-chain inputs that require screening, hashing, scoping, and review before installation."
+      },
+      {
+        "title": "Desktop-Delta Bench: Do Computer-Use Models Understand Desktop GUI Transitions?",
+        "url": "https://arxiv.org/abs/2607.26041",
+        "arxiv_id": "2607.26041v1",
+        "implication": "Add step-level GUI transition verification between grounding and final task success for computer-use agents."
+      },
+      {
+        "title": "Addressable Recall Compaction for Long Context-Window Control in AI Agents",
+        "url": "https://arxiv.org/abs/2607.25066",
+        "arxiv_id": "2607.25066v1",
+        "implication": "Keep tool observations in append-only ID-addressable logs so authority/provenance can survive compaction and later recall."
+      },
+      {
+        "title": "The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+        "url": "https://arxiv.org/abs/2404.13208",
+        "arxiv_id": "2404.13208v1",
+        "implication": "Foundational framing for treating prompt injection as a priority-resolution failure, not only a moderation failure."
+      },
+      {
+        "title": "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents",
+        "url": "https://arxiv.org/abs/2406.13352",
+        "arxiv_id": "2406.13352v3",
+        "implication": "Indirect prompt injection through tool/environment content is the practical ancestor of the U≻T test surface."
+      }
+    ],
+    "concepts": [
+      "instruction hierarchy",
+      "IH-Benchmark",
+      "system-over-user conflict",
+      "user-over-tool conflict",
+      "indirect prompt injection",
+      "tool-output quarantine",
+      "authority graph",
+      "predicate DSL",
+      "category-scoped LLM judges",
+      "constraint hardening",
+      "skill-file supply chain",
+      "source-priority metadata",
+      "write-side verifier",
+      "agent reliability engineering",
+      "finance no-action gate",
+      "typed tool contracts"
+    ],
+    "sources": [
+      {
+        "title": "arXiv: IH-Benchmark: A Conflict-Centered Benchmark for Instruction-Hierarchy Robustness in LLM Applications",
+        "url": "https://arxiv.org/abs/2607.25987"
+      },
+      {
+        "title": "PDF: IH-Benchmark full paper",
+        "url": "https://arxiv.org/pdf/2607.25987"
+      },
+      {
+        "title": "arXiv: The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+        "url": "https://arxiv.org/abs/2404.13208"
+      },
+      {
+        "title": "arXiv: AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents",
+        "url": "https://arxiv.org/abs/2406.13352"
+      },
+      {
+        "title": "arXiv: IHEval: Evaluating Language Models on Following the Instruction Hierarchy",
+        "url": "https://arxiv.org/abs/2502.08745"
+      },
+      {
+        "title": "arXiv: Control Illusion: The Failure of Instruction Hierarchies in Large Language Models",
+        "url": "https://arxiv.org/abs/2502.15851"
+      },
+      {
+        "title": "arXiv: SkillGate: Cost Efficient Runtime Malicious Skill File Detection in Coding Agents",
+        "url": "https://arxiv.org/abs/2607.25619"
+      },
+      {
+        "title": "PDF: SkillGate full paper",
+        "url": "https://arxiv.org/pdf/2607.25619"
+      },
+      {
+        "title": "arXiv: Desktop-Delta Bench",
+        "url": "https://arxiv.org/abs/2607.26041"
+      },
+      {
+        "title": "PDF: Desktop-Delta Bench full paper",
+        "url": "https://arxiv.org/pdf/2607.26041"
+      },
+      {
+        "title": "arXiv: Addressable Recall Compaction for Long Context-Window Control in AI Agents",
+        "url": "https://arxiv.org/abs/2607.25066"
+      },
+      {
+        "title": "PDF: Addressable Recall Compaction full paper",
+        "url": "https://arxiv.org/pdf/2607.25066"
+      }
+    ],
+    "implications": {
+      "AI/product": "Build hierarchy-aware workflow infrastructure: source-priority tags, tool-output quarantine, skill scanning, action-intent matching, approval prompts, and audit views. Enterprise buyers will ask which authority the agent obeyed, not only whether it completed the task.",
+      "finance/trading": "Finance agents should never let a retrieved filing, scraped page, analyst note, broker message, or news feed become a portfolio instruction. Treat no-trade/no-update as valid when lower-priority or conflicting evidence influences a proposed action.",
+      "agentic company OS": "Model every instruction-like string as an authority-typed object: system policy, user request, tool observation, retrieved document, memory note, skill file, or agent hypothesis. Enforce the graph at action time and expose it in traces.",
+      "career/opportunities": "Agent reliability engineering remains the wedge: instruction-hierarchy evals, indirect prompt-injection defenses, skill-file supply-chain security, typed tool contracts, memory provenance, and finance-grade action gates."
+    },
+    "open_questions": [
+      "Can IH-Benchmark-style scenarios be reproduced inside realistic MCP workflows with GitHub, browser, docs, email, spreadsheet, and broker-sandbox tools?",
+      "How much do source labels and tool-output quoting improve U≻T compliance compared with prompt hardening alone?",
+      "Can malicious tool output survive summarization or memory compaction and later reappear as apparently trusted memory?",
+      "What finance-specific U≻T benchmark would test filings, scraped web pages, stale data corrections, analyst-note conflicts, and trade-ticket manipulation?",
+      "Can write-side verifiers detect whether a proposed action depends on lower-priority conflicting instructions?",
+      "Do vendors improve on IH-Benchmark without improving transfer to unseen tools, domains, and multi-turn workflows?"
+    ],
+    "report_path": "reports/2026-07-29_afternoon_gwern_essay.md"
+  },
+  {
     "id": "2026-07-28-afternoon",
     "date": "2026-07-28",
     "cadence": "afternoon",

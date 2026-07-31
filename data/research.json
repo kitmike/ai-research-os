@@ -1,5 +1,152 @@
 [
   {
+    "id": "2026-07-31-morning",
+    "date": "2026-07-31",
+    "cadence": "morning",
+    "title": "Agent Reliability Moves from Demo to Operating System",
+    "executive_summary": "The July 30 research/announcement window is about operational hardening of agents: OSReward targets computer-use reward-model reliability, local CUA scaling studies show more compute can shift rather than solve failure modes, PAIChecker exposes SWE-bench-style label hygiene risk, ORCA-bench shows on-call RCA remains hard for frontier agents, and Shadow Before Swap gives finance/trading a concrete forward-gated model replacement pattern. OpenAI and Google are simultaneously packaging GPT-5.6/Gemini managed-agent efficiency, realtime agents, hooks, compaction, and price-performance as product surfaces. For Michael, the opportunity is an agent reliability cockpit: verification, telemetry, cost controls, deployment gates, and domain-specific operating policies.",
+    "key_claims": [
+      "OSReward introduces a benchmark family for evaluating VLM judges on computer-use-agent trajectories and reports systematic leniency bias that mislabels failed runs as successes.",
+      "OSReward releases OS-Shepherd-100K and OS-Shepherd 9B/35B, claiming lower-cost stable reward signals that match commercial judges at 30–60% lower cost in the paper abstract.",
+      "The local CUA scaling paper reports that contextual, temporal, structural, and parallel inference-time scaling show diminishing returns or costly failure-mode shifts on OSWorld for resource-constrained models.",
+      "PAIChecker reports 13.6% PR-issue misalignment in SWE-bench Verified and proposes a multi-agent checker for PR/issue alignment in SWE-bench-like datasets.",
+      "ORCA-bench reports 1,079 on-call RCA tasks over a six-day OpenTelemetry testbed, with best frontier-agent RCA accuracy of 25.3% on Medium and 10.0% on Hard tasks in the abstract.",
+      "Shadow Before Swap promotes only 114 of 528 challenger models in Binance historical replay, reducing deployed model changes by 78.4% while reporting small NLL improvements versus replacement baselines.",
+      "OpenAI RSS entries dated July 29–30 announce GPT-5.6 price-performance/efficiency, ARC-AGI-3 settings involving reasoning retention and compaction, and a GPT-Realtime retail-agent deployment; Google announced Gemini API Managed Agents with 3.6 Flash and hooks."
+    ],
+    "papers": [
+      {
+        "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+        "url": "https://arxiv.org/abs/2607.28609v1",
+        "arxiv_id": "2607.28609v1",
+        "implication": "Trajectory judges are now part of the agent stack; weak reward models can create false-positive autonomy."
+      },
+      {
+        "title": "Rethinking Inference-Time Scaling in Local Computer-Use Agents: Failure Modes and Compute Tradeoffs",
+        "url": "https://arxiv.org/abs/2607.28573v1",
+        "arxiv_id": "2607.28573v1",
+        "implication": "Local/private agents need selective compute allocation and failure-aware controllers, not just longer horizons."
+      },
+      {
+        "title": "PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks",
+        "url": "https://arxiv.org/abs/2607.28587v1",
+        "arxiv_id": "2607.28587v1",
+        "implication": "Coding-agent benchmarks need data-hygiene preflight before leaderboard results are trusted."
+      },
+      {
+        "title": "ORCA-bench: How Ready Are Language Model Agents for Oncall?",
+        "url": "https://arxiv.org/abs/2607.28545v1",
+        "arxiv_id": "2607.28545v1",
+        "implication": "SRE agents should first collect evidence and navigate telemetry before autonomous root-cause decisions."
+      },
+      {
+        "title": "Train Often, Deploy Selectively: Forward-Gated Model Replacement in Crypto Markets",
+        "url": "https://arxiv.org/abs/2607.28577v1",
+        "arxiv_id": "2607.28577v1",
+        "implication": "Trading models should be shadow-tested and promoted only after fixed forward-label advantages."
+      },
+      {
+        "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+        "url": "https://arxiv.org/abs/2607.28418v1",
+        "arxiv_id": "2607.28418v1",
+        "implication": "Inference efficiency remains a product primitive for high-volume agent workloads."
+      }
+    ],
+    "concepts": [
+      "computer-use agents",
+      "trajectory reward models",
+      "VLM judge leniency bias",
+      "OSReward",
+      "OS-Shepherd",
+      "local CUA scaling",
+      "failure-aware compute allocation",
+      "PR-issue misalignment",
+      "SWE-bench hygiene",
+      "on-call RCA agents",
+      "OpenTelemetry agent evaluation",
+      "Shadow Before Swap",
+      "forward-gated model replacement",
+      "agent runtime hooks",
+      "managed agents",
+      "realtime retail agents",
+      "GPU utilization",
+      "agent reliability cockpit"
+    ],
+    "sources": [
+      {
+        "title": "arXiv: OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+        "url": "https://arxiv.org/abs/2607.28609v1"
+      },
+      {
+        "title": "OSReward project page",
+        "url": "https://os-copilot.github.io/OSReward-Home/"
+      },
+      {
+        "title": "arXiv: Rethinking Inference-Time Scaling in Local Computer-Use Agents",
+        "url": "https://arxiv.org/abs/2607.28573v1"
+      },
+      {
+        "title": "arXiv: PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks",
+        "url": "https://arxiv.org/abs/2607.28587v1"
+      },
+      {
+        "title": "arXiv: ORCA-bench: How Ready Are Language Model Agents for Oncall?",
+        "url": "https://arxiv.org/abs/2607.28545v1"
+      },
+      {
+        "title": "arXiv: Train Often, Deploy Selectively: Forward-Gated Model Replacement in Crypto Markets",
+        "url": "https://arxiv.org/abs/2607.28577v1"
+      },
+      {
+        "title": "arXiv: WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+        "url": "https://arxiv.org/abs/2607.28418v1"
+      },
+      {
+        "title": "GitHub: WIDE code under EIT-NLP/LLM-Pruning",
+        "url": "https://github.com/EIT-NLP/LLM-Pruning/tree/main/WIDE"
+      },
+      {
+        "title": "OpenAI: Advancing the price-performance frontier with GPT-5.6",
+        "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6"
+      },
+      {
+        "title": "OpenAI: How avatarin built a 24/7 retail agent with GPT-Realtime",
+        "url": "https://openai.com/index/avatarin"
+      },
+      {
+        "title": "OpenAI: How enabling two settings tripled our scores on ARC-AGI-3",
+        "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores"
+      },
+      {
+        "title": "Google Blog: Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/"
+      },
+      {
+        "title": "Hugging Face Blog: GPU Management: Why Idle GPUs Are the New Grounded Aircraft",
+        "url": "https://huggingface.co/blog/Dharma-AI/gpu-management"
+      },
+      {
+        "title": "Hugging Face Blog: Anatomy of a Frontier Lab Agent Intrusion",
+        "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline"
+      }
+    ],
+    "implications": {
+      "AI/product": "Build an agent QA stack: trajectory capture, reward/judge validation, benchmark-hygiene checks, deployment gates, and cost-per-success reporting. The product wedge is the reliability cockpit, not another free-form chatbot.",
+      "finance/trading": "Treat model updates like trades: shadow challengers, evaluate on delayed forward labels, promote only with a declared advantage, and log model-state transitions. SBS is directly relevant to crypto forecast deployment governance.",
+      "agentic company OS": "Represent every workflow as auditable trajectories with judges, hooks, telemetry, cost budgets, and escalation policies. Agent OS design should separate actor, verifier, telemetry, and deployment-control lanes.",
+      "career/opportunities": "Focus on computer-use evals, reward models for agent trajectories, benchmark-data auditing, SRE copilots with telemetry constraints, and finance-grade model deployment controls."
+    },
+    "open_questions": [
+      "Can OSReward-style judging predict downstream task success under live browser, desktop, and SaaS workflows?",
+      "Which local CUA failure modes should trigger early stop, human handoff, or parallel retry?",
+      "Can PAIChecker-like PR/issue alignment checks become a standard preflight for SWE-style benchmark ingestion?",
+      "What promotion margin should trading models require when objective improvements are small but model changes carry operational risk?",
+      "How much of OpenAI/Google managed-agent improvement comes from model quality versus runtime hooks, compaction, and orchestration?",
+      "Can on-call RCA agents become useful first as evidence collectors and runbook navigators before root-cause decision-makers?"
+    ],
+    "report_path": "reports/2026-07-31_morning_briefing.md"
+  },
+  {
     "id": "2026-07-29-afternoon",
     "date": "2026-07-29",
     "cadence": "afternoon",

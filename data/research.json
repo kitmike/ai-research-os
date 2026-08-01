@@ -1,5 +1,287 @@
 [
   {
+    "id": "2026-08-01-afternoon",
+    "date": "2026-08-01",
+    "cadence": "afternoon",
+    "title": "The Judge Is Now the Bottleneck",
+    "executive_summary": "OSReward is the week’s most important agent paper because it evaluates the evaluator: VLM judges for computer-use-agent trajectories. The paper builds a 1,019-trajectory cross-platform benchmark, a 284-item hard subset, and a 440-item multi-axis quality subset, then evaluates 27 VLM judges. The central finding is asymmetric and operationally dangerous: many judges are lenient, accepting failed trajectories as successes. Frontier judges reach roughly 89–90% full-set accuracy but fall to about 67–70% on OSReward-Hard, while cheap/open judges can collapse in failure recall. OS-Shepherd-9B/35B, trained on a high-agreement reasoning-annotated 100K-scale corpus, improves hard failure-catching at far lower cost. The strategic implication is that production agents need actor–evidence–judge–gate architecture, with failure recall and false-success probes treated as product and governance primitives.",
+    "key_claims": [
+      "OSReward evaluates VLM judges rather than actor agents, asking whether models can correctly label computer-use trajectories as successful or failed.",
+      "The benchmark contains 1,019 cross-platform trajectories, with about 43% successes and 57% failures, plus OSReward-Hard with 284 hard trajectories and OSReward-Multi with 440 successful trajectories labeled for alignment and efficiency.",
+      "The paper reports top closed judges near 89–90% accuracy on the full set: Claude-Opus-4-8 at 89.7%, GPT-5.5 at 89.5%, and Claude-Opus-4-6 at 89.5%.",
+      "On OSReward-Hard, top closed judges fall to about 67–70% accuracy: Claude-Opus-4-8 at 69.7%, GPT-5.5 at 67.3%, and Claude-Opus-4-6 at 67.3%.",
+      "Many judges show leniency bias, with high success recall but much lower failure recall; some small open VLMs approach an always-success pattern on OSReward-Hard.",
+      "Input ablations report that screenshot-selection changes move binary accuracy by less than half a point, while removing per-step thought/action text costs 7.2 percentage points and flips 22.7% of verdicts.",
+      "The paper reports that top-judge majority voting improves the best single judge by only about one percentage point at several times the cost because judge errors are correlated.",
+      "OS-Shepherd-9B improves over its Qwen3.5-9B base from 39.4% to 60.2% accuracy on OSReward-Hard and from 14.1% to 57.6% hard-set failure recall.",
+      "A modest online RL example in the paper, 200 updates × 16 batch × 16 rollouts, produces 51,200 judge calls; the paper estimates about $4,000 with Claude-Opus-4-8, $2,300 with GPT-5.5, and $68 API-equivalent with OS-Shepherd-9B.",
+      "The operational lesson is to separate actor, evidence, judge, and gate lanes; the actor’s final claim should not be treated as task completion evidence."
+    ],
+    "papers": [
+      {
+        "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+        "url": "https://arxiv.org/abs/2607.28609v1",
+        "arxiv_id": "2607.28609v1",
+        "implication": "Trajectory judges are now a core agent-infrastructure component; failure recall matters more than aggregate accuracy when judges gate autonomy or reward training."
+      },
+      {
+        "title": "ORCA-bench: How Ready Are Language Model Agents for Oncall?",
+        "url": "https://arxiv.org/abs/2607.28545v1",
+        "arxiv_id": "2607.28545v1",
+        "implication": "Operational agents need telemetry-grounded verification, not just plausible RCA narratives."
+      },
+      {
+        "title": "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments",
+        "url": "https://arxiv.org/abs/2607.28591v1",
+        "arxiv_id": "2607.28591v1",
+        "implication": "Coding-agent progress increasingly depends on executable verified task construction and reliable outcome measurement."
+      },
+      {
+        "title": "Sample More, Reflect Less: Self-Refine and Reflexion Lose to Repeated Sampling at Equal Token Cost, from 1.5B to 7B",
+        "url": "https://arxiv.org/abs/2607.28576v1",
+        "arxiv_id": "2607.28576v1",
+        "implication": "Inference-time reasoning claims need cost-matched baselines; extra text should not be mistaken for better reasoning."
+      }
+    ],
+    "concepts": [
+      "OSReward",
+      "computer-use agents",
+      "trajectory judging",
+      "VLM-as-judge",
+      "leniency bias",
+      "false-success risk",
+      "failure recall",
+      "OSReward-Hard",
+      "OSReward-Multi",
+      "OS-Shepherd",
+      "OS-Shepherd-100K",
+      "reasoning-annotated judge corpus",
+      "reward model economics",
+      "judge herding",
+      "actor-evidence-judge-gate architecture",
+      "agent reliability dashboard",
+      "finance false-success benchmark"
+    ],
+    "sources": [
+      {
+        "title": "arXiv: OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+        "url": "https://arxiv.org/abs/2607.28609v1"
+      },
+      {
+        "title": "arXiv HTML: OSReward full paper",
+        "url": "https://arxiv.org/html/2607.28609v1"
+      },
+      {
+        "title": "OSReward project homepage",
+        "url": "https://os-copilot.github.io/OSReward-Home/"
+      },
+      {
+        "title": "OSReward GitHub repository",
+        "url": "https://github.com/OS-Copilot/OSReward"
+      },
+      {
+        "title": "OSReward dataset on Hugging Face",
+        "url": "https://huggingface.co/datasets/OS-Copilot/OSReward"
+      },
+      {
+        "title": "OS-Shepherd-100K dataset on Hugging Face",
+        "url": "https://huggingface.co/datasets/OS-Copilot/OS-Shepherd-100K"
+      },
+      {
+        "title": "OSReward and OS-Shepherd Hugging Face collection",
+        "url": "https://huggingface.co/collections/OS-Copilot/osreward-and-os-shepherd"
+      },
+      {
+        "title": "arXiv: ORCA-bench: How Ready Are Language Model Agents for Oncall?",
+        "url": "https://arxiv.org/abs/2607.28545v1"
+      },
+      {
+        "title": "arXiv: Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments",
+        "url": "https://arxiv.org/abs/2607.28591v1"
+      },
+      {
+        "title": "arXiv: Sample More, Reflect Less",
+        "url": "https://arxiv.org/abs/2607.28576v1"
+      }
+    ],
+    "implications": {
+      "AI/product": "Build agent reliability dashboards around trajectory evidence, failure recall, false-success examples, judge calibration, judge drift, and cost per verified success. Enterprise buyers will ask how the system knows a task was done, not only whether the agent claimed completion.",
+      "finance/trading": "Finance agents need asymmetric judges that prefer no-action/escalation over false success. Benchmark source vintage, data lineage, leakage checks, broker/risk state, and whether recommendations are grounded in environment evidence before any trade or model promotion.",
+      "agentic company OS": "Separate actor, evidence, judge, and gate lanes. The actor writes a trace; deterministic and learned verifiers inspect state; the gate decides approve/retry/escalate/no-op/rollback. Completion should be a judge packet, not a final chat message.",
+      "career/opportunities": "Agent reliability engineering is a concrete niche: trace schemas, reward-model evals, deterministic verifiers, adversarial false-success probes, judge-cost optimization, and deployment-gate UX."
+    },
+    "open_questions": [
+      "Does OS-Shepherd transfer to realistic private MCP/SaaS workflows such as GitHub, email, spreadsheets, CRM, analytics dashboards, and broker sandboxes?",
+      "Can agents trained against OS-Shepherd learn adversarial trajectory styles that exploit its failure modes?",
+      "What hybrid verifier stack best combines deterministic state checks with learned trajectory judges?",
+      "How should judge calibration be monitored when actor models, UI layouts, tool schemas, or task distributions change?",
+      "What would a finance-specific OSReward-Hard benchmark look like for stale data, leakage, wrong filings, risk-limit breaches, and no-trade decisions?",
+      "Should production dashboards optimize dollars per token, dollars per judged trajectory, or dollars per verified successful outcome?",
+      "Can abstention/escalation policies outperform forced binary judge labels on hard ambiguous trajectories?"
+    ],
+    "report_path": "reports/2026-08-01_afternoon_gwern_essay.md"
+  },
+  {
+    "id": "2026-07-31-afternoon",
+    "date": "2026-07-31",
+    "cadence": "afternoon",
+    "title": "Spend the Inference Budget on Attempts, Not Self-Flattery",
+    "executive_summary": "Mirzaei's Sample More, Reflect Less is the most important new paper in this window because it turns test-time reasoning into an accounting problem. Across 36 cost-matched comparisons on Qwen2.5 1.5B/3B and selected 7B settings over GSM8K and MATH-500, no prompting/reflection/debate method reliably beats repeated sampling at the same generated-token cost; ten comparisons are significantly worse and all significant losses involve model self-inspection. The practical lesson is not that reflection is useless everywhere, but that agent builders must plot budget frontiers and prove a reflective loop beats the boring alternative of more independent attempts, executable tests, or trained verifiers.",
+    "key_claims": [
+      "The paper evaluates seven methods against self-consistency at each method's measured generated-token cost, using paired questions, bootstrap intervals, and Holm correction.",
+      "Across 36 method-setting comparisons, zero methods are significantly better than repeated sampling at equal generated-token cost; ten are significantly worse and 26 are indistinguishable under within-setting Holm correction.",
+      "All 18 self-inspection comparisons are negative: methods where the base model critiques, verifies, or rewrites its own output underperform the matched sampling baseline in this experimental scope.",
+      "Best-of-N isolates the mechanism: on identical eight-sample candidate sets, majority counting beats base-model self-selection by 8.0 and 11.3 pp at 1.5B, 5.3 and 17.3 pp at 3B, and small non-significant margins at 7B.",
+      "Reflexion as published silently collapsed into one chain-of-thought on Qwen2.5-1.5B because its self-assessment judged every first answer correct and never triggered a retry.",
+      "The paper's own caveats are material: the domain is exact-answer math, full comparisons are at small open models, generated tokens are only one cost proxy, and open-ended tasks may need different baselines.",
+      "For agents, the durable operational rule is to instrument budget frontiers: compare reflection, debate, self-verification, tool tests, and independent sampling by success per token, latency, dollar, and verifier override accuracy."
+    ],
+    "papers": [
+      {
+        "title": "Sample More, Reflect Less: Self-Refine and Reflexion Lose to Repeated Sampling at Equal Token Cost, from 1.5B to 7B",
+        "url": "https://arxiv.org/abs/2607.28576",
+        "arxiv_id": "2607.28576v1",
+        "implication": "Treat every test-time reasoning method as a budget-allocation claim; require an equal-token repeated-sampling baseline."
+      },
+      {
+        "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+        "url": "https://arxiv.org/abs/2203.11171",
+        "arxiv_id": "2203.11171",
+        "implication": "Provides the boring but strong sampling/majority baseline that reflective methods must beat."
+      },
+      {
+        "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+        "url": "https://arxiv.org/abs/2303.17651",
+        "arxiv_id": "2303.17651",
+        "implication": "Represents the self-feedback/rewrite family whose value depends on beating cost-matched sampling."
+      },
+      {
+        "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2303.11366",
+        "arxiv_id": "2303.11366",
+        "implication": "Shows why adaptive reflection loops must report engagement rates, not only final accuracy."
+      },
+      {
+        "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+        "url": "https://arxiv.org/abs/2310.01798",
+        "arxiv_id": "2310.01798",
+        "implication": "Prior warning that self-correction claims can depend on leakage or insufficient baselines."
+      },
+      {
+        "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+        "url": "https://arxiv.org/abs/2408.03314",
+        "arxiv_id": "2408.03314",
+        "implication": "Places token-budget allocation in the broader inference-scaling literature."
+      },
+      {
+        "title": "Let's Verify Step by Step",
+        "url": "https://arxiv.org/abs/2305.20050",
+        "arxiv_id": "2305.20050",
+        "implication": "Trained/verifiable process supervision is a different mechanism from asking the base model to judge itself."
+      }
+    ],
+    "concepts": [
+      "test-time compute",
+      "generated-token accounting",
+      "cost-matched evaluation",
+      "self-consistency",
+      "repeated sampling",
+      "majority voting",
+      "self-inspection",
+      "self-verification",
+      "Self-Refine",
+      "Reflexion",
+      "Best-of-N",
+      "Multi-Agent Debate",
+      "verifier override accuracy",
+      "adaptive control-flow engagement",
+      "budget frontier",
+      "parallel sampling",
+      "trained verifier",
+      "agent reasoning loops",
+      "finance/trading evaluation",
+      "agent operating system"
+    ],
+    "sources": [
+      {
+        "title": "arXiv: Sample More, Reflect Less",
+        "url": "https://arxiv.org/abs/2607.28576"
+      },
+      {
+        "title": "arXiv PDF: Sample More, Reflect Less",
+        "url": "https://arxiv.org/pdf/2607.28576"
+      },
+      {
+        "title": "arXiv e-print/source: Sample More, Reflect Less",
+        "url": "https://arxiv.org/e-print/2607.28576"
+      },
+      {
+        "title": "arXiv: Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+        "url": "https://arxiv.org/abs/2203.11171"
+      },
+      {
+        "title": "arXiv: Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+        "url": "https://arxiv.org/abs/2201.11903"
+      },
+      {
+        "title": "arXiv: Plan-and-Solve Prompting",
+        "url": "https://arxiv.org/abs/2305.04091"
+      },
+      {
+        "title": "arXiv: Self-Refine",
+        "url": "https://arxiv.org/abs/2303.17651"
+      },
+      {
+        "title": "arXiv: Reflexion",
+        "url": "https://arxiv.org/abs/2303.11366"
+      },
+      {
+        "title": "arXiv: Multiagent Debate",
+        "url": "https://arxiv.org/abs/2305.14325"
+      },
+      {
+        "title": "arXiv: Large Language Models Cannot Self-Correct Reasoning Yet",
+        "url": "https://arxiv.org/abs/2310.01798"
+      },
+      {
+        "title": "arXiv: Scaling LLM Test-Time Compute Optimally",
+        "url": "https://arxiv.org/abs/2408.03314"
+      },
+      {
+        "title": "arXiv: GSM8K / Training Verifiers to Solve Math Word Problems",
+        "url": "https://arxiv.org/abs/2110.14168"
+      },
+      {
+        "title": "arXiv: Measuring Mathematical Problem Solving With the MATH Dataset",
+        "url": "https://arxiv.org/abs/2103.03874"
+      },
+      {
+        "title": "arXiv: Incentivizing LLMs to Self-Verify Their Answers",
+        "url": "https://arxiv.org/abs/2506.01369"
+      },
+      {
+        "title": "arXiv: Let's Verify Step by Step",
+        "url": "https://arxiv.org/abs/2305.20050"
+      }
+    ],
+    "implications": {
+      "AI/product": "Expose budget-evidence cards for agent features: success per generated token, input token, dollar, latency, and tool call. Do not sell reflection or debate as quality unless it moves the frontier against repeated sampling or a trained verifier.",
+      "finance/trading": "Treat reflective forecasting agents like trading strategies after costs: require walk-forward baselines, selector/verifier calibration, no-trade/abstention outcomes, and latency-aware equal-budget comparisons.",
+      "agentic company OS": "Separate actor, sampler, verifier, tool-test, and escalation lanes. Instrument whether adaptive loops actually fire and whether verifier overrides beat majority or executable-test baselines.",
+      "career/opportunities": "Build evaluation harnesses and dashboards for inference-time compute allocation: cost-frontier plots, verifier override metrics, adaptive-loop engagement telemetry, and domain-specific graders for code/finance/ops."
+    },
+    "open_questions": [
+      "At frontier model scale, does untrained self-verification beat majority voting on disagreement cases, or only converge toward it?",
+      "Does the equal-token result hold for code generation when executable tests replace exact-answer majority vote?",
+      "For open-ended writing, product strategy, and research synthesis, what is the right boring baseline when majority voting is unavailable?",
+      "Can a lightweight trained verifier beat both majority vote and base-model self-verification at lower total cost?",
+      "Which agent tasks should allocate budget to parallel samples versus sequential reflection versus external tool checks?",
+      "For finance/trading agents, does self-critique reduce tail-risk decisions after costs or mainly add latency and narrative overfitting?",
+      "Should agent eval papers be required to report adaptive-loop engagement rates and verifier override accuracy?"
+    ],
+    "report_path": "reports/2026-07-31_afternoon_gwern_essay.md"
+  },
+  {
     "id": "2026-07-31-morning",
     "date": "2026-07-31",
     "cadence": "morning",
@@ -2667,165 +2949,5 @@
       "Which financial institutions will accept LLM-generated causal/explainability artifacts, and what audit standard will emerge?"
     ],
     "report_path": "reports/2026-07-17_morning_briefing.md"
-  },
-  {
-    "id": "2026-07-31-afternoon",
-    "date": "2026-07-31",
-    "cadence": "afternoon",
-    "title": "Spend the Inference Budget on Attempts, Not Self-Flattery",
-    "executive_summary": "Mirzaei's Sample More, Reflect Less is the most important new paper in this window because it turns test-time reasoning into an accounting problem. Across 36 cost-matched comparisons on Qwen2.5 1.5B/3B and selected 7B settings over GSM8K and MATH-500, no prompting/reflection/debate method reliably beats repeated sampling at the same generated-token cost; ten comparisons are significantly worse and all significant losses involve model self-inspection. The practical lesson is not that reflection is useless everywhere, but that agent builders must plot budget frontiers and prove a reflective loop beats the boring alternative of more independent attempts, executable tests, or trained verifiers.",
-    "key_claims": [
-      "The paper evaluates seven methods against self-consistency at each method's measured generated-token cost, using paired questions, bootstrap intervals, and Holm correction.",
-      "Across 36 method-setting comparisons, zero methods are significantly better than repeated sampling at equal generated-token cost; ten are significantly worse and 26 are indistinguishable under within-setting Holm correction.",
-      "All 18 self-inspection comparisons are negative: methods where the base model critiques, verifies, or rewrites its own output underperform the matched sampling baseline in this experimental scope.",
-      "Best-of-N isolates the mechanism: on identical eight-sample candidate sets, majority counting beats base-model self-selection by 8.0 and 11.3 pp at 1.5B, 5.3 and 17.3 pp at 3B, and small non-significant margins at 7B.",
-      "Reflexion as published silently collapsed into one chain-of-thought on Qwen2.5-1.5B because its self-assessment judged every first answer correct and never triggered a retry.",
-      "The paper's own caveats are material: the domain is exact-answer math, full comparisons are at small open models, generated tokens are only one cost proxy, and open-ended tasks may need different baselines.",
-      "For agents, the durable operational rule is to instrument budget frontiers: compare reflection, debate, self-verification, tool tests, and independent sampling by success per token, latency, dollar, and verifier override accuracy."
-    ],
-    "papers": [
-      {
-        "title": "Sample More, Reflect Less: Self-Refine and Reflexion Lose to Repeated Sampling at Equal Token Cost, from 1.5B to 7B",
-        "url": "https://arxiv.org/abs/2607.28576",
-        "arxiv_id": "2607.28576v1",
-        "implication": "Treat every test-time reasoning method as a budget-allocation claim; require an equal-token repeated-sampling baseline."
-      },
-      {
-        "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
-        "url": "https://arxiv.org/abs/2203.11171",
-        "arxiv_id": "2203.11171",
-        "implication": "Provides the boring but strong sampling/majority baseline that reflective methods must beat."
-      },
-      {
-        "title": "Self-Refine: Iterative Refinement with Self-Feedback",
-        "url": "https://arxiv.org/abs/2303.17651",
-        "arxiv_id": "2303.17651",
-        "implication": "Represents the self-feedback/rewrite family whose value depends on beating cost-matched sampling."
-      },
-      {
-        "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
-        "url": "https://arxiv.org/abs/2303.11366",
-        "arxiv_id": "2303.11366",
-        "implication": "Shows why adaptive reflection loops must report engagement rates, not only final accuracy."
-      },
-      {
-        "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
-        "url": "https://arxiv.org/abs/2310.01798",
-        "arxiv_id": "2310.01798",
-        "implication": "Prior warning that self-correction claims can depend on leakage or insufficient baselines."
-      },
-      {
-        "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
-        "url": "https://arxiv.org/abs/2408.03314",
-        "arxiv_id": "2408.03314",
-        "implication": "Places token-budget allocation in the broader inference-scaling literature."
-      },
-      {
-        "title": "Let's Verify Step by Step",
-        "url": "https://arxiv.org/abs/2305.20050",
-        "arxiv_id": "2305.20050",
-        "implication": "Trained/verifiable process supervision is a different mechanism from asking the base model to judge itself."
-      }
-    ],
-    "concepts": [
-      "test-time compute",
-      "generated-token accounting",
-      "cost-matched evaluation",
-      "self-consistency",
-      "repeated sampling",
-      "majority voting",
-      "self-inspection",
-      "self-verification",
-      "Self-Refine",
-      "Reflexion",
-      "Best-of-N",
-      "Multi-Agent Debate",
-      "verifier override accuracy",
-      "adaptive control-flow engagement",
-      "budget frontier",
-      "parallel sampling",
-      "trained verifier",
-      "agent reasoning loops",
-      "finance/trading evaluation",
-      "agent operating system"
-    ],
-    "sources": [
-      {
-        "title": "arXiv: Sample More, Reflect Less",
-        "url": "https://arxiv.org/abs/2607.28576"
-      },
-      {
-        "title": "arXiv PDF: Sample More, Reflect Less",
-        "url": "https://arxiv.org/pdf/2607.28576"
-      },
-      {
-        "title": "arXiv e-print/source: Sample More, Reflect Less",
-        "url": "https://arxiv.org/e-print/2607.28576"
-      },
-      {
-        "title": "arXiv: Self-Consistency Improves Chain of Thought Reasoning in Language Models",
-        "url": "https://arxiv.org/abs/2203.11171"
-      },
-      {
-        "title": "arXiv: Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
-        "url": "https://arxiv.org/abs/2201.11903"
-      },
-      {
-        "title": "arXiv: Plan-and-Solve Prompting",
-        "url": "https://arxiv.org/abs/2305.04091"
-      },
-      {
-        "title": "arXiv: Self-Refine",
-        "url": "https://arxiv.org/abs/2303.17651"
-      },
-      {
-        "title": "arXiv: Reflexion",
-        "url": "https://arxiv.org/abs/2303.11366"
-      },
-      {
-        "title": "arXiv: Multiagent Debate",
-        "url": "https://arxiv.org/abs/2305.14325"
-      },
-      {
-        "title": "arXiv: Large Language Models Cannot Self-Correct Reasoning Yet",
-        "url": "https://arxiv.org/abs/2310.01798"
-      },
-      {
-        "title": "arXiv: Scaling LLM Test-Time Compute Optimally",
-        "url": "https://arxiv.org/abs/2408.03314"
-      },
-      {
-        "title": "arXiv: GSM8K / Training Verifiers to Solve Math Word Problems",
-        "url": "https://arxiv.org/abs/2110.14168"
-      },
-      {
-        "title": "arXiv: Measuring Mathematical Problem Solving With the MATH Dataset",
-        "url": "https://arxiv.org/abs/2103.03874"
-      },
-      {
-        "title": "arXiv: Incentivizing LLMs to Self-Verify Their Answers",
-        "url": "https://arxiv.org/abs/2506.01369"
-      },
-      {
-        "title": "arXiv: Let's Verify Step by Step",
-        "url": "https://arxiv.org/abs/2305.20050"
-      }
-    ],
-    "implications": {
-      "AI/product": "Expose budget-evidence cards for agent features: success per generated token, input token, dollar, latency, and tool call. Do not sell reflection or debate as quality unless it moves the frontier against repeated sampling or a trained verifier.",
-      "finance/trading": "Treat reflective forecasting agents like trading strategies after costs: require walk-forward baselines, selector/verifier calibration, no-trade/abstention outcomes, and latency-aware equal-budget comparisons.",
-      "agentic company OS": "Separate actor, sampler, verifier, tool-test, and escalation lanes. Instrument whether adaptive loops actually fire and whether verifier overrides beat majority or executable-test baselines.",
-      "career/opportunities": "Build evaluation harnesses and dashboards for inference-time compute allocation: cost-frontier plots, verifier override metrics, adaptive-loop engagement telemetry, and domain-specific graders for code/finance/ops."
-    },
-    "open_questions": [
-      "At frontier model scale, does untrained self-verification beat majority voting on disagreement cases, or only converge toward it?",
-      "Does the equal-token result hold for code generation when executable tests replace exact-answer majority vote?",
-      "For open-ended writing, product strategy, and research synthesis, what is the right boring baseline when majority voting is unavailable?",
-      "Can a lightweight trained verifier beat both majority vote and base-model self-verification at lower total cost?",
-      "Which agent tasks should allocate budget to parallel samples versus sequential reflection versus external tool checks?",
-      "For finance/trading agents, does self-critique reduce tail-risk decisions after costs or mainly add latency and narrative overfitting?",
-      "Should agent eval papers be required to report adaptive-loop engagement rates and verifier override accuracy?"
-    ],
-    "report_path": "reports/2026-07-31_afternoon_gwern_essay.md"
   }
 ]

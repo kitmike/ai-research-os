@@ -1,5 +1,119 @@
 [
   {
+    "id": "2026-08-02-afternoon",
+    "date": "2026-08-02",
+    "cadence": "afternoon",
+    "title": "More Tasks Per Repository: Change2Task and the Industrialization of Coding-Agent Evaluation",
+    "executive_summary": "Change2Task is the week’s most important coding-agent infrastructure paper because it treats repository history as a reusable task foundry rather than a static benchmark archive. Starting from merged PRs and healthy descendant revisions, it reconstructs developer-grounded tasks through Patch Reversal, Code Mapping, and Agent Reconstruction, then validates healthy/task/restored lifecycles, scope, fidelity, and matched agent outcomes. The paper reports 900 finalized paired tasks from 1,130 eligible changes; 500/621 matched Bug Fix recoveries versus 387/621 for a PR Mirror baseline; 0.894 task-weighted source-change-profile fidelity; balanced aggregate solve counts across original and reconstructed branches; and environment reuse that reduces setup time by 58.4% and retained storage by 71.2%. The strategic lesson is that agent companies need task-foundry engineering: provenance-linked private evals mined from real work, continuously refreshed onto maintained code, audited for semantic drift, and priced by cost per verified task or verified solve.",
+    "key_claims": [
+      "Change2Task reframes coding-agent evaluation data as executable infrastructure: repository state, dependencies, specifications, oracles, scope gates, and provenance must travel together.",
+      "The system starts from merged PR evidence and a healthy descendant revision, then reconstructs modern task states through three escalating routes: Patch Reversal, Code Mapping, and Agent Reconstruction.",
+      "Accepted tasks must pass lifecycle validation across healthy, task, and restored states: target checks pass/fail/pass while regression checks pass throughout.",
+      "From 1,130 construction-eligible source changes, the paper reports 900 finalized paired tasks: 500 Bug Fix and 100 each for Feature Addition, Test Generation, API Migration, and Security Repair.",
+      "On a matched 621-candidate Bug Fix comparison, Direct Reversal recovers 81 tasks, SWE-smith PR Mirror recovers 387, and Change2Task recovers 500, an 18.2-point absolute and 29.2% relative gain over PR Mirror.",
+      "The paper reports 0.894 task-weighted source-change-profile fidelity, with family means from 0.825 to 0.925 and 92.7% of the final corpus directly accepted by both independent model judges before manual adjudication of remaining cases.",
+      "Across 3,600 matched agent-task pairs, original and reconstructed branches each have 1,478 solved outcomes, with balanced discordance, 89.7% aggregate agreement, Cohen’s kappa of 0.787, and paired solve-rate difference of 0.0 points with 95% interval [-1.1, 1.1].",
+      "Environment reuse prepares 388 healthy modern bases for 900 tasks rather than one base per task, reducing setup time from 3,240h to 1,349h and retained storage from 5,580GB to 1,607GB in the paper’s accounting.",
+      "The result is conditional on eligibility: historical PR intent, executable checks, modern behavior hosts, and bounded edit policies must exist before Change2Task can work.",
+      "The operational lesson for agent companies is to build task foundries that mine private work history into provenance-linked, executable, drift-audited evaluation packets."
+    ],
+    "papers": [
+      {
+        "title": "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments",
+        "url": "https://arxiv.org/abs/2607.28591v1",
+        "arxiv_id": "2607.28591v1",
+        "implication": "A coding-agent platform should convert repository history into reusable, executable, provenance-linked private eval infrastructure rather than relying only on public static benchmarks."
+      },
+      {
+        "title": "PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks",
+        "url": "https://arxiv.org/abs/2607.28587v1",
+        "arxiv_id": "2607.28587v1",
+        "implication": "Benchmark task construction needs integrity checks; PR-issue linkage defects can contaminate coding-agent evaluation."
+      },
+      {
+        "title": "Rethinking Inference-Time Scaling in Local Computer-Use Agents: Failure Modes and Compute Tradeoffs",
+        "url": "https://arxiv.org/abs/2607.28573v1",
+        "arxiv_id": "2607.28573v1",
+        "implication": "Compute allocation and environment/task validity should be measured together; extra inference is not a substitute for better task infrastructure."
+      },
+      {
+        "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+        "url": "https://arxiv.org/abs/2607.28609v1",
+        "arxiv_id": "2607.28609v1",
+        "implication": "Task foundries need evaluator foundries too: trajectory judges and task oracles are both production infrastructure."
+      }
+    ],
+    "concepts": [
+      "Change2Task",
+      "coding agents",
+      "executable task supply",
+      "repository history mining",
+      "task foundry",
+      "healthy modern base",
+      "Patch Reversal",
+      "Code Mapping",
+      "Agent Reconstruction",
+      "lifecycle validation",
+      "scope gate",
+      "fidelity gate",
+      "source change profile",
+      "matched branch evaluation",
+      "environment reuse",
+      "private agent evals",
+      "benchmark integrity",
+      "PR-issue misalignment",
+      "cost per verified task",
+      "continuous regression evaluation"
+    ],
+    "sources": [
+      {
+        "title": "arXiv: Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments",
+        "url": "https://arxiv.org/abs/2607.28591v1"
+      },
+      {
+        "title": "arXiv HTML: Change2Task full paper",
+        "url": "https://arxiv.org/html/2607.28591v1"
+      },
+      {
+        "title": "DOI: Change2Task arXiv DOI landing page",
+        "url": "https://doi.org/10.48550/arXiv.2607.28591"
+      },
+      {
+        "title": "arXiv: PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks",
+        "url": "https://arxiv.org/abs/2607.28587v1"
+      },
+      {
+        "title": "arXiv HTML: PAIChecker full paper",
+        "url": "https://arxiv.org/html/2607.28587v1"
+      },
+      {
+        "title": "arXiv: Rethinking Inference-Time Scaling in Local Computer-Use Agents",
+        "url": "https://arxiv.org/abs/2607.28573v1"
+      },
+      {
+        "title": "arXiv: OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+        "url": "https://arxiv.org/abs/2607.28609v1"
+      }
+    ],
+    "implications": {
+      "AI/product": "Sell the foundry, not just the agent: convert customer repository history into a private executable regression suite that validates model upgrades against that customer’s real code, migrations, security repairs, and test surfaces.",
+      "finance/trading": "Build a finance analogue of Change2Task: mine historical research bugs, stale-data incidents, model promotions, risk-limit breaches, and post-trade reviews into time-indexed eval tasks with leakage guards, no-trade outcomes, and deterministic risk oracles.",
+      "agentic company OS": "Archive every PR, task, trace, CI result, rollback, incident, and review as future eval material. Completion evidence should become a task packet with provenance, base revision, task state, restoration patch, oracle, allowed scope, hidden checks, and evaluation trace.",
+      "career/opportunities": "Agent task-foundry engineering is an emerging niche: history mining, environment preparation, verifier design, semantic-equivalence audits, cost accounting, private eval dashboards, and benchmark drift monitoring."
+    },
+    "open_questions": [
+      "Can Change2Task be replicated in a private monorepo with weak tests, internal services, feature flags, and non-public dependencies?",
+      "How many distinct high-signal task variants can one healthy modern base support before tasks become redundant?",
+      "Do reconstructed tasks predict real future engineering-agent performance better than public SWE-bench-family benchmarks?",
+      "Which Level 3 Agent Reconstruction errors survive lifecycle and fidelity gates but fail human semantic audit?",
+      "Can deterministic program analysis reduce dependence on model judges for semantic alignment?",
+      "Does training on Change2Task-generated tasks create agents that overfit reconstruction artifacts?",
+      "Should task-foundry economics optimize dollars per task, dollars per verified solve, dollars per avoided regression, or dollars per production PR merged?",
+      "What is the finance/trading equivalent of a healthy modern base, task state, restoration patch, and hidden oracle?"
+    ],
+    "report_path": "reports/2026-08-02_afternoon_gwern_essay.md"
+  },
+  {
     "id": "2026-08-01-afternoon",
     "date": "2026-08-01",
     "cadence": "afternoon",
